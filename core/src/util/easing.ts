@@ -86,3 +86,11 @@ export function easeInOutQuart(t:number, b:number, c:number, d:number):number {
   t -= 2;
   return -c/2 * (t*t*t*t - 2) + b;
 }
+
+/**
+ * accelerating from zero velocity
+ */
+export function easeInQuint(t:number, b:number, c:number, d:number):number {
+  t /= d;
+  return c*t*t*t*t*t + b;
+}
