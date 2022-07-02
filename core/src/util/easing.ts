@@ -40,3 +40,12 @@ export function  easeInCubic(t:number, b:number, c:number, d:number):number {
   t /= d;
   return c*t*t*t + b;
 }
+
+/**
+ * decelerating to zero velocity
+ */
+export function easeOutCubic(t:number, b:number, c:number, d:number):number {
+  t /= d;
+  t--;
+  return c*(t*t*t + 1) + b;
+}
