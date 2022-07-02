@@ -32,3 +32,11 @@ export function easeInOutQuad(t:number, b:number, c:number, d:number):number {
   t--;
   return -c / 2 * (t * (t - 2) - 1) + b;
 }
+
+/**
+ * accelerating from zero velocity
+ */
+export function  easeInCubic(t:number, b:number, c:number, d:number):number {
+  t /= d;
+  return c*t*t*t + b;
+}
