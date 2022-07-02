@@ -1,9 +1,9 @@
 <script setup lang="ts">
-
+import {pickRow} from '@elonehoo/pick'
 </script>
 
 <template>
   <div>
-    1
+    <pickRow :pickW="1">0</pickRow>
   </div>
 </template>

@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "pnpm -C test run test",
-    "build-dev":"pnpm -C core run build:lib",
+    "build-dev":"pnpm -C core run build:dev",
     "example-dev": "pnpm -C example run dev"
   },
   "devDependencies": {
