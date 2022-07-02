@@ -3,3 +3,7 @@
 </div>
 
 <h1 align="center">pick</h1>
+
+<p align="center">
+  framework components for vue.js
+</p>
