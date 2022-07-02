@@ -3,7 +3,7 @@ withDefaults(defineProps<{
   pickAlign?: string,
   pickJustify?: string,
   pickType?: string,
-  pickW: number
+  pickW?: number
 }>(),{
   pickAlign: '',
   pickJustify:'',
