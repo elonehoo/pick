@@ -15,4 +15,11 @@ export function easeInQuad(t:number, b:number, c:number, d:number):number {
   return c*t*t + b;
 }
 
+/**
+ * decelerating to zero velocity
+ */
+export function easeOutQuad(t:number, b:number, c:number, d:number):number {
+  t /= d;
+  return -c * t*(t-2) + b;
+}
 
