@@ -42,6 +42,8 @@
     "bumpp": "^8.2.1",
     "rimraf": "^3.0.2",
     "ts-node": "^10.8.1",
-    "vue-tsc": "^0.38.2"
+    "vue-tsc": "^0.38.2",
+    "vite-plugin-dts": "^1.2.0",
+    "vite-plugin-libcss": "^1.0.5"
   }
 }
