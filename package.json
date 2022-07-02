@@ -11,7 +11,8 @@
     "typeCheck": "tsc --noEmit",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test":"pnpm -C test run test"
+    "test":"pnpm -C test run test",
+    "example-dev":"pnpm -C example run dev"
   },
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",
