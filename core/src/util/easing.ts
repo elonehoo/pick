@@ -103,3 +103,13 @@ export function easeOutQuint(t:number, b:number, c:number, d:number):number {
   t--;
   return c*(t*t*t*t*t + 1) + b;
 }
+
+/**
+ * acceleration until halfway, then deceleration
+ */
+export function easeInOutQuintfunction(t:number, b:number, c:number, d:number):number {
+  t /= d/2;
+  if (t < 1) return c/2*t*t*t*t*t + b;
+  t -= 2;
+  return c/2*(t*t*t*t*t + 2) + b;
+}
