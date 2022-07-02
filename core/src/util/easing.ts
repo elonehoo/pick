@@ -67,3 +67,12 @@ export function easeInQuart(t:number, b:number, c:number, d:number):number {
   t /= d;
   return c*t*t*t*t + b;
 }
+
+/**
+ * decelerating to zero velocity
+ */
+export function easeOutQuart(t:number, b:number, c:number, d:number):number {
+  t /= d;
+  t--;
+  return -c * (t*t*t*t - 1) + b;
+}
