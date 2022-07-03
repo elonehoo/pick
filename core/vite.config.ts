@@ -22,8 +22,9 @@ export default defineConfig({
     })
   ],
   build: {
+    outDir:'dist',
     lib: {
-      entry: path.resolve(__dirname, 'lib/index.js'),
+      entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'pick',
       fileName: 'index',
     },

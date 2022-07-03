@@ -1,13 +1,16 @@
-import type { App } from 'vue'
+import { App, Plugin } from 'vue';
 
-import pickCol from './components/pickCol/pickCol.vue'
-import pickRow from './components/pickRow/pickRow.vue'
+import {pickColPlugin} from './components/pickCol'
+import {pickRowPlugin} from './components/pickRow'
 
-const install = (Vue: App) => {
-  Vue.component(pickCol.name, pickCol)
-     .component(pickRow.name,pickRow)
-}
+const pickPlugin: Plugin = {
+  install(app: App) {
+    pickColPlugin.install?.(app);
+    pickRowPlugin.install?.(app);
+  },
+};
 
-export { pickCol }
+export default pickPlugin;
 
-export default { install }
+export * from './components/pickRow'
+export * from './components/pickCol'
