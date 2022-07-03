@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import {pickRow,pickCol} from '@elonehoo/pick'
-
-const flex:string = $ref('flex')
 </script>
 
 <template>
@@ -10,19 +8,19 @@ const flex:string = $ref('flex')
       <pick-col class="col border-right" type="flex" justify="center" align="center" :w="12">100%</pick-col>
     </pick-row>
     <pick-row class="row">
-      <pick-col v-for="item in 2" :key="item" :class="item === 2 ? 'border-right' : ''" class="col" :type="flex" justify="center" align="center" :w="6">50%</pick-col>
+      <pick-col v-for="item in 2" :key="item" :class="item === 2 ? 'border-right' : ''" class="col" type="flex" justify="center" align="center" :w="6">50%</pick-col>
     </pick-row>
     <pick-row class="row">
-      <pick-col v-for="item in 3" :key="item" :class="item === 3 ? 'border-right' : ''" class="col" :type="flex" justify="center" align="center" :w="4">33.3%</pick-col>
+      <pick-col v-for="item in 3" :key="item" :class="item === 3 ? 'border-right' : ''" class="col" type="flex" justify="center" align="center" :w="4">33.3%</pick-col>
     </pick-row>
     <pick-row class="row">
-      <pick-col v-for="item in 4" :key="item" :class="item === 4 ? 'border-right' : ''" class="col" :type="flex" justify="center" align="center" :w="3">25%</pick-col>
+      <pick-col v-for="item in 4" :key="item" :class="item === 4 ? 'border-right' : ''" class="col" type="flex" justify="center" align="center" :w="3">25%</pick-col>
     </pick-row>
     <pick-row class="row">
-      <pick-col v-for="item in 6" :key="item" :class="item === 6 ? 'border-right' : ''" class="col" :type="flex" justify="center" align="center" :w="2">16.6%</pick-col>
+      <pick-col v-for="item in 6" :key="item" :class="item === 6 ? 'border-right' : ''" class="col" type="flex" justify="center" align="center" :w="2">16.6%</pick-col>
     </pick-row>
     <pick-row class="row">
-      <pick-col v-for="item in 12" :key="item" :class="item === 12 ? 'border-right' : ''" class="col border-bottom" :type="flex" justify="center" align="center" :w="1">16.6%</pick-col>
+      <pick-col v-for="item in 12" :key="item" :class="item === 12 ? 'border-right' : ''" class="col border-bottom" type="flex" justify="center" align="center" :w="1">8.3%</pick-col>
     </pick-row>
 </div>
 </template>
