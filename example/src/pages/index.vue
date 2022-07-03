@@ -4,6 +4,6 @@ import {pickRow} from '@elonehoo/pick'
 
 <template>
   <div>
-    <pickRow :pickW="1">0</pickRow>
+    <pick-row>0</pick-row>
 </div>
 </template>
