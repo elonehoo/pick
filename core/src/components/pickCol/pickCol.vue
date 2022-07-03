@@ -1,29 +1,29 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
-  pickW?: number,
-  pickXs?: number | string,
-  pickSm?: number | string,
-  pickLg?: number | string,
-  pickOffset?: number,
-  pickType?: string,
-  pickJustify?: string,
-  pickAlign?:string,
-  pickOrder?:string | number
+  w?: number,
+  xs?: number | string,
+  sm?: number | string,
+  lg?: number | string,
+  offset?: number,
+  type?: string,
+  justify?: string,
+  align?:string,
+  order?:string | number
 }>(),{
-  pickW: 12,
-  pickXs: '',
-  pickSm: '',
-  pickLg: '',
-  pickOffset: 0,
-  pickType:'',
-  pickJustify:'',
-  pickAlign:'',
-  pickOrder:''
+  w: 12,
+  xs: '',
+  sm: '',
+  lg: '',
+  offset: 0,
+  type:'',
+  justify:'',
+  align:'',
+  order:''
 })
 </script>
 
 <template>
-<div :class="['pick-xs-'+pickXs,'pick-sm-'+pickSm,'pick-lg-'+pickLg,]" class="pick-col">
+<div :class="['pick-xs-'+xs,'pick-sm-'+sm,'pick-lg-'+lg,]" class="pick-col" :style="{'display':type}">
     <slot/>
   </div>
 </template>
@@ -31,12 +31,11 @@ withDefaults(defineProps<{
 <style scoped>
   .pick-col {
     float: left;
-    order: v-bind(pickOrder);
-    justify-content: v-bind(pickJustify);
-    display: v-bind(pickType);
-    align-items: v-bind(pickAlign);
-    margin-left: v-bind('pickOffset * 100 / 12 + "%"');
-    width: v-bind(pickW * 100 / 12 + '%');
+    order: v-bind(order);
+    justify-content: v-bind(justify);
+    align-items: v-bind(align);
+    margin-left: v-bind('offset * 100 / 12 + "%"');
+    width: v-bind(w * 100 / 12 + '%');
   }
   .pick-lg-12 {
     width: 100% !important;

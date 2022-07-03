@@ -1,14 +1,14 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
-  pickAlign?: string,
-  pickJustify?: string,
-  pickType?: string,
-  pickW?: number
+  align?: string,
+  justify?: string,
+  type?: string,
+  w?: number
 }>(),{
-  pickAlign: '',
-  pickJustify:'',
-  pickType:'flex',
-  pickW: 12
+  align: '',
+  justify:'',
+  type:'flex',
+  w: 12
 })
 </script>
 
@@ -20,12 +20,11 @@ withDefaults(defineProps<{
 
 <style scoped>
 .pick-row{
-  align-items: v-bind(pickAlign);
-  justify-content: v-bind(pickJustify);
-  display: v-bind(pickType);
-  overflow: v-bind('pickType === "block"?"hidden":null');
-  width: v-bind(pickW * 100 / 12 + '%');
+  align-items: v-bind(align);
+  justify-content: v-bind(justify);
+  display: v-bind(type);
+  overflow: v-bind('type === "block"?"hidden":null');
+  width: v-bind(w * 100 / 12 + '%');
   clear: both;
-  flex-flow: wrap;
 }
 </style>
