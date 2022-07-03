@@ -3,7 +3,7 @@ import pickCol from './pickCol.vue'
 
 export const pickColPlugin: Plugin = {
   install(app: App) {
-    app.component('pickCol', pickCol);
+    app.component('pick-col', pickCol);
   },
 };
 

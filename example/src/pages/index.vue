@@ -5,5 +5,5 @@ import {pickRow} from '@elonehoo/pick'
 <template>
   <div>
     <pickRow :pickW="1">0</pickRow>
-  </div>
+</div>
 </template>

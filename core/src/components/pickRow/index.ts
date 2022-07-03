@@ -3,7 +3,7 @@ import pickRow from './pickRow.vue'
 
 export const pickRowPlugin: Plugin = {
   install(app: App) {
-    app.component('pickRow', pickRow);
+    app.component('pick-row', pickRow);
   },
 };
 
