@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed} from 'vue'
+import {computed, StyleValue} from 'vue'
 import {isColor,getColor} from '../../util/color'
 
 const props = withDefaults(defineProps<{
@@ -74,9 +74,11 @@ const textClass = computed(()=>{
 })
 
 const textStyle = computed(()=>{
-  const style:any = {
-    transform: `translate(-50%,-50%) scale(${returnScale})`
+  const style:StyleValue = {
+    transform:'',
+    color:''
   }
+  style.transform = `translate(-50%,-50%) scale(${returnScale.value})`
   if (!isColor(props.textColor)) {
     style.color = getColor(props.textColor)
   }
@@ -101,7 +103,7 @@ const returnText:any = computed(()=>{
 
 const returnScale = computed(()=>{
   if(!props.text) return 1
-      let lengthx = returnText.length
+      let lengthx = returnText.value.length
       if(lengthx <= 5 && lengthx > 1) {
         return lengthx / (lengthx * 1.50)
       } else {
