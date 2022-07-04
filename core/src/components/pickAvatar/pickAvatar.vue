@@ -25,7 +25,7 @@ const avatarClass = computed(()=>{
   let classes:any = {}
   classes[props.size] = true
   if(isColor(props.color)){
-    classes[`con-avatar-${props.color}`] = true
+    classes[`con-pick-avatar-${props.color}`] = true
   }
   return classes
 })
@@ -61,10 +61,10 @@ const badgeStyle = computed(()=>{
 
 const textClass = computed(()=>{
   const classes:any = {
-    'material-icons': !props.text
+    'material-icons': !props.text,
   }
   if (isColor(props.textColor)) {
-    classes[`vs-avatar-text-${props.textColor}`] = true
+    classes[`pick-avatar-text-${props.textColor}`] = true
   }
   return classes
 })
@@ -113,15 +113,15 @@ const returnScale = computed(()=>{
    v-bind="$attrs"
    :style="avatarStyle"
    :class="avatarClass"
-   class="con-vs-avatar">
+   class="con-pick-avatar">
     <div
      v-if="props.badge && props.badge> 0"
      :style="badgeStyle"
      :class="badgeClass"
-     class="dot-count vs-avatar--count">
+     class="dot-count pick-avatar--count">
       {{ typeof props.badge != 'boolean' ? props.badge : null }}
     </div>
-    <div v-if="props.src" class="con-img vs-avatar--con-img">
+    <div v-if="props.src" class="con-img pick-avatar--con-img">
       <img :src="props.src" :alt="props.text">
     </div>
     <span
@@ -130,14 +130,14 @@ const returnScale = computed(()=>{
      :style="textStyle"
      :class="[props.text ? '' : props.text ? '' : textClass]"
      translate="no"
-     class="vs-avatar--text notranslate">
+     class="pick-avatar--text notranslate">
       {{ props.text ? returnText : '' }}
     </span>
   </div>
 </template>
 
 <style scoped>
-.con-vs-avatar {
+.con-pick-avatar {
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -146,18 +146,18 @@ const returnScale = computed(()=>{
   display: inline-block;
   margin: 5px;
 }
-.con-vs-avatar.large {
+.con-pick-avatar.large {
   width: 50px;
   height: 50px;
 }
-.con-vs-avatar.small {
+.con-pick-avatar.small {
   width: 24px;
   height: 24px;
 }
-.con-vs-avatar.small .vs-avatar-text {
+.con-pick-avatar.small .pick-avatar-text {
   font-size: 0.9375em;
 }
-.vs-avatar--count {
+.pick-avatar--count {
   position: absolute;
   top: 1px;
   right: 1px;
@@ -166,7 +166,7 @@ const returnScale = computed(()=>{
   border-radius: 50%;
   z-index: 100;
 }
-.vs-avatar--count.badgeNumber {
+.pick-avatar--count.badgeNumber {
   width: auto;
   height: auto;
   top: -3px;
@@ -177,38 +177,38 @@ const returnScale = computed(()=>{
   font-size: 0.625em;
   color: #fff;
 }
-.vs-avatar--text {
+.pick-avatar--text {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.vs-avatar--con-img {
+.pick-avatar--con-img {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: 50%;
 }
-.vs-avatar--con-img img {
+.pick-avatar--con-img img {
   width: 100%;
 }
-.con-vs-avatar-primary .dot-count-primary .vs-avatar-text-primary{
+.con-pick-avatar-primary .dot-count-primary .pick-avatar-text-primary{
   background: rgb(31, 116, 255,1);
 }
-.con-vs-avatar-secondary .dot-count-secondary .vs-avatar-text-secondary{
+.con-pick-avatar-secondary .dot-count-secondary .pick-avatar-text-secondary{
   background: rgb(121, 49, 177,1);
 }
-.con-vs-avatar-danger .dot-count-danger .vs-avatar-text-danger{
+.con-pick-avatar-danger .dot-count-danger .pick-avatar-text-danger{
   background: rgb(255, 71, 87,1);
 }
-.con-vs-avatar-success .dot-count-success .vs-avatar-text-success{
+.con-pick-avatar-success .dot-count-success .pick-avatar-text-success{
   background: rgb(70, 201, 58,1);
 }
-.con-vs-avatar-warning .dot-count-warning .vs-avatar-text-warning{
+.con-pick-avatar-warning .dot-count-warning .pick-avatar-text-warning{
   background: rgb(255,186,0,1);
 }
-.con-vs-avatar-light .dot-count-light .vs-avatar-text-light{
+.con-pick-avatar-light .dot-count-light .pick-avatar-text-light{
   background: rgb(245, 245, 245,1);
 }
 </style>
