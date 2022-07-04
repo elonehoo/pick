@@ -7,8 +7,6 @@ const props = withDefaults(defineProps<{
   badgeColor?: string,
   size?: string,
   src?: string,
-  icon?:string,
-  iconPack?:string,
   textColor?:string,
   text?: string,
   color?:string
@@ -17,10 +15,8 @@ const props = withDefaults(defineProps<{
   badgeColor: 'danger',
   size:'',
   src:'',
-  icon:'person',
-  iconPack:'material-icons',
   textColor:'rgb(255, 255, 255)',
-  text:'',
+  text:'PICK',
   color:'rgb(195, 195, 195)'
 })
 
@@ -132,10 +128,10 @@ const returnScale = computed(()=>{
      v-else
      :title="props.text"
      :style="textStyle"
-     :class="[props.text ? '' : props.iconPack, props.text ? '' : props.icon, textClass]"
+     :class="[props.text ? '' : props.text ? '' : textClass]"
      translate="no"
      class="vs-avatar--text notranslate">
-      {{ props.text ? returnText : props.iconPack == 'material-icons' ? props.icon : '' }}
+      {{ props.text ? returnText : '' }}
     </span>
   </div>
 </template>

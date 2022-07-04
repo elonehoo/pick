@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import {pickAvatar} from '@elonehoo/pick'
+import {pickRow,pickAvatar} from '@elonehoo/pick'
 </script>
 
 <template>
   <div>
-    <pick-avatar text="Elone Hoo"/>
-    <pick-avatar text="Elone"/>
+    <pick-row :w="10">
+      <pick-avatar />
+      <pick-avatar text="Elone Hoo"/>
+      <pick-avatar text="Elone"/>
+      <pick-avatar src="https://github.com/elonehoo.png"/>
+    </pick-row>
   </div>
 </template>
 
