@@ -2,11 +2,13 @@
 </script>
 
 <template>
-  <nav class="text-xl mt-6 inline-flex gap-2">
-    <a href="https://github.com/elonehoo/pick" target="_blank">
-      GitHub
-    </a>
-  </nav>
+  <div>
+    <nav class="text-xl mt-6 inline-flex gap-2">
+      <a href="https://github.com/elonehoo/pick" target="_blank">
+        GitHub
+      </a>
+    </nav>
+  </div>
 </template>
 
 <style scoped>

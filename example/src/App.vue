@@ -3,7 +3,7 @@ import Footer from '~/components/Footer.vue'
 </script>
 
 <template>
-  <main class="font-sans px-4 py-10 text-center">
+  <main class="font-sans px-4 py-10 center">
     <router-view />
     <Footer />
   </main>
@@ -21,8 +21,7 @@ import Footer from '~/components/Footer.vue'
   padding-top: 2.5rem; /* 40px */
   padding-bottom: 2.5rem; /* 40px */
 }
-.text-center {
+.center {
   text-align: center;
-  width: 70%;
 }
 </style>
