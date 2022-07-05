@@ -86,13 +86,13 @@ export function rColor(colorx: string, opacity = 1): string {
     }
     else {
       if (vscolors.includes(colorx))
-        return `rgba(var(--vs-${colorx}),${opacity})`
+        return `rgba(var(--pick-${colorx}),${opacity})`
       else
-        return `rgba(var(--vs-primary),${opacity})`
+        return `rgba(var(--pick-primary),${opacity})`
     }
   }
   else {
-    return `rgba(var(--vs-primary),${opacity})`
+    return `rgba(var(--pick-primary),${opacity})`
   }
 }
 
@@ -127,7 +127,7 @@ export function changeColor(colorInicial: string) {
 
   if (colores.includes(colorInicial)) {
     const style = getComputedStyle(document.documentElement)
-    colorx = getVariable(style, `--vs-${colorInicial}`)
+    colorx = getVariable(style, `--pick-${colorInicial}`)
   }
   else {
     if (/[rgb()]/g.test(colorInicial)) {
@@ -139,7 +139,7 @@ export function changeColor(colorInicial: string) {
       colorx = `${rgbx.r},${rgbx.g},${rgbx.b}`
     }
     else {
-      colorx = `--vs-${colorInicial}`
+      colorx = `--pick-${colorInicial}`
     }
   }
   return colorx
