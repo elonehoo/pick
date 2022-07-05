@@ -23,7 +23,9 @@ const props = withDefaults(defineProps<{
 
 const avatarClass = computed(()=>{
   let classes:any = {}
-  classes[props.size] = true
+  if(props.size !== ''){
+    classes[props.size] = true
+  }
   if(isColor(props.color)){
     classes[`con-pick-avatar-${props.color}`] = true
   }
@@ -193,22 +195,67 @@ const returnScale = computed(()=>{
 .pick-avatar--con-img img {
   width: 100%;
 }
-.con-pick-avatar-primary .dot-count-primary .pick-avatar-text-primary{
+.con-pick-avatar-primary{
   background: rgb(31, 116, 255,1);
 }
-.con-pick-avatar-secondary .dot-count-secondary .pick-avatar-text-secondary{
+.dot-count-primary{
+  background: rgb(31, 116, 255,1);
+}
+.pick-avatar-text-primary{
+  background: rgb(31, 116, 255,1);
+}
+.con-pick-avatar-secondary{
   background: rgb(121, 49, 177,1);
 }
-.con-pick-avatar-danger .dot-count-danger .pick-avatar-text-danger{
+.dot-count-secondary{
+  background: rgb(121, 49, 177,1);
+}
+.pick-avatar-text-secondary{
+  background: rgb(121, 49, 177,1);
+}
+.con-pick-avatar-danger{
   background: rgb(255, 71, 87,1);
 }
-.con-pick-avatar-success .dot-count-success .pick-avatar-text-success{
+.dot-count-danger{
+  background: rgb(255, 71, 87,1);
+}
+.pick-avatar-text-danger{
+  background: rgb(255, 71, 87,1);
+}
+.con-pick-avatar-success{
   background: rgb(70, 201, 58,1);
 }
-.con-pick-avatar-warning .dot-count-warning .pick-avatar-text-warning{
+.dot-count-success{
+  background: rgb(70, 201, 58,1);
+}
+.pick-avatar-text-success{
+  background: rgb(70, 201, 58,1);
+}
+.con-pick-avatar-warning{
   background: rgb(255,186,0,1);
 }
-.con-pick-avatar-light .dot-count-light .pick-avatar-text-light{
+.dot-count-warning{
+  background: rgb(255,186,0,1);
+}
+.pick-avatar-text-warning{
+  background: rgb(255,186,0,1);
+}
+.con-pick-avatar-dark{
+  background: rgb(30, 30, 30,1);
+}
+ .dot-count-dark{
+  background: rgb(30, 30, 30,1);
+}
+ .pick-avatar-text-dark{
+  background: rgb(30, 30, 30,1);
+}
+.con-pick-avatar-light{
+  background: rgb(245, 245, 245,1);
+}
+ .dot-count-light{
+  background: rgb(245, 245, 245,1);
+}
+ .pick-avatar-text-light{
   background: rgb(245, 245, 245,1);
 }
 </style>
