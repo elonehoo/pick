@@ -73,18 +73,18 @@ function leave(el:any){
     <div
      v-show="props.active"
      ref="alerts"
-     :class="[`con-vs-alert-${props.color}`,{'con-icon':props.icon,}]"
+     :class="[`con-pick-alert-${props.color}`,{'con-icon':props.icon,}]"
      :style="styleAlert"
-     class="con-vs-alert"
+     class="con-pick-alert"
      v-on="$attrs">
       <div
        v-if="props.closable"
-       class="con-x vs-alert--close"
+       class="con-x pick-alert--close"
        @click="$emit('update:active',false)">
         <pick-icon :icon-pack="props.iconPack" :icon="props.closeIcon"/>
       </div>
-      <h4 v-if="props.title" :style="styleTitle" class="titlex vs-alert--title" v-text="props.title" />
-      <div :class="{'con-icon': props.icon}" class="vs-alert">
+      <h4 v-if="props.title" :style="styleTitle" class="titlex pick-alert--title" v-text="props.title" />
+      <div :class="{'con-icon': props.icon}" class="pick-alert">
         <pick-icon v-if="props.icon" :icon-pack="iconPack" :icon="icon" class="icon-alert" />
         <slot/>
       </div>
@@ -93,7 +93,7 @@ function leave(el:any){
 </template>
 
 <style scoped>
-.con-vs-alert {
+.con-pick-alert {
   border-radius: 6px;
   color: #fff;
   width: 100%;
@@ -114,18 +114,18 @@ function leave(el:any){
   display: flex;
   align-items: center;
 }
-.vs-alert {
+.pick-alert {
   padding: 10px;
   overflow: hidden;
   position: relative;
   padding-left: 40px;
 }
-.vs-alert--title {
+.pick-alert--title {
   font-size: 0.9rem;
   font-weight: bold;
   padding: 8px 10px;
 }
-.vs-alert--close {
+.pick-alert--close {
     position: relative;
     float: right;
     margin-top: 4px;
@@ -137,97 +137,97 @@ function leave(el:any){
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
 }
-.vs-alert--close:hover {
+.pick-alert--close:hover {
   box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
 }
 
-.con-vs-alert-primary {
+.con-pick-alert-primary {
   background: rgb(31, 116, 255,0.15);
   box-shadow: 0px 0px 25px 0px rgb(31, 116, 255,0.15);
   color: rgb(31, 116, 255,1);
 }
-.con-vs-alert-primary h4 {
+.con-pick-alert-primary h4 {
   box-shadow: 0px 6px 15px -7px rgb(31, 116, 255,0.4);
 }
-.con-vs-alert-primary .con-x {
+.con-pick-alert-primary .con-x {
   background: rgb(31, 116, 255,1);
   color: #fff;
 }
 
-.con-vs-alert-secondary {
+.con-pick-alert-secondary {
   background: rgb(121, 49, 177,0.15);
   box-shadow: 0px 0px 25px 0px rgb(121, 49, 177,0.15);
   color: rgb(121, 49, 177,1);
 }
-.con-vs-alert-secondary h4 {
+.con-pick-alert-secondary h4 {
   box-shadow: 0px 6px 15px -7px rgb(121, 49, 177,0.4);
 }
-.con-vs-alert-secondary .con-x {
+.con-pick-alert-secondary .con-x {
   background: rgb(121, 49, 177,1);
   color: #fff;
 }
 
-.con-vs-alert-danger {
+.con-pick-alert-danger {
   background: rgb(255, 71, 87,0.15);
   box-shadow: 0px 0px 25px 0px rgb(255, 71, 87,0.15);
   color: rgb(255, 71, 87,1);
 }
-.con-vs-alert-danger h4 {
+.con-pick-alert-danger h4 {
   box-shadow: 0px 6px 15px -7px rgb(255, 71, 87,0.4);
 }
-.con-vs-alert-danger .con-x {
+.con-pick-alert-danger .con-x {
   background: rgb(255, 71, 87,1);
   color: #fff;
 }
 
-.con-vs-alert-success {
+.con-pick-alert-success {
   background: rgb(70, 201, 58,0.15);
   box-shadow: 0px 0px 25px 0px rgb(70, 201, 58,0.15);
   color: rgb(70, 201, 58,1);
 }
-.con-vs-alert-success h4 {
+.con-pick-alert-success h4 {
   box-shadow: 0px 6px 15px -7px rgb(70, 201, 58,0.4);
 }
-.con-vs-alert-success .con-x {
+.con-pick-alert-success .con-x {
   background: rgb(70, 201, 58,1);
   color: #fff;
 }
 
-.con-vs-alert-warning {
+.con-pick-alert-warning {
   background: rgb(255,186,0,0.15);
   box-shadow: 0px 0px 25px 0px rgb(255,186,0,0.15);
   color: rgb(255,186,0,1);
 }
-.con-vs-alert-warning h4 {
+.con-pick-alert-warning h4 {
   box-shadow: 0px 6px 15px -7px rgb(255,186,0,0.4);
 }
-.con-vs-alert-warning .con-x {
+.con-pick-alert-warning .con-x {
   background: rgb(255,186,0,1);
   color: #fff;
 }
 
-.con-vs-alert-dark {
+.con-pick-alert-dark {
   background: rgb(30,30,30,0.15);
   box-shadow: 0px 0px 25px 0px rgb(30,30,30,0.15);
   color: rgb(30,30,30,1);
 }
-.con-vs-alert-dark h4 {
+.con-pick-alert-dark h4 {
   box-shadow: 0px 6px 15px -7px rgb(30, 30, 30,0.4);
 }
-.con-vs-alert-dark .con-x {
+.con-pick-alert-dark .con-x {
   background: rgb(30, 30, 30,1);
   color: #fff;
 }
 
-.con-vs-alert-light {
+.con-pick-alert-light {
   background: rgb(245, 245, 245,0.15);
   box-shadow: 0px 0px 25px 0px rgb(245, 245, 245,0.15);
   color: rgb(245, 245, 245,1);
 }
-.con-vs-alert-light h4 {
+.con-pick-alert-light h4 {
   box-shadow: 0px 6px 15px -7px rgb(245, 245, 245,0.4);
 }
-.con-vs-alert-light .con-x {
+.con-pick-alert-light .con-x {
   background: rgb(245, 245, 245,1);
   color: #fff;
 }
