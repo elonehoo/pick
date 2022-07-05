@@ -21,7 +21,7 @@ const iconClass = computed(()=>{
   const classes:any = {}
   classes[props.size] = true
   if (isColor(props.color)) {
-    classes[`vs-icon-${props.color}`] = true
+    classes[`pick-icon-${props.color}`] = true
   }
   return classes
 })
@@ -40,7 +40,7 @@ const iconStyle = computed(()=>{
 const getBg = computed(()=>{
   const classes:any = {}
   if (isColor(props.bg)) {
-    classes[`con-vs-icon-bg-${props.bg}`] = true
+    classes[`con-pick-icon-bg-${props.bg}`] = true
   }
   return classes
 })
@@ -49,7 +49,7 @@ const getBgSize = computed(()=>{
   const classes:any = {}
   if(['small','medium','large'].includes(props.size))  {
     classes[`bg-${props.size}`] = true;
-    classes['vs-icon-bg'] = true;
+    classes['pick-icon-bg'] = true;
   }
   return classes
 })
@@ -67,7 +67,7 @@ const getBgColor = computed(()=>{
   <i
    :style="iconStyle"
    :class="[iconPack, iconPack !='material-icons' ? icon : '',iconClass,getBg,getBgSize,{'round':round}]"
-   class="vs-icon notranslate icon-scale"
+   class="pick-icon notranslate icon-scale"
    v-bind="$attrs"
   >
     <slot>{{ iconPack == 'material-icons' ? icon : '' }}</slot>
@@ -75,112 +75,112 @@ const getBgColor = computed(()=>{
 </template>
 
 <style scoped>
-.vs-icon {
+.pick-icon {
   color: inherit;
   text-align: center;
   font-size: 1rem;
 }
-.vs-icon.large {
+.pick-icon.large {
   font-size: 3.125rem;
   width: 3.125rem;
   height: 3.125rem;
 }
-.vs-icon.medium {
+.pick-icon.medium {
   font-size: 2.31rem;
   width: 2.31rem;
   height: 2.31rem;
 }
-.vs-icon.small {
+.pick-icon.small {
   font-size: 1.5rem;
   width: 1.5rem;
   height: 1.5rem;
 }
-.vs-icon-bg {
+.pick-icon-bg {
   width: 1rem;
   height: 1rem;
 }
-.vs-icon-bg.bg-large {
+.pick-icon-bg.bg-large {
   width: 3.125rem;
   height: 3.125rem;
 }
-.vs-icon-bg.bg-medium {
+.pick-icon-bg.bg-medium {
   width: 2.31rem;
   height: 2.31rem;
 }
-.vs-icon-bg.bg-small {
+.pick-icon-bg.bg-small {
   width: 1.5rem;
   height: 1.5rem;
 }
 .round {
   border-radius: 50%;
 }
-.con-vs-icon-bg-primary{
+.con-pick-icon-bg-primary{
   background: rgb(31, 116, 255,1)
 }
 .dot-count-primary{
   background: rgb(31, 116, 255,1)
 }
-.vs-icon-primary{
+.pick-icon-primary{
   color: rgb(31, 116, 255,1)
 }
 
-.con-vs-icon-bg-secondary{
+.con-pick-icon-bg-secondary{
   background: rgb(121, 49, 177,1)
 }
 .dot-count-secondary{
   background: rgb(121, 49, 177,1)
 }
-.vs-icon-secondary{
+.pick-icon-secondary{
   color: rgb(121, 49, 177,1)
 }
 
-.con-vs-icon-bg-danger{
+.con-pick-icon-bg-danger{
   background: rgb(255, 71, 87,1)
 }
 .dot-count-danger{
   background: rgb(255, 71, 87,1)
 }
-.vs-icon-danger{
+.pick-icon-danger{
   color: rgb(255, 71, 87,1)
 }
 
-.con-vs-icon-bg-success{
+.con-pick-icon-bg-success{
   background: rgb(70, 201, 58,1)
 }
 .dot-count-success{
   background: rgb(70, 201, 58,1)
 }
-.vs-icon-success{
+.pick-icon-success{
   color: rgb(70, 201, 58,1)
 }
 
-.con-vs-icon-bg-warning{
+.con-pick-icon-bg-warning{
   background: rgb(255,186,0,1)
 }
 .dot-count-warning{
   background: rgb(255,186,0,1)
 }
-.vs-icon-warning{
+.pick-icon-warning{
   color: rgb(255,186,0,1)
 }
 
-.con-vs-icon-bg-dark{
+.con-pick-icon-bg-dark{
   background: rgb(30, 30, 30,1)
 }
 .dot-count-dark{
   background: rgb(30, 30, 30,1)
 }
-.vs-icon-dark{
+.pick-icon-dark{
   color: rgb(30, 30, 30,1)
 }
 
-.con-vs-icon-bg-light{
+.con-pick-icon-bg-light{
   background: rgb(245, 245, 245,1)
 }
 .dot-count-light{
   background: rgb(245, 245, 245,1)
 }
-.vs-icon-light{
+.pick-icon-light{
   color: rgb(245, 245, 245,1)
 }
 </style>
