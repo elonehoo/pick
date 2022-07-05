@@ -14,9 +14,9 @@
     "test": "pnpm -C test run test",
     "build-dev":"pnpm -C core run build:dev",
     "example-dev": "pnpm -C example run dev",
-    "docs-dev":"pnpm -C docs run docs-dev",
-    "docs-build":"pnpm -C docs run docs-build",
-    "docs-server":"pnpm -C docs run docs-server"
+    "docs-dev":"pnpm -C docs run dev",
+    "docs-build":"pnpm -C docs run build",
+    "docs-server":"pnpm -C docs run server"
   },
   "devDependencies": {
     "@elonehoo/eslint-config": "^2.0.0",

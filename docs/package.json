@@ -8,9 +8,9 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "main": "index.js",
   "scripts": {
-    "docs-dev":"vitepress dev",
-    "docs-build":"vitepress build",
-    "docs-serve":"vitepress serve"
+    "dev":"vitepress --port 3344 --open",
+    "build":"vitepress build",
+    "serve":"vitepress serve"
   },
   "devDependencies": {
     "@elonehoo/pick": "workspace:*",
