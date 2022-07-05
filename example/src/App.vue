@@ -23,5 +23,6 @@ import Footer from '~/components/Footer.vue'
 }
 .text-center {
   text-align: center;
+  width: 70%;
 }
 </style>

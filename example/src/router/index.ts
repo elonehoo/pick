@@ -3,6 +3,7 @@ import Home from '~/pages/index.vue'
 import All from '~/pages/all/all.vue'
 import Avatar from '~/pages/avatar/avatar.vue'
 import icon from '~/pages/icon/icon.vue'
+import alert from '~/pages/alert/alert.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,6 +19,10 @@ const router = createRouter({
     {
       path:'/icon',
       component:icon,
+    },
+    {
+      path:'/alert',
+      component:alert,
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],
