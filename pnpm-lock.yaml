@@ -46,10 +46,12 @@ importers:
   docs:
     specifiers:
       '@elonehoo/pick': workspace:*
+      typescript: ^4.7.4
       vitepress: 1.0.0-alpha.4
       vue: ^3.2.37
     devDependencies:
       '@elonehoo/pick': link:../core
+      typescript: 4.7.4
       vitepress: 1.0.0-alpha.4_dbxh4f3fh3s2knho4ceegqbogm
       vue: 3.2.37
 
