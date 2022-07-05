@@ -2,3 +2,4 @@ packages:
   - core
   - example
   - test
+  - docs
