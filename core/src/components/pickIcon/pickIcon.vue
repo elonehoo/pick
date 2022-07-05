@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import {isColor} from '../../util/color'
 const props = withDefaults(defineProps<{
   icon?:string,
   iconPack?:string,
@@ -15,11 +16,61 @@ const props = withDefaults(defineProps<{
   size:'',
   round:false
 })
+
+const iconClass = computed(()=>{
+  const classes:any = {}
+  classes[props.size] = true
+  if (isColor(props.color)) {
+    classes[`vs-icon-${props.color}`] = true
+  }
+  return classes
+})
+
+const iconStyle = computed(()=>{
+  const style = {
+    width: /(px)/.test(props.size) ? props.size : /(em)/.test(props.size) ? props.size : undefined,
+    height: /(px)/.test(props.size) ? props.size : /(em)/.test(props.size) ? props.size : undefined,
+    'font-size': /(px)/.test(props.size) ? props.size : /(em)/.test(props.size) ? props.size : undefined,
+    color: getColor.value,
+    background: getBgColor.value
+  }
+  return style
+})
+
+const getBg = computed(()=>{
+  const classes:any = {}
+  if (isColor(props.bg)) {
+    classes[`con-vs-icon-bg-${props.bg}`] = true
+  }
+  return classes
+})
+
+const getBgSize = computed(()=>{
+  const classes:any = {}
+  if(['small','medium','large'].includes(props.size))  {
+    classes[`bg-${props.size}`] = true;
+    classes['vs-icon-bg'] = true;
+  }
+  return classes
+})
+
+const getColor = computed(()=>{
+  return isColor(props.color) ? props.color : props.color
+})
+
+const getBgColor = computed(()=>{
+  return isColor(props.bg) ? props.bg : props.bg
+})
 </script>
 
 <template>
-  <i >
-
+  <i
+   :style="iconStyle"
+   :class="[iconPack, iconPack !='material-icons' ? icon : '',iconClass,getBg,getBgSize,{'round':round}]"
+   class="vs-icon notranslate icon-scale"
+   v-bind="$attrs"
+  >
+    <slot>{{ iconPack == 'material-icons' ? icon : '' }}</slot>
   </i>
 </template>
 
@@ -63,5 +114,73 @@ const props = withDefaults(defineProps<{
 .round {
   border-radius: 50%;
 }
+.con-vs-icon-bg-primary{
+  background: rgb(31, 116, 255,1)
+}
+.dot-count-primary{
+  background: rgb(31, 116, 255,1)
+}
+.vs-icon-primary{
+  color: rgb(31, 116, 255,1)
+}
 
+.con-vs-icon-bg-secondary{
+  background: rgb(121, 49, 177,1)
+}
+.dot-count-secondary{
+  background: rgb(121, 49, 177,1)
+}
+.vs-icon-secondary{
+  color: rgb(121, 49, 177,1)
+}
+
+.con-vs-icon-bg-danger{
+  background: rgb(255, 71, 87,1)
+}
+.dot-count-danger{
+  background: rgb(255, 71, 87,1)
+}
+.vs-icon-danger{
+  color: rgb(255, 71, 87,1)
+}
+
+.con-vs-icon-bg-success{
+  background: rgb(70, 201, 58,1)
+}
+.dot-count-success{
+  background: rgb(70, 201, 58,1)
+}
+.vs-icon-success{
+  color: rgb(70, 201, 58,1)
+}
+
+.con-vs-icon-bg-warning{
+  background: rgb(255,186,0,1)
+}
+.dot-count-warning{
+  background: rgb(255,186,0,1)
+}
+.vs-icon-warning{
+  color: rgb(255,186,0,1)
+}
+
+.con-vs-icon-bg-dark{
+  background: rgb(30, 30, 30,1)
+}
+.dot-count-dark{
+  background: rgb(30, 30, 30,1)
+}
+.vs-icon-dark{
+  color: rgb(30, 30, 30,1)
+}
+
+.con-vs-icon-bg-light{
+  background: rgb(245, 245, 245,1)
+}
+.dot-count-light{
+  background: rgb(245, 245, 245,1)
+}
+.vs-icon-light{
+  color: rgb(245, 245, 245,1)
+}
 </style>

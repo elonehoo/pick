@@ -8,6 +8,7 @@
     "preview": "vite preview --port 8766 --open"
   },
   "dependencies": {
+    "material-icons": "^1.11.4",
     "vue": "^3.2.37",
     "vue-router": "^4.0.16"
   },
