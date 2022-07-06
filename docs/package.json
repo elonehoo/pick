@@ -1,6 +1,5 @@
 {
   "name": "@elonehoo/docs",
-  "type": "module",
   "version": "0.0.0",
   "private": "true",
   "description": "",
@@ -8,7 +7,7 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress --port 3333 --open",
+    "dev": "vitepress --port 3344 --open",
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
