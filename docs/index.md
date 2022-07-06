@@ -17,8 +17,8 @@ hero:
       text: Get Started
       link: /docs/
     - theme: alt
-      text: Features
-      link: /docs/features
+      text: Why Pick?
+      link: /docs/why
     - theme: alt
       text: View on GitHub
       link: https://github.com/elonehoo/pick

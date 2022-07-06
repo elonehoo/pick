@@ -52,7 +52,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Docs', link: '/docs/' },
-      { text: 'Components', link: '/components/' },
+      { text: 'Components', link: '/components/grid' },
       {
         text: `v${version}`,
         items: [
@@ -63,5 +63,47 @@ export default defineConfig({
         ],
       },
     ],
+    sidebar: {
+      // TODO: bring sidebar of apis and config back
+      '/docs/': [
+        {
+          text: 'Getting Started',
+          items: [
+            {
+              text: 'Why Pick',
+              link: '/docs/why',
+            },
+            {
+              text: 'Installation',
+              link: '/docs/',
+            },
+            {
+              text: 'Usage',
+              link: '/docs/usage',
+            },
+          ],
+        },
+      ],
+      '/components/': [
+        {
+          text:'Layout',
+          items:[
+            {
+              text:'Grid',
+              link:'/components/grid',
+            }
+          ]
+        },
+        {
+          text:'Theme',
+          items:[
+            {
+              text:'Icon',
+              link:'/components/icon',
+            }
+          ]
+        }
+      ]
+    },
   }
 })
