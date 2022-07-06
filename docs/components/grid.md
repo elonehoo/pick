@@ -251,6 +251,19 @@ There are some measures that can only be added in a specific size of the device,
   </pick-row>
 </div>
 
+## API
+
+| name | type | parameters | description | default |
+| :----: | :----: | :----------: | :-----------: | :-------: |
+| w | number | 1-12 | Width of the row or col. | 12 |
+| offset | number | 1-12 | Distance to the left of the. | 0 |
+| justify | string | flex-start, center, flex-end, space-around, space-between | Define the alignment vertically of the elements within the row or col. | |
+| align | string | flex-start, center, flex-end, space-around, space-between | Define the horizontal alignment of the elements within the row or col. | |
+| order | string \| number | | Changes the order of the col with respect to his brothers col. | |
+| lg | number \| string | 1-12 | Is for large devices such as desktops or laptops (large). | |
+| sm | number \| string | 1-12 | Is for medium devices such as laptops or tablets. | |
+| xs | number \| string | 1-12 | Is for small devices such as tablets (small) and phones. | |
+
 <style scoped>
 .row{
   color: #969696;
