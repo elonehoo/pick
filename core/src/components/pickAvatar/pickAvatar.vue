@@ -8,6 +8,8 @@ const props = withDefaults(defineProps<{
   size?: string,
   src?: string,
   textColor?:string,
+  icon?:string,
+  iconPack?:string,
   text?: string,
   color?:string
 }>(),{
@@ -16,7 +18,9 @@ const props = withDefaults(defineProps<{
   size:'',
   src:'',
   textColor:'rgb(255, 255, 255)',
-  text:'PICK',
+  icon:'person',
+  iconPack:'material-icons',
+  text:'',
   color:'rgb(195, 195, 195)'
 })
 
@@ -130,10 +134,10 @@ const returnScale = computed(()=>{
      v-else
      :title="props.text"
      :style="textStyle"
-     :class="[props.text ? '' : props.text ? '' : textClass]"
+     :class="[props.text ? '' : props.iconPack, props.text ? '' : props.icon, textClass]"
      translate="no"
      class="pick-avatar--text notranslate">
-      {{ props.text ? returnText : '' }}
+      {{ props.text ? returnText : props.iconPack == 'material-icons' ? props.icon : '' }}
     </span>
   </div>
 </template>

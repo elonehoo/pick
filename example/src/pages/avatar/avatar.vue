@@ -46,6 +46,17 @@ const badge2:number = $ref(16)
         <pick-avatar :badge="badge2" src="https://github.com/elonehoo.png"/>
       </pick-col>
     </pick-row>
+    <br><br><br>
+    <pick-row type="flex" justify="center" align="center">
+      <pick-col type="flex-end" justify="center" align="center">
+        <pick-avatar />
+        <pick-avatar color="primary" icon="date_range" />
+        <pick-avatar color="success" icon="whatshot" />
+        <pick-avatar color="danger" icon="photo_camera" />
+        <pick-avatar color="warning" icon="filter_vintage" />
+        <pick-avatar color="dark" icon="watch" />
+      </pick-col>
+    </pick-row>
   </div>
 </template>
 
