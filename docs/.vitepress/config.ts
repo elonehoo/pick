@@ -1,3 +1,4 @@
+import { link } from 'fs'
 import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
 import {
@@ -97,6 +98,15 @@ export default defineConfig({
             {
               text:'Icon',
               link:'/components/icon',
+            }
+          ]
+        },
+        {
+          text:'component',
+          items:[
+            {
+              text:'Alert',
+              link:'/components/alert',
             }
           ]
         }
