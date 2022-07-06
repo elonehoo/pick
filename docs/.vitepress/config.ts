@@ -107,6 +107,10 @@ export default defineConfig({
             {
               text:'Alert',
               link:'/components/alert',
+            },
+            {
+              text:'Avatar',
+              link:'/components/avatar',
             }
           ]
         }

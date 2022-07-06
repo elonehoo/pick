@@ -11,9 +11,9 @@
   --vp-c-brand-darker: #29b6f6;
   --vp-c-text-code: #5d6f5d;
   --vp-code-block-bg: rgba(125,125,125,0.04);
-  --vp-custom-block-tip-text: rgb(18, 181, 157);
-  --vp-custom-block-tip-border: rgba(18, 181, 157, 0.5);
-  --vp-custom-block-tip-bg: rgba(18, 181, 157, 0.1);
+  --vp-custom-block-tip-text: rgb(227, 149, 0);
+  --vp-custom-block-tip-border: rgba(227, 149, 0, 0.5);
+  --vp-custom-block-tip-bg: rgba(227, 149, 0, 0.1);
 }
 
 .dark {

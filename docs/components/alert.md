@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 <script setup lang="ts">
 import {ref} from 'vue'
 import {pickAlert} from '@elonehoo/pick'
