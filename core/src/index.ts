@@ -5,6 +5,7 @@ import {pickRowPlugin} from './components/pickRow'
 import {pickAvatarPlugin} from './components/pickAvatar'
 import {pickIconPlugin} from './components/pickIcon'
 import {pickAlertPlugin} from './components/pickAlert'
+import {pickBreadcrumbPlugin} from './components/pickBreadcrumb'
 
 const pickPlugin: Plugin = {
   install(app: App) {
@@ -13,6 +14,7 @@ const pickPlugin: Plugin = {
     pickAvatarPlugin.install?.(app);
     pickIconPlugin.install?.(app);
     pickAlertPlugin.install?.(app);
+    pickBreadcrumbPlugin.install?.(app);
   },
 };
 
@@ -23,3 +25,4 @@ export * from './components/pickCol'
 export * from './components/pickAvatar'
 export * from './components/pickIcon'
 export * from './components/pickAlert'
+export * from './components/pickBreadcrumb'
