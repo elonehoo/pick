@@ -31,5 +31,5 @@ features:
   - title: Pick is open source
     details: Do you want to participate in our initiative? We are open to receive all kinds of contributions and suggestions..
   - title: Pick Premium Themes
-    details: Create great projects with a higher level saving time and work with the themes created with Pick
+    details: Create great projects with a higher level saving time and work with the themes created with Pick.
 ---
