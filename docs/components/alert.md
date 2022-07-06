@@ -164,3 +164,15 @@ Pick uses the **Google Material Icons** font library by default. For a list of a
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
   </pick-alert>
 </div>
+
+## API
+
+| name | type | parameters | descriptive | default |
+| :----: | :----: | :-----------: | :-----------: | :-------: |
+| active | boolean | true,false | Determines if the component is visible. | false |
+| title | string | | Title of the alert | |
+| closable | boolean | | Determines if the alert can be closed by the user | false |
+| color | string | primary, success, danger, warning, dark, RGB, HEX | Color of the alert | |
+| icon | string | | Determines the alert icon | |
+| close-icon | string | | Determines the close icon | close |
+| icon-pack | string | | Determines the icon pack. If not set, icon will default to Material Icons. ex. FA4 uses fa or fas, FA5 uses fas, far, or fal. | material-icons |
