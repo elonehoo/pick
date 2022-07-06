@@ -8,12 +8,15 @@
   "author": "Elone Hoo <huchengyea@163.com>",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress --port 3344 --open",
+    "dev": "vitepress --port 3333 --open",
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
+  "dependencies": {
+    "material-icons": "^1.11.4",
+    "@elonehoo/pick": "workspace:*"
+  },
   "devDependencies": {
-    "@elonehoo/pick": "workspace:*",
     "typescript": "^4.7.4",
     "vitepress": "1.0.0-alpha.4",
     "vue": "^3.2.37"
