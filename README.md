@@ -7,3 +7,5 @@
 <p align="center">
   framework components for vue.js
 </p>
+
+<em>It is still under development. If you are interested in pick, you can pay attention to the development progress of pick.</em>
