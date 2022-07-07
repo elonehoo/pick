@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import {computed,useSlots} from 'vue'
 import {isColor,getColor} from '../../util/color'
+import {BreadcrumbItem} from './type'
 
 const slots = useSlots()
 
 const props = withDefaults(defineProps<{
-  items:Array<any>,
+  items?:BreadcrumbItem[],
   separator?:string,
   color?:string,
   align?:string
