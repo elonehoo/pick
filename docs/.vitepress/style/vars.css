@@ -14,6 +14,7 @@
   --vp-custom-block-tip-text: rgb(227, 149, 0);
   --vp-custom-block-tip-border: rgba(227, 149, 0, 0.5);
   --vp-custom-block-tip-bg: rgba(227, 149, 0, 0.1);
+  --vp-c-text-light-2: rgba(56 56 56 / 70%);
 }
 
 .dark {

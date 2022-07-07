@@ -111,6 +111,10 @@ export default defineConfig({
             {
               text:'Avatar',
               link:'/components/avatar',
+            },
+            {
+              text:'Breadcrumb',
+              link:'/components/breadcrumb',
             }
           ]
         }
