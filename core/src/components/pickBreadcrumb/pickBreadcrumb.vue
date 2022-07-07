@@ -19,7 +19,7 @@ const props = withDefaults(defineProps<{
 const textClass = computed(()=>{
   const classes:any = {}
   if(isColor(props.color)){
-    classes[`vs-breadcrumb-text-${props.color}`] = true
+    classes[`pick-breadcrumb-text-${props.color}`] = true
   }
   return classes
 })
@@ -39,29 +39,29 @@ const hasSlot = computed(()=>{
 </script>
 
 <template>
-  <nav :class="`vs-align-${props.align}`" class="vs-breadcrumb" aria-label="breadcrumb">
-    <ol class="vs-breadcrumb--ol">
+  <nav :class="`pick-align-${props.align}`" class="pick-breadcrumb" aria-label="breadcrumb">
+    <ol class="pick-breadcrumb--ol">
       <slot />
-      <li v-for="item in items" :key="item.title" v-show="!hasSlot" :class="{'vs-active':item.active,'disabled-link':item.disabled}">
+      <li v-for="item in items" :key="item.title" v-show="!hasSlot" :class="{'pick-active':item.active,'disabled-link':item.disabled}">
         <a
           v-if="!item.active"
           :href="item.url ? item.url : '#'"
           :title="item.title"
-          class="vs-breadcrumb--link"
+          class="pick-breadcrumb--link"
           v-text="item.title"
         ></a>
         <template v-else>
           <span
             :class="textClass"
             :style="textStyle"
-            class="vs-breadcrumb--text"
+            class="pick-breadcrumb--text"
             v-text="item.title"
           ></span>
         </template>
         <span
           v-if="!item.active"
           :class="separator.length > 1 ? 'material-icons' : null"
-          class="separator notranslate vs-breadcrum--separator"
+          class="separator notranslate pick-breadcrum--separator"
           translate="no"
           aria-hidden="true"
           v-text="separator"
@@ -72,69 +72,69 @@ const hasSlot = computed(()=>{
 </template>
 
 <style scoped>
-.vs-breadcrumb {
+.pick-breadcrumb {
   display: flex;
 }
-.vs-breadcrumb.vs-align-left {
+.pick-breadcrumb.pick-align-left {
   justify-content: flex-start;
 }
-.vs-breadcrumb.vs-align-center {
+.pick-breadcrumb.pick-align-center {
   justify-content: center;
 }
-.vs-breadcrumb.vs-align-right {
+.pick-breadcrumb.pick-align-right {
   justify-content: flex-end;
 }
-.vs-breadcrumb .disabled-link {
+.pick-breadcrumb .disabled-link {
   opacity: 0.5;
   pointer-events: none;
 }
-.vs-breadcrumb--ol {
+.pick-breadcrumb--ol {
   display: flex;
   align-items:flex-end;
   flex-wrap: wrap;
   padding: 0.75rem 1rem;
   list-style-type: none;
 }
-.vs-breadcrumb--ol li.vs-active {
+.pick-breadcrumb--ol li.pick-active {
   cursor: default;
 }
-.vs-breadcrumb--ol a {
+.pick-breadcrumb--ol a {
   transition: all 0.2s ease;
   color: rgba(0,0,0,0.4);
   text-decoration: none;
 }
-.vs-breadcrumb--ol a:hover,
-.vs-breadcrumb--ol a:focus {
+.pick-breadcrumb--ol a:hover,
+.pick-breadcrumb--ol a:focus {
   color: rgba(0,0,0,0.7);
   text-decoration: underline;
 }
-.vs-breadcrum--separator {
+.pick-breadcrum--separator {
   color: rgba(0,0,0,0.4);
   padding: 0 0.5rem 0 0.5rem;
 }
-.vs-breadcrum--separator.material-icons {
+.pick-breadcrum--separator.material-icons {
   vertical-align: middle;
   font-size: inherit;
 }
-.vs-breadcrumb-text-primary {
+.pick-breadcrumb-text-primary {
   color: rgb(31, 116, 255,1);
 }
-.vs-breadcrumb-text-secondary {
+.pick-breadcrumb-text-secondary {
   color: rgb(121, 49, 177,1);
 }
-.vs-breadcrumb-text-danger {
+.pick-breadcrumb-text-danger {
   color: rgb(255, 71, 87,1);
 }
-.vs-breadcrumb-text-success {
+.pick-breadcrumb-text-success {
   color: rgb(70, 201, 58,1);
 }
-.vs-breadcrumb-text-warning {
+.pick-breadcrumb-text-warning {
   color: rgb(255,186,0,1);
 }
-.vs-breadcrumb-text-dark {
+.pick-breadcrumb-text-dark {
   color: rgb(30, 30, 30,1);
 }
-.vs-breadcrumb-text-light {
+.pick-breadcrumb-text-light {
   color: rgb(245, 245, 245,1);
 }
 
