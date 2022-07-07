@@ -90,6 +90,7 @@ const hasSlot = computed(()=>{
 }
 .vs-breadcrumb--ol {
   display: flex;
+  align-items:flex-end;
   flex-wrap: wrap;
   padding: 0.75rem 1rem;
   list-style-type: none;
