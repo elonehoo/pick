@@ -7,7 +7,7 @@ titleTemplate: Framework Components for Vue.js
 
 hero:
   name: pick
-  text: Frontend Vue Components
+  text: Frontend Vue Components.
   tagline: We love what we do. Let us help you do what You love.
   image:
     src: /logo.svg
