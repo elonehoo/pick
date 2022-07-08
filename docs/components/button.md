@@ -295,22 +295,22 @@ You can change the position of the icon so that it is after the text with the pr
 ```
 
 <pick-row align="flex-start" type="flex" justify="center" :w="12">
-  <pick-col type="flex" justify="center" align="center" offset="1" :w="1">
+  <pick-col type="flex" justify="center" align="center" :w="1">
     <pick-button color="primary" type="border" icon="home">Primary</pick-button>
   </pick-col>
-  <pick-col type="flex" justify="center" align="center" offset="1" :w="1">
+  <pick-col type="flex" justify="center" align="center" :w="1">
     <pick-button color="warning" type="filled" icon="star">Star</pick-button>
   </pick-col>
-  <pick-col type="flex" justify="center" align="center" offset="1" :w="1">
+  <pick-col type="flex" justify="center" align="center" :w="1">
     <pick-button color="success" type="flat" icon="done">Done</pick-button>
   </pick-col>
-  <pick-col type="flex" justify="center" align="center" offset="1" :w="1">
+  <pick-col type="flex" justify="center" align="center" :w="1">
     <pick-button color="dark" type="line" icon="menu" iconAfter>menu</pick-button>
   </pick-col>
-  <pick-col type="flex" justify="center" align="center" offset="1" :w="1">
+  <pick-col type="flex" justify="center" align="center" :w="1">
     <pick-button color="danger" type="gradient" icon="favorite">favorite</pick-button>
   </pick-col>
-  <pick-col type="flex" justify="center" align="center" offset="1" :w="1">
+  <pick-col type="flex" justify="center" align="center" :w="1">
     <pick-button disabled color="primary" type="border" icon="home">Disabled</pick-button>
   </pick-col>
 </pick-row>
