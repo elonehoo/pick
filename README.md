@@ -9,3 +9,39 @@
 </p>
 
 <em>It is still under development. If you are interested in pick, you can pay attention to the development progress of pick.</em>
+
+## Components
+
+- [x] Grid
+- [x] Icon
+- [x] Alert
+- [x] Avatar
+- [x] Breadcrumb
+- [x] Button
+- [x] Card
+- [] CheckBox
+- [] Chip
+- [] Collapse
+- [] Dialogs
+- [] Divider
+- [] DropDown
+- [] Images
+- [] Input
+- [] List
+- [] Loading
+- [] Navbar
+- [] Notifications
+- [] Number Input
+- [] Pagination
+- [] Popup
+- [] Progress
+- [] Radio
+- [] Select
+- [] SideBar
+- [] Slider
+- [] Switch
+- [] Table
+- [] Tabs
+- [] Textarea
+- [] Tooltip
+- [] Upload
