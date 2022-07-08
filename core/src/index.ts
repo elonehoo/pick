@@ -1,28 +1,28 @@
-import { App, Plugin } from 'vue';
+import type { App, Plugin } from 'vue'
 
-import {pickColPlugin} from './components/pickCol'
-import {pickRowPlugin} from './components/pickRow'
-import {pickAvatarPlugin} from './components/pickAvatar'
-import {pickIconPlugin} from './components/pickIcon'
-import {pickAlertPlugin} from './components/pickAlert'
-import {pickBreadcrumbPlugin} from './components/pickBreadcrumb'
+import { pickColPlugin } from './components/pickCol'
+import { pickRowPlugin } from './components/pickRow'
+import { pickAvatarPlugin } from './components/pickAvatar'
+import { pickIconPlugin } from './components/pickIcon'
+import { pickAlertPlugin } from './components/pickAlert'
+import { pickBreadcrumbPlugin } from './components/pickBreadcrumb'
 import { pickButtonPlugin } from './components/pickButton'
 import { pickCardPlugin } from './components/pickCard'
 
 const pickPlugin: Plugin = {
   install(app: App) {
-    pickColPlugin.install?.(app);
-    pickRowPlugin.install?.(app);
-    pickAvatarPlugin.install?.(app);
-    pickIconPlugin.install?.(app);
-    pickAlertPlugin.install?.(app);
-    pickBreadcrumbPlugin.install?.(app);
-    pickButtonPlugin.install?.(app);
-    pickCardPlugin.install?.(app);
+    pickColPlugin.install?.(app)
+    pickRowPlugin.install?.(app)
+    pickAvatarPlugin.install?.(app)
+    pickIconPlugin.install?.(app)
+    pickAlertPlugin.install?.(app)
+    pickBreadcrumbPlugin.install?.(app)
+    pickButtonPlugin.install?.(app)
+    pickCardPlugin.install?.(app)
   },
-};
+}
 
-export default pickPlugin;
+export default pickPlugin
 
 export * from './components/pickRow'
 export * from './components/pickCol'

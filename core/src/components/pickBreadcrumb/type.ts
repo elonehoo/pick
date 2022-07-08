@@ -1,6 +1,6 @@
 export interface BreadcrumbItem {
-  title?: string,
-  url?:string
+  title?: string
+  url?: string
   disabled?: boolean
   active?: boolean
 }

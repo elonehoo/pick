@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { pickCard,pickButton,pickRow,pickCol } from '@elonehoo/pick'
+import { pickButton, pickCard, pickCol, pickRow } from '@elonehoo/pick'
 </script>
 
 <template>
@@ -17,9 +17,9 @@
           </template>
           <template #footer>
             <pick-row justify="flex-end">
-              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite"></pick-button>
-              <pick-button class="basic-demo" color="primary" icon="turned_in_not"></pick-button>
-              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></pick-button>
+              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite" />
+              <pick-button class="basic-demo" color="primary" icon="turned_in_not" />
+              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings" />
             </pick-row>
           </template>
         </pick-card>
@@ -42,9 +42,9 @@
           </template>
           <template #footer>
             <pick-row justify="flex-end">
-              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite"></pick-button>
-              <pick-button class="basic-demo" color="primary" icon="turned_in_not"></pick-button>
-              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></pick-button>
+              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite" />
+              <pick-button class="basic-demo" color="primary" icon="turned_in_not" />
+              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings" />
             </pick-row>
           </template>
         </pick-card>
@@ -64,9 +64,9 @@
           </template>
           <template #footer>
             <pick-row justify="flex-end">
-              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite"></pick-button>
-              <pick-button class="basic-demo" color="primary" icon="turned_in_not"></pick-button>
-              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></pick-button>
+              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite" />
+              <pick-button class="basic-demo" color="primary" icon="turned_in_not" />
+              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings" />
             </pick-row>
           </template>
         </pick-card>
@@ -75,7 +75,7 @@
 
     <pick-row justify="center">
       <pick-col type="flex" justify="center" align="center" :w="6">
-        <pick-card class="cardx" fixedHeight>
+        <pick-card class="cardx" fixed-height>
           <template #header>
             <h3>
               Hello world !
@@ -89,15 +89,15 @@
           </template>
           <template #footer>
             <pick-row justify="flex-end">
-              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite"></pick-button>
-              <pick-button class="basic-demo" color="primary" icon="turned_in_not"></pick-button>
-              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></pick-button>
+              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite" />
+              <pick-button class="basic-demo" color="primary" icon="turned_in_not" />
+              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings" />
             </pick-row>
           </template>
         </pick-card>
       </pick-col>
       <pick-col type="flex" justify="center" align="center" :w="6">
-        <pick-card class="cardx" fixedHeight>
+        <pick-card class="cardx" fixed-height>
           <template #header>
             <h3>
               Hello world !
@@ -111,9 +111,9 @@
           </template>
           <template #footer>
             <pick-row justify="flex-end">
-              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite"></pick-button>
-              <pick-button class="basic-demo" color="primary" icon="turned_in_not"></pick-button>
-              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></pick-button>
+              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite" />
+              <pick-button class="basic-demo" color="primary" icon="turned_in_not" />
+              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings" />
             </pick-row>
           </template>
         </pick-card>
@@ -136,9 +136,9 @@
           </template>
           <template #footer>
             <pick-row justify="flex-end">
-              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite"></pick-button>
-              <pick-button class="basic-demo" color="primary" icon="turned_in_not"></pick-button>
-              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></pick-button>
+              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite" />
+              <pick-button class="basic-demo" color="primary" icon="turned_in_not" />
+              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings" />
             </pick-row>
           </template>
         </pick-card>
@@ -158,9 +158,9 @@
           </template>
           <template #footer>
             <pick-row justify="flex-end">
-              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite"></pick-button>
-              <pick-button class="basic-demo" color="primary" icon="turned_in_not"></pick-button>
-              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings"></pick-button>
+              <pick-button class="basic-demo" type="gradient" color="danger" icon="favorite" />
+              <pick-button class="basic-demo" color="primary" icon="turned_in_not" />
+              <pick-button class="basic-demo" color="rgb(230,230,230)" color-text="rgb(50,50,50)" icon="settings" />
             </pick-row>
           </template>
         </pick-card>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {pickIcon} from '@elonehoo/pick'
+import { pickIcon } from '@elonehoo/pick'
 </script>
 
 <template>

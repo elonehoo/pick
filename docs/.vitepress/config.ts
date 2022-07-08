@@ -1,20 +1,19 @@
-import { link } from 'fs'
 import { defineConfig } from 'vitepress'
 import { version } from '../../package.json'
 import {
-  pickName,
-  pickDescription,
+  discord,
   font,
   github,
+  pickDescription,
+  pickName,
   releases,
-  discord,
-  twitter
+  twitter,
 } from './meta'
 
 export default defineConfig({
   lang: 'en-US',
   title: pickName,
-  description:pickDescription,
+  description: pickDescription,
   head: [
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
@@ -84,45 +83,49 @@ export default defineConfig({
       ],
       '/components/': [
         {
-          text:'Layout',
-          items:[
+          text: 'Layout',
+          items: [
             {
-              text:'Grid',
-              link:'/components/grid',
-            }
-          ]
+              text: 'Grid',
+              link: '/components/grid',
+            },
+          ],
         },
         {
-          text:'Theme',
-          items:[
+          text: 'Theme',
+          items: [
             {
-              text:'Icon',
-              link:'/components/icon',
-            }
-          ]
+              text: 'Icon',
+              link: '/components/icon',
+            },
+          ],
         },
         {
-          text:'component',
-          items:[
+          text: 'component',
+          items: [
             {
-              text:'Alert',
-              link:'/components/alert',
+              text: 'Alert',
+              link: '/components/alert',
             },
             {
-              text:'Avatar',
-              link:'/components/avatar',
+              text: 'Avatar',
+              link: '/components/avatar',
             },
             {
-              text:'Breadcrumb',
-              link:'/components/breadcrumb',
+              text: 'Breadcrumb',
+              link: '/components/breadcrumb',
             },
             {
-              text:'Button',
-              link:'/components/button',
-            }
-          ]
-        }
-      ]
+              text: 'Button',
+              link: '/components/button',
+            },
+            {
+              text: 'Card',
+              link: '/components/card',
+            },
+          ],
+        },
+      ],
     },
-  }
+  },
 })

@@ -1,30 +1,30 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
-  w?: number,
-  xs?: number | string,
-  sm?: number | string,
-  lg?: number | string,
-  offset?: number,
-  type?: string,
-  justify?: string,
-  align?:string,
-  order?:string | number
-}>(),{
+  w?: number
+  xs?: number | string
+  sm?: number | string
+  lg?: number | string
+  offset?: number
+  type?: string
+  justify?: string
+  align?: string
+  order?: string | number
+}>(), {
   w: 12,
   xs: '',
   sm: '',
   lg: '',
   offset: 0,
-  type:'',
-  justify:'',
-  align:'',
-  order:''
+  type: '',
+  justify: '',
+  align: '',
+  order: '',
 })
 </script>
 
 <template>
-<div :class="['pick-xs-'+xs,'pick-sm-'+sm,'pick-lg-'+lg,]" class="pick-col" :style="{'display':type}">
-    <slot/>
+  <div :class="['pick-xs-'+xs,'pick-sm-'+sm,'pick-lg-'+lg,]" class="pick-col" :style="{'display':type}">
+    <slot />
   </div>
 </template>
 

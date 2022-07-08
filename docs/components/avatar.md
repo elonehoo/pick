@@ -27,9 +27,9 @@ If the text has more than 5 letters, only the first letter will be shown as in t
 ```vue
 <template>
   <pick-avatar />
-  <pick-avatar text="Elone Hoo"/>
-  <pick-avatar text="Elone"/>
-  <pick-avatar src="https://github.com/elonehoo.png"/>
+  <pick-avatar text="Elone Hoo" />
+  <pick-avatar text="Elone" />
+  <pick-avatar src="https://github.com/elonehoo.png" />
 </template>
 ```
 
@@ -59,9 +59,9 @@ In the example the last avatar has the custom size of 70px the added value will 
 ```vue
 <template>
   <pick-avatar size="small" />
-  <pick-avatar text="Elone Hoo"/>
-  <pick-avatar size="large" text="Elone"/>
-  <pick-avatar size="70px" src="https://github.com/elonehoo.png"/>
+  <pick-avatar text="Elone Hoo" />
+  <pick-avatar size="large" text="Elone" />
+  <pick-avatar size="70px" src="https://github.com/elonehoo.png" />
 </template>
 ```
 
@@ -82,14 +82,14 @@ You can change the Avatar's color by using the property `color`. If needed you c
 
 ```vue
 <template>
-  <pick-avatar color="primary" text="primary"/>
-  <pick-avatar color="success" text="success"/>
-  <pick-avatar color="danger" text="danger"/>
-  <pick-avatar color="warning" text="warning"/>
-  <pick-avatar color="dark" text="dark"/>
-  <pick-avatar color="rgb(200, 21, 129)" text="RGB"/>
-  <pick-avatar color="#18cd5b" text="HEX"/>
-  <pick-avatar color="#26302a" text-color="rgb(246, 190, 16)" text="HEX RGB"/>
+  <pick-avatar color="primary" text="primary" />
+  <pick-avatar color="success" text="success" />
+  <pick-avatar color="danger" text="danger" />
+  <pick-avatar color="warning" text="warning" />
+  <pick-avatar color="dark" text="dark" />
+  <pick-avatar color="rgb(200, 21, 129)" text="RGB" />
+  <pick-avatar color="#18cd5b" text="HEX" />
+  <pick-avatar color="#26302a" text-color="rgb(246, 190, 16)" text="HEX RGB" />
 </template>
 ```
 
@@ -123,7 +123,7 @@ Only **RGB** and **HEX** colors are supported.
   <pick-avatar badge />
   <pick-avatar :badge="badge1" text="EloneHoo" />
   <pick-avatar badge-color="rgb(140, 23, 164)" :badge="badge2" text="Elone" />
-  <pick-avatar :badge="badge2" src="https://github.com/elonehoo.png"/>
+  <pick-avatar :badge="badge2" src="https://github.com/elonehoo.png" />
 </template>
 ```
 

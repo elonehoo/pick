@@ -1,10 +1,10 @@
-import { App, Plugin } from 'vue'
+import type { App, Plugin } from 'vue'
 import pickCard from './pickCard.vue'
 
 export const pickCardPlugin: Plugin = {
   install(app: App) {
-    app.component('pick-card', pickCard);
+    app.component('PickCard', pickCard)
   },
-};
+}
 
-export { pickCard };
+export { pickCard }

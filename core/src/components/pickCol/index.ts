@@ -1,10 +1,10 @@
-import { App, Plugin } from 'vue'
+import type { App, Plugin } from 'vue'
 import pickCol from './pickCol.vue'
 
 export const pickColPlugin: Plugin = {
   install(app: App) {
-    app.component('pick-col', pickCol);
+    app.component('PickCol', pickCol)
   },
-};
+}
 
-export { pickCol };
+export { pickCol }

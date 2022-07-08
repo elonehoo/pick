@@ -31,11 +31,11 @@ After the installation, you can use all the components in your SFC like this.
 If you can use vue setup script, you can use it like this.
 
 ```vue
+<script setup lang="ts">
+import { pickButton } from '@elonehoo/pick'
+</script>
+
 <template>
   <pick-button>@elonehoo/pick</pick-button>
 </template>
-
-<script setup lang="ts">
-  import { pickButton } from '@elonehoo/pick'
-</script>
 ```

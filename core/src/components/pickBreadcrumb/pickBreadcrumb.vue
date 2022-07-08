@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import {computed,useSlots} from 'vue'
-import {isColor,getColor} from '../../util/color'
-import {BreadcrumbItem} from './type'
+import { computed, useSlots } from 'vue'
+import { getColor, isColor } from '../../util/color'
+import type { BreadcrumbItem } from './type'
 
 const slots = useSlots()
 
 const props = withDefaults(defineProps<{
-  items?:BreadcrumbItem[],
-  separator?:string,
-  color?:string,
-  align?:string
-}>(),{
-  separator:'/',
-  color:'primary',
-  align:'left'
+  items?: BreadcrumbItem[]
+  separator?: string
+  color?: string
+  align?: string
+}>(), {
+  separator: '/',
+  color: 'primary',
+  align: 'left',
 })
 
-const textClass = computed(()=>{
-  const classes:any = {}
-  if(isColor(props.color)){
+const textClass = computed(() => {
+  const classes: any = {}
+  if (isColor(props.color))
     classes[`pick-breadcrumb-text-${props.color}`] = true
-  }
+
   return classes
 })
 
-const textStyle = computed(()=>{
-  const style:any = {}
-  if (!isColor(props.color)) {
+const textStyle = computed(() => {
+  const style: any = {}
+  if (!isColor(props.color))
     style.color = getColor(props.color)
-  }
+
   return style
 })
 
-const hasSlot = computed(()=>{
+const hasSlot = computed(() => {
   return !!slots.default
 })
 
@@ -42,21 +42,21 @@ const hasSlot = computed(()=>{
   <nav :class="`pick-align-${props.align}`" class="pick-breadcrumb" aria-label="breadcrumb">
     <ol class="pick-breadcrumb--ol">
       <slot />
-      <li v-for="item in items" :key="item.title" v-show="!hasSlot" :class="{'pick-active':item.active,'disabled-link':item.disabled}">
+      <li v-for="item in items" v-show="!hasSlot" :key="item.title" :class="{'pick-active':item.active,'disabled-link':item.disabled}">
         <a
           v-if="!item.active"
           :href="item.url ? item.url : '#'"
           :title="item.title"
           class="pick-breadcrumb--link"
           v-text="item.title"
-        ></a>
+        />
         <template v-else>
           <span
             :class="textClass"
             :style="textStyle"
             class="pick-breadcrumb--text"
             v-text="item.title"
-          ></span>
+          />
         </template>
         <span
           v-if="!item.active"
@@ -65,7 +65,7 @@ const hasSlot = computed(()=>{
           translate="no"
           aria-hidden="true"
           v-text="separator"
-        ></span>
+        />
       </li>
     </ol>
   </nav>

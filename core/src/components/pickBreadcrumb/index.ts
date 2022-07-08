@@ -1,10 +1,10 @@
-import { App, Plugin } from 'vue'
+import type { App, Plugin } from 'vue'
 import pickBreadcrumb from './pickBreadcrumb.vue'
 
 export const pickBreadcrumbPlugin: Plugin = {
   install(app: App) {
-    app.component('pick-breadcrumbr', pickBreadcrumb);
+    app.component('PickBreadcrumbr', pickBreadcrumb)
   },
-};
+}
 
-export { pickBreadcrumb };
+export { pickBreadcrumb }

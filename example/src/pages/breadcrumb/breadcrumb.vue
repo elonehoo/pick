@@ -1,23 +1,24 @@
 <script setup lang="ts">
-import {pickBreadcrumb,BreadcrumbItem} from '@elonehoo/pick'
+import type { BreadcrumbItem } from '@elonehoo/pick'
+import { pickBreadcrumb } from '@elonehoo/pick'
 
-const items:BreadcrumbItem[] = [
+const items: BreadcrumbItem[] = [
   {
     title: 'Dashboard',
-    url: 'dashboard'
+    url: 'dashboard',
   },
   {
     title: 'Link 1',
-    url: 'link-1'
+    url: 'link-1',
   },
   {
     title: 'Link 2',
-    disabled: true
+    disabled: true,
   },
   {
     title: 'Active',
-    active: true
-  }
+    active: true,
+  },
 ]
 </script>
 
@@ -30,9 +31,15 @@ const items:BreadcrumbItem[] = [
     <pick-breadcrumb :items="items" separator="|" />
     <pick-breadcrumb :items="items" separator="chevron_right" />
     <pick-breadcrumb>
-      <li class="disabled-link"><a href="#" title="Home">Home</a><span class="vs-breadcrum--separator">/</span></li>
-      <li class="disabled-link"><a href="#" title="Profil">Profil</a><span class="vs-breadcrum--separator">/</span></li>
-      <li aria-current="page" class="active">Infos</li>
+      <li class="disabled-link">
+        <a href="#" title="Home">Home</a><span class="vs-breadcrum--separator">/</span>
+      </li>
+      <li class="disabled-link">
+        <a href="#" title="Profil">Profil</a><span class="vs-breadcrum--separator">/</span>
+      </li>
+      <li aria-current="page" class="active">
+        Infos
+      </li>
     </pick-breadcrumb>
 
     <pick-breadcrumb :items="items" align="left" />

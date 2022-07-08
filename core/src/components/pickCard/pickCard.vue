@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import {useSlots} from 'vue'
+import { useSlots } from 'vue'
 const slots = useSlots()
 
 const props = withDefaults(defineProps<{
-  actionable?:boolean,
-  fixedHeight?:boolean
-}>(),{
-  actionable:false,
-  fixedHeight:false
+  actionable?: boolean
+  fixedHeight?: boolean
+}>(), {
+  actionable: false,
+  fixedHeight: false,
 })
 
-function hasSlot(slot:string){
+function hasSlot(slot: string) {
   return slots[slot]
 }
 

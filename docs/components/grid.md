@@ -24,22 +24,34 @@ With the directive `w` define the width of the column (`col`) its value is 1-12 
 ```vue
 <template>
   <pick-row>
-      <pick-col type="flex" justify="center" align="center" :w="12">100%</pick-col>
+    <pick-col type="flex" justify="center" align="center" :w="12">
+      100%
+    </pick-col>
   </pick-row>
   <pick-row>
-    <pick-col v-for="item in 2" :key="item" type="flex" justify="center" align="center" :w="6">50%</pick-col>
+    <pick-col v-for="item in 2" :key="item" type="flex" justify="center" align="center" :w="6">
+      50%
+    </pick-col>
   </pick-row>
   <pick-row>
-    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="4">33.3%</pick-col>
+    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="4">
+      33.3%
+    </pick-col>
   </pick-row>
   <pick-row>
-    <pick-col v-for="item in 4" :key="item" type="flex" justify="center" align="center" :w="3">25%</pick-col>
+    <pick-col v-for="item in 4" :key="item" type="flex" justify="center" align="center" :w="3">
+      25%
+    </pick-col>
   </pick-row>
   <pick-row>
-    <pick-col v-for="item in 6" :key="item" type="flex" justify="center" align="center" :w="2">16.6%</pick-col>
+    <pick-col v-for="item in 6" :key="item" type="flex" justify="center" align="center" :w="2">
+      16.6%
+    </pick-col>
   </pick-row>
   <pick-row>
-    <pick-col v-for="item in 12" :key="item" type="flex" justify="center" align="center" :w="1">8.3%</pick-col>
+    <pick-col v-for="item in 12" :key="item" type="flex" justify="center" align="center" :w="1">
+      8.3%
+    </pick-col>
   </pick-row>
 </template>
 ```
@@ -72,19 +84,29 @@ To give a distance with respect to the left we have the directive offset that wi
 ```vue
 <template>
   <pick-row :w="12">
-    <pick-col :offset="5" type="flex" justify="center" align="center" :w="6">offset - 6</pick-col>
+    <pick-col :offset="5" type="flex" justify="center" align="center" :w="6">
+      offset - 6
+    </pick-col>
   </pick-row>
   <pick-row :w="12">
-    <pick-col :offset="0" type="flex" justify="center" align="center" :w="2">offset - 2</pick-col>
+    <pick-col :offset="0" type="flex" justify="center" align="center" :w="2">
+      offset - 2
+    </pick-col>
   </pick-row>
   <pick-row :w="12">
-    <pick-col :offset="2" type="flex" justify="center" align="center" :w="8">offset - 8</pick-col>
+    <pick-col :offset="2" type="flex" justify="center" align="center" :w="8">
+      offset - 8
+    </pick-col>
   </pick-row>
   <pick-row :w="12">
-    <pick-col :offset="10" type="flex" justify="center" align="center" :w="1">offset - 7</pick-col>
+    <pick-col :offset="10" type="flex" justify="center" align="center" :w="1">
+      offset - 7
+    </pick-col>
   </pick-row>
   <pick-row :w="12">
-    <pick-col :offset="4" type="flex" justify="center" align="center" :w="4">offset - 4</pick-col>
+    <pick-col :offset="4" type="flex" justify="center" align="center" :w="4">
+      offset - 4
+    </pick-col>
   </pick-row>
 </template>
 ```
@@ -114,19 +136,29 @@ If we need to align the elements horizontally, use the `justify` directive that 
 ```vue
 <template>
   <pick-row>
-    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2" >offset - 6</pick-col>
+    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2">
+      offset - 6
+    </pick-col>
   </pick-row>
   <pick-row type="flex" justify="center">
-    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2" >offset - 6</pick-col>
+    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2">
+      offset - 6
+    </pick-col>
   </pick-row>
   <pick-row type="flex" justify="flex-end">
-    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2" >offset - 6</pick-col>
+    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2">
+      offset - 6
+    </pick-col>
   </pick-row>
   <pick-row type="flex" justify="space-around">
-    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2" >offset - 6</pick-col>
+    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2">
+      offset - 6
+    </pick-col>
   </pick-row>
   <pick-row type="flex" justify="space-between">
-    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2" >offset - 6</pick-col>
+    <pick-col v-for="item in 3" :key="item" type="flex" justify="center" align="center" :w="2">
+      offset - 6
+    </pick-col>
   </pick-row>
 </template>
 ```
@@ -158,7 +190,9 @@ To align the elements vertically we have the directive `align` that as parameter
 ```vue
 <template>
   <pick-row align="flex-start" type="flex" justify="center" :w="12">
-    <pick-row v-for="item in 4" :key="item" type="flex" justify="center" align="center" :w="2">col - 3</pick-row>
+    <pick-row v-for="item in 4" :key="item" type="flex" justify="center" align="center" :w="2">
+      col - 3
+    </pick-row>
   </pick-row>
 </template>
 ```
@@ -174,7 +208,9 @@ To align the elements vertically we have the directive `align` that as parameter
 ```vue
 <template>
   <pick-row align="center" type="flex" justify="space-around" :w="12">
-    <pick-row v-for="item in 4" :key="item" type="flex" justify="center" align="center" :w="2">col - 3</pick-row>
+    <pick-row v-for="item in 4" :key="item" type="flex" justify="center" align="center" :w="2">
+      col - 3
+    </pick-row>
   </pick-row>
 </template>
 ```
@@ -190,7 +226,9 @@ To align the elements vertically we have the directive `align` that as parameter
 ```vue
 <template>
   <pick-row align="center" type="flex" justify="space-between" :w="12">
-    <pick-row v-for="item in 4" :key="item" type="flex" justify="center" align="center" :w="2">col - 3</pick-row>
+    <pick-row v-for="item in 4" :key="item" type="flex" justify="center" align="center" :w="2">
+      col - 3
+    </pick-row>
   </pick-row>
 </template>
 ```
@@ -208,10 +246,18 @@ In some cases, we want to order the elements to our liking. To do this, use the 
 ```vue
 <template>
   <pick-row type="flex">
-    <pick-col order="3" type="flex" justify="center" align="center" :w="3">1 / order 3</pick-col>
-    <pick-col order="1" type="flex" justify="center" align="center" :w="3">2 / order 1</pick-col>
-    <pick-col order="4" type="flex" justify="center" align="center" :w="3">3 / order 4</pick-col>
-    <pick-col order="2" type="flex" justify="center" align="center" :w="3">4 / order 2</pick-col>
+    <pick-col order="3" type="flex" justify="center" align="center" :w="3">
+      1 / order 3
+    </pick-col>
+    <pick-col order="1" type="flex" justify="center" align="center" :w="3">
+      2 / order 1
+    </pick-col>
+    <pick-col order="4" type="flex" justify="center" align="center" :w="3">
+      3 / order 4
+    </pick-col>
+    <pick-col order="2" type="flex" justify="center" align="center" :w="3">
+      4 / order 2
+    </pick-col>
   </pick-row>
 </template>
 ```
@@ -236,9 +282,15 @@ There are some measures that can only be added in a specific size of the device,
 ```vue
 <template>
   <pick-row :w="12">
-    <pick-col type="flex" justify="center" align="center" lg="2" sm="4" xs="12">vs-lg="2"</pick-col>
-    <pick-col type="flex" justify="center" align="center" lg="8" sm="4" xs="12">vs-lg="8"</pick-col>
-    <pick-col type="flex" justify="center" align="center" lg="2" sm="4" xs="12">vs-lg="2"</pick-col>
+    <pick-col type="flex" justify="center" align="center" lg="2" sm="4" xs="12">
+      vs-lg="2"
+    </pick-col>
+    <pick-col type="flex" justify="center" align="center" lg="8" sm="4" xs="12">
+      vs-lg="8"
+    </pick-col>
+    <pick-col type="flex" justify="center" align="center" lg="2" sm="4" xs="12">
+      vs-lg="2"
+    </pick-col>
   </pick-row>
 </template>
 ```

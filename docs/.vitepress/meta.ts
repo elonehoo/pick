@@ -13,5 +13,3 @@ export const releases = 'https://github.com/elonehoo/pick/releases'
 export const discord = 'https://discord.gg/Fry7332ar7'
 export const twitter = 'https://twitter.com/huchengye'
 
-
-

@@ -1,10 +1,10 @@
-import { App, Plugin } from 'vue'
+import type { App, Plugin } from 'vue'
 import pickAvatar from './pickAvatar.vue'
 
 export const pickAvatarPlugin: Plugin = {
   install(app: App) {
-    app.component('pick-avatar', pickAvatar);
+    app.component('PickAvatar', pickAvatar)
   },
-};
+}
 
-export { pickAvatar };
+export { pickAvatar }

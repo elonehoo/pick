@@ -1,20 +1,20 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
-  align?: string,
-  justify?: string,
-  type?: string,
+  align?: string
+  justify?: string
+  type?: string
   w?: number
-}>(),{
+}>(), {
   align: '',
-  justify:'',
-  type:'flex',
-  w: 12
+  justify: '',
+  type: 'flex',
+  w: 12,
 })
 </script>
 
 <template>
-<div class="pick-row">
-    <slot/>
+  <div class="pick-row">
+    <slot />
   </div>
 </template>
 

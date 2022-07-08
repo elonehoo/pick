@@ -113,7 +113,7 @@ The property to determine if the alert can be closed is closable.
 
 ```vue
 <template>
-  <pick-alert :active="active1" closable @update:active="(n)=>active1 = n" close-icon="close">
+  <pick-alert :active="active1" closable close-icon="close" @update:active="(n)=>active1 = n">
     Lorem ip sum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
   </pick-alert>
 </template>
@@ -134,7 +134,7 @@ Pick uses the **Google Material Icons** font library by default. For a list of a
 
 ```vue
 <template>
-  <pick-alert :active="active1" closable @update:active="(n)=>active1 = n" close-icon="cancel">
+  <pick-alert :active="active1" closable close-icon="cancel" @update:active="(n)=>active1 = n">
     Lorem ip sum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
   </pick-alert>
 </template>

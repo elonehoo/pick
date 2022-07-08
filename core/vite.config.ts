@@ -16,13 +16,13 @@ export default defineConfig({
     }),
     libCss(),
     dts({
-      tsConfigFilePath: "./tsconfig.json",
+      tsConfigFilePath: './tsconfig.json',
       cleanVueFileName: true,
       insertTypesEntry: true,
-    })
+    }),
   ],
   build: {
-    outDir:'dist',
+    outDir: 'dist',
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'pick',
