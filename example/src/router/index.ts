@@ -5,6 +5,7 @@ import Avatar from '~/pages/avatar/avatar.vue'
 import icon from '~/pages/icon/icon.vue'
 import alert from '~/pages/alert/alert.vue'
 import breadcrumb from '~/pages/breadcrumb/breadcrumb.vue'
+import button from '~/pages/button/button.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,6 +29,10 @@ const router = createRouter({
     {
       path:'/breadcrumb',
       component:breadcrumb,
+    },
+    {
+      path:'/button',
+      component:button,
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],
