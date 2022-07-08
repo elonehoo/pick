@@ -518,16 +518,16 @@ const styleLine = computed(()=>{
   box-shadow: 0 -3px 0 0 rgba(0,0,0,0.2) inset;
 }
 .vs-button-success.vs-button-filled {
-  background: rgb( 255,186,0) !important;
+  background: rgb(70, 201, 58) !important;
 }
 .vs-button-success.vs-button-filled:hover {
-  box-shadow: 0px 8px 25px -8px rgb( 255,186,0);
+  box-shadow: 0px 8px 25px -8px rgb(70, 201, 58);
 }
 .vs-button-success.vs-button-border,
 .vs-button-success.vs-button-flat {
-  border: 1px solid rgb( 255,186,0);
+  border: 1px solid rgb(70, 201, 58);
   background: transparent !important;
-  color: rgb( 255,186,0);
+  color: rgb(70, 201, 58);
 }
 .vs-button-success.vs-button-border .vs-button--text.isActive,
 .vs-button-success.vs-button-flat .vs-button--text.isActive {
@@ -535,30 +535,30 @@ const styleLine = computed(()=>{
 }
 .vs-button-success.vs-button-border:hover,
 .vs-button-success.vs-button-flat:hover {
-  background: rgb( 255,186,0,0.08) !important;
+  background: rgb( 70, 201, 58,0.08) !important;
 }
 .vs-button-success.vs-button-border .vs-button-backgroundx,
 .vs-button-success.vs-button-flat .vs-button-backgroundx {
-  background: rgb( 255,186,0);
-  box-shadow: inset 0px 0px 60px 0px rgb( 255,186,0);
+  background: rgb(70, 201, 58);
+  box-shadow: inset 0px 0px 60px 0px rgb(70, 201, 58);
 }
 .vs-button-success.vs-button-flat {
   border: none !important;
 }
 .vs-button-success.vs-button-line {
-  color: rgb( 255,186,0);
+  color: rgb(70, 201, 58);
   border-color: getColor('success', 0.2);
 }
 .vs-button-success.vs-button-line .vs-button-linex {
-  background: rgb( 255,186,0);
+  background: rgb(70, 201, 58);
 }
 .vs-button-success.vs-button-gradient {
   background: #0064fa;
-  background-image: linear-gradient(30deg, rgb( 255,186,0,1) 0%, rgb( 255,186,0,0.6) 100%) !important;
+  background-image: linear-gradient(30deg, rgb(70, 201, 58,1) 0%, rgb(70, 201, 58,0.6) 100%) !important;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
 }
 .vs-button-success.vs-button-relief {
-  background: rgb( 255,186,0,1);
+  background: rgb(70, 201, 58,1);
   box-shadow: 0 -3px 0 0 rgba(0,0,0,0.2) inset;
 }
 .vs-button-warning.vs-button-filled {
