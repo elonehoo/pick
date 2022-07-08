@@ -115,6 +115,10 @@ export default defineConfig({
             {
               text:'Breadcrumb',
               link:'/components/breadcrumb',
+            },
+            {
+              text:'Button',
+              link:'/components/button',
             }
           ]
         }
