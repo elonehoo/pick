@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { pickIcon } from '../pickIcon'
 import {isColor,getColor,darken} from '../../util/color'
 import {ref,nextTick,computed,useSlots, StyleValue} from 'vue'
 
@@ -17,7 +18,6 @@ const props = withDefaults(defineProps<{
   iconPack?:string,
   iconAfter?:boolean,
   radius?:boolean,
-  to?:any,
   href?:any,
   target?:boolean | string,
   button?:any
@@ -34,8 +34,7 @@ const props = withDefaults(defineProps<{
   iconPack:'material-icons',
   iconAfter:false,
   radius:false,
-  to:false,
-  href:'',
+  href:null,
   target:false,
   button:'button'
 })
@@ -101,17 +100,17 @@ function blurButton(event:any){
 function clickButton(event:any){
   emit('click',event)
   nextTick(()=>{
-    if(isActive){ return }
+    if(isActive.value){return}
     if(props.href){
       if(typeof(props.href) === 'string'){
         props.target ? window.open(props.href) : window.location.href = props.href
       }else{
         props.target ? window.open(props.href.url) : window.location.href = props.href.url
       }
+    }
       if (props.type == 'border' || props.type == 'flat') {
         isActive.value = true
       }
-
       let xEvent = event.offsetX
       let yEvent = event.offsetY
       //@ts-ignore
@@ -141,10 +140,9 @@ function clickButton(event:any){
         }, time.value * 1100)
       } else {
         setTimeout( () => {
-          timeOpacity.value = .15
+          timeOpacity.value = 0.15
         }, time.value * 1100)
       }
-    }
   })
 }
 
@@ -158,20 +156,21 @@ const listeners = computed(()=>{
 })
 
 const styles = computed(()=>{
+  let style:StyleValue = {}
   if(is('filled')){
-    return {
+    style =  {
       color: getColor(props.textColor, 1),
       background: getColor(props.color, 1),
       boxShadow: hoverx.value ? `0px 8px 25px -8px ${getColor(props.color, 1)}` : undefined
     }
   }else if(is('border') || is('flat')){
-    return{
+    style = {
       border: `${is('flat') ? 0 : 1}px solid ${getColor(props.color, 1)}`,
       background: hoverx.value ? getColor(props.color, .1) : 'transparent',
       color:getColor(props.textColor, 1) || getColor(props.color, 1)
     }
   }else if(is('line')){
-    return {
+    style = {
       color: getColor(props.textColor, 1) || getColor(props.color, 1),
       borderBottomWidth: props.linePosition == 'bottom' ? `2px` : undefined,
       borderColor: `${getColor(props.color, .2)}`,
@@ -179,16 +178,17 @@ const styles = computed(()=>{
     }
   }else if(is('gradient')){
     let backgroundx = `linear-gradient(${props.gradientDirection}, ${getColor(props.color)} 0%, ${getColor(props.gradientColorSecondary, 1)} 100%)`
-    return {
+    style = {
       background: backgroundx,
     }
   }else if(is('relief')){
     let color = getColor(props.color, 1)
-    return {
+    style = {
       background: getColor(props.color, 1),
       boxShadow: `0 3px 0 0 ${darken(color, -0.4)}`
     }
   }
+  return style
 })
 
 const stylesBackGround = computed(()=>{
@@ -216,7 +216,7 @@ const styleLine = computed(()=>{
     bottom: props.linePosition == 'bottom' ? '-2px' : 'auto',
     background: getColor(props.color, 1),
     left: lineOrigins,
-    right: props.lineOrigin == 'auto' ? '0px' : undefined,
+    right: lineOrigins == 'auto' ? '0px' : undefined,
     transform: lineOrigins == '50%' ? 'translate(-50%)' : undefined
   }
   return styles
@@ -249,6 +249,17 @@ const styleLine = computed(()=>{
      ref="backgroundx"
      :style="stylesBackGround"
      class="vs-button-backgroundx vs-button--background"
+    />
+    <pick-icon
+     v-if="props.icon"
+     :style="{
+      'order':iconAfter ? 2 : 0,
+      ['margin-' + isRTL('left')]: slots.default && !iconAfter ? '5px' : '0px',
+      ['margin-' + isRTL('right')]: slots.default && iconAfter ? '5px' : '0px'
+     }"
+     :icon-pack="props.iconPack"
+     :icon="props.icon"
+     class="vs-button--icon"
     />
     <span
       v-if="slots.default"
@@ -288,7 +299,7 @@ const styleLine = computed(()=>{
   font-size: 0.7em;
 }
 .vs-button:disabled {
-  opacity: .5;
+  opacity: 0.5;
   cursor: default;
   pointer-events: none;
 }
@@ -547,7 +558,7 @@ const styleLine = computed(()=>{
 }
 .vs-button-success.vs-button-line {
   color: rgb(70, 201, 58);
-  border-color: getColor('success', 0.2);
+  border-color: rgb(70, 201, 58,0.2);
 }
 .vs-button-success.vs-button-line .vs-button-linex {
   background: rgb(70, 201, 58);
