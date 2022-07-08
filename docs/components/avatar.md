@@ -175,7 +175,7 @@ This icon is only displayed when there is no property as text o src
 ## API
 
 | name | type | parameters | descriptive | default |
-| :----: | :----: | :-----------: | :-----------: | :-------: |
+| :---- | :---- | :----------: | :----------- | :------- |
 | text | string | | If the text is very long, only the first letter is added. | |
 | text-color | string | Text colores principales, RGB, HEX | Define the color of the Text. | rgb(255, 255, 255) |
 | src | string | parameters | Url of the image to show in the Avatar. | |

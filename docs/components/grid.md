@@ -306,7 +306,7 @@ There are some measures that can only be added in a specific size of the device,
 ## API
 
 | name | type | parameters | description | default |
-| :----: | :----: | :----------: | :-----------: | :-------: |
+| :---- | :---- | :----------: | :----------- | :------- |
 | w | number | 1-12 | Width of the row or col. | 12 |
 | offset | number | 1-12 | Distance to the left of the. | 0 |
 | justify | string | flex-start, center, flex-end, space-around, space-between | Define the alignment vertically of the elements within the row or col. | |

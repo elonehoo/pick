@@ -172,7 +172,7 @@ Pick uses the **Google Material Icons** font library by default. For a list of a
 ## API
 
 | name | type | parameters | descriptive | default |
-| :----: | :----: | :-----------: | :-----------: | :-------: |
+| :---- | :---- | :----------: | :----------- | :------- |
 | active | boolean | true,false | Determines if the component is visible. | false |
 | title | string | | Title of the alert | |
 | closable | boolean | | Determines if the alert can be closed by the user | false |

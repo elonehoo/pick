@@ -135,7 +135,7 @@ Use `align` to either align the breadcrumb to the left, center or right.
 ## API
 
 | name | type | parameters | description | default |
-| :----: | :----: | :----------: | :-----------: | :-------: |
+| :---- | :---- | :----------: | :----------- | :------- |
 | items | Array\<BreadcrumbItem> | ["title", "url", "disabled", "active" ] | The items that will construct the breadcrumb | |
 | separator | string | | Separator dividing the breadcrumb links | / |
 | color | string | | Change the color of the breadcrumb links | |

@@ -135,7 +135,7 @@ You can also pass this as `round=true`. The two are equivalent.
 ## API
 
 | name | type | parameters | description | default |
-| :----: | :----: | :----------: | :-----------: | :-------: |
+| :---- | :---- | :----------: | :----------- | :------- |
 | icon | string | | Determines the icon | |
 | icon-pack | string | | Determines the icon pack. If not set, icon will default to Material Icons. ex. FA4 uses fa or fas, FA5 uses fas, far, or fal. | material-icons |
 | color | string | Pick color presets, RGB, HEX, html color presets | Determines the icon pack. If not set, icon will default to Material Icons. ex. FA4 uses fa or fas, FA5 uses fas, far, or fal. | black |

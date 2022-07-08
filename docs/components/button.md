@@ -562,7 +562,7 @@ you can use the `target` property to window.open()
 ## API
 
 | name | type | parameters | descriptive | default |
-| :----: | :----: | :-----------: | :-----------: | :-------: |
+| :---- | :---- | :----------: | :----------- | :------- |
 | type | string | | The type of button to use | filled |
 | color | string | | Change the color of the button | primary |
 | text-color | string | | Change the font color of the button | |
