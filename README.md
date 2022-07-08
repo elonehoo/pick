@@ -19,29 +19,29 @@
 - [x] Breadcrumb
 - [x] Button
 - [x] Card
-- [] CheckBox
-- [] Chip
-- [] Collapse
-- [] Dialogs
-- [] Divider
-- [] DropDown
-- [] Images
-- [] Input
-- [] List
-- [] Loading
-- [] Navbar
-- [] Notifications
-- [] Number Input
-- [] Pagination
-- [] Popup
-- [] Progress
-- [] Radio
-- [] Select
-- [] SideBar
-- [] Slider
-- [] Switch
-- [] Table
-- [] Tabs
-- [] Textarea
-- [] Tooltip
-- [] Upload
+- [ ] CheckBox
+- [ ] Chip
+- [ ] Collapse
+- [ ] Dialogs
+- [ ] Divider
+- [ ] DropDown
+- [ ] Images
+- [ ] Input
+- [ ] List
+- [ ] Loading
+- [ ] Navbar
+- [ ] Notifications
+- [ ] Number Input
+- [ ] Pagination
+- [ ] Popup
+- [ ] Progress
+- [ ] Radio
+- [ ] Select
+- [ ] SideBar
+- [ ] Slider
+- [ ] Switch
+- [ ] Table
+- [ ] Tabs
+- [ ] Textarea
+- [ ] Tooltip
+- [ ] Upload
