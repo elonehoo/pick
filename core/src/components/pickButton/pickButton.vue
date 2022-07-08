@@ -227,20 +227,20 @@ const styleLine = computed(()=>{
   <button
    ref="btn"
    :class="[
-    `vs-button-${isColor(props.color) ? color : null}`,
-    `vs-button-${props.type}`,
+    `pick-button-${isColor(props.color) ? color : null}`,
+    `pick-button-${props.type}`,
     {
       'isActive':isActive,
       'includeIcon':props.icon,
       'includeIconOnly':props.icon && ! slots.default,
-      'vs-radius':props.radius
+      'pick-radius':props.radius
     },props.size]"
    :style="[styles,{
       'width':/[px]/.test(props.size) ? `${props.size}` : undefined,
       'height':/[px]/.test(props.size) ? `${props.size}` : undefined
     }]"
    :type="props.button"
-   class="vs-component vs-button"
+   class="pick-component pick-button"
    name="button"
    v-on="listeners"
   >
@@ -248,7 +248,7 @@ const styleLine = computed(()=>{
      v-if="!is('line')&&!is('gradient')&&!is('relief')"
      ref="backgroundx"
      :style="stylesBackGround"
-     class="vs-button-backgroundx vs-button--background"
+     class="pick-button-backgroundx pick-button--background"
     />
     <pick-icon
      v-if="props.icon"
@@ -259,23 +259,23 @@ const styleLine = computed(()=>{
      }"
      :icon-pack="props.iconPack"
      :icon="props.icon"
-     class="vs-button--icon"
+     class="pick-button--icon"
     />
     <span
       v-if="slots.default"
-      class="vs-button-text vs-button--text">
+      class="pick-button-text pick-button--text">
       <slot/>
     </span>
     <span
       ref="linex"
       :style="styleLine"
-      class="vs-button-linex"
+      class="pick-button-linex"
     />
   </button>
 </template>
 
 <style scoped>
-.vs-button {
+.pick-button {
   transition: all 0.2s ease;
   padding: 10px;
   border: 0px;
@@ -287,30 +287,30 @@ const styleLine = computed(()=>{
   box-sizing: border-box;
   background: transparent;
 }
-.vs-button.vs-radius {
+.pick-button.pick-radius {
   border-radius: 50%;
 }
-.vs-button.large {
+.pick-button.large {
   padding: 12px;
   font-size: 1em;
 }
-.vs-button.small {
+.pick-button.small {
   padding: 7px;
   font-size: 0.7em;
 }
-.vs-button:disabled {
+.pick-button:disabled {
   opacity: 0.5;
   cursor: default;
   pointer-events: none;
 }
-.vs-button--icon {
+.pick-button--icon {
   z-index: 100;
   display: block;
   position: relative;
   font-size: 1.125em;
   transition: all 0.2s ease;
 }
-.vs-button--background {
+.pick-button--background {
   border-radius: 50%;
   width: 10px;
   position: absolute;
@@ -320,31 +320,31 @@ const styleLine = computed(()=>{
   -moz-transform: translate(-50%, -50%);
   box-shadow: inset 0px 0px 60px 0px rgba(255,255,255,0.5);
 }
-.vs-button--text {
+.pick-button--text {
   position: relative;
   color: inherit;
   display: inline-block;
   transition: all .25s ease;
 }
-.vs-button-border {
+.pick-button-border {
   padding: 9px;
 }
-.vs-button-border.isActive .vs-button--text,
-.vs-button-flat.isActive .vs-button--text,
-.vs-button-border.isActive .vs-button--icon,
-.vs-button-flat.isActive .vs-button--icon {
+.pick-button-border.isActive .pick-button--text,
+.pick-button-flat.isActive .pick-button--text,
+.pick-button-border.isActive .pick-button--icon,
+.pick-button-flat.isActive .pick-button--icon {
   color: #fff !important;
 }
-.vs-button-filled:hover {
+.pick-button-filled:hover {
   box-shadow: 0px 9px 28px -9px;
 }
-.vs-button-line {
+.pick-button-line {
   padding: 9px 10px;
   border-radius: 0px;
   overflow: visible;
   border-style: solid;
 }
-.vs-button-line .vs-button-linex {
+.pick-button-line .pick-button-linex {
   transition: all 0.2s ease;
   width: 0%;
   position: absolute;
@@ -352,25 +352,25 @@ const styleLine = computed(()=>{
   bottom: -2px;
   height: 2px;
 }
-.vs-button-line:hover .vs-button--text,
-.vs-button-line:hover .vs-button--icon {
+.pick-button-line:hover .pick-button--text,
+.pick-button-line:hover .pick-button--icon {
   transform: translate(0, 2px);
 }
-.vs-button-line:hover .vs-button-linex {
+.pick-button-line:hover .pick-button-linex {
   width: 100% !important;
 }
-.vs-button-gradient:hover {
+.pick-button-gradient:hover {
   transform: translate(0, -2px);
   box-shadow: 0px 8px 25px -8px #aaa;
 }
-.vs-button-gradient:active {
+.pick-button-gradient:active {
   transform: translate(0, 0px);
   box-shadow: 0px 8px 0px -8px #aaa;
 }
-.vs-button-relief {
+.pick-button-relief {
   padding: 10px;
 }
-.vs-button-relief:active {
+.pick-button-relief:active {
   transform: translate(0, 3px);
   box-shadow: none !important;
 }
@@ -392,315 +392,315 @@ const styleLine = computed(()=>{
   width: 28px !important;
   height: 28px !important;
 }
-.includeIconOnly.small .vs-icon {
+.includeIconOnly.small .pick-icon {
   font-size: 0.85rem;
 }
 
-.vs-button-primary.vs-button-filled {
+.pick-button-primary.pick-button-filled {
   background: rgb(31, 116, 255) !important;
 }
-.vs-button-primary.vs-button-filled:hover {
+.pick-button-primary.pick-button-filled:hover {
   box-shadow: 0px 8px 25px -8px rgb(31, 116, 255);
 }
-.vs-button-primary.vs-button-border,
-.vs-button-primary.vs-button-flat {
+.pick-button-primary.pick-button-border,
+.pick-button-primary.pick-button-flat {
   border: 1px solid rgb(31, 116, 255);
   background: transparent !important;
   color: rgb(31, 116, 255);
 }
-.vs-button-primary.vs-button-border .vs-button--text.isActive,
-.vs-button-primary.vs-button-flat .vs-button--text.isActive {
+.pick-button-primary.pick-button-border .pick-button--text.isActive,
+.pick-button-primary.pick-button-flat .pick-button--text.isActive {
   color: #fff !important;
 }
-.vs-button-primary.vs-button-border:hover,
-.vs-button-primary.vs-button-flat:hover {
+.pick-button-primary.pick-button-border:hover,
+.pick-button-primary.pick-button-flat:hover {
   background: rgb(31, 116, 255,0.08) !important;
 }
-.vs-button-primary.vs-button-border .vs-button-backgroundx,
-.vs-button-primary.vs-button-flat .vs-button-backgroundx {
+.pick-button-primary.pick-button-border .pick-button-backgroundx,
+.pick-button-primary.pick-button-flat .pick-button-backgroundx {
   background: rgb(31, 116, 255);
   box-shadow: inset 0px 0px 60px 0px rgb(31, 116, 255);
 }
-.vs-button-primary.vs-button-flat {
+.pick-button-primary.pick-button-flat {
   border: none !important;
 }
-.vs-button-primary.vs-button-line {
+.pick-button-primary.pick-button-line {
   color: rgb(31, 116, 255);
   border-color: rgb(31, 116, 255,0.2);
 }
-.vs-button-primary.vs-button-line .vs-button-linex {
+.pick-button-primary.pick-button-line .pick-button-linex {
   background: rgb(31, 116, 255);
 }
-.vs-button-primary.vs-button-gradient {
+.pick-button-primary.pick-button-gradient {
   background: #640064;
   background-image: linear-gradient(30deg, rgb(31, 116, 255,1) 0%, rgb(31, 116, 255,0.5) 100%) !important;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
 }
-.vs-button-primary.vs-button-relief {
+.pick-button-primary.pick-button-relief {
   background: rgb(31, 116, 255,1);
   box-shadow: 0 -3px 0 0 rgba(0,0,0,0.2) inset;
 }
-.vs-button-secondary.vs-button-filled {
+.pick-button-secondary.pick-button-filled {
   background: rgb(121, 49, 177) !important;
 }
-.vs-button-secondary.vs-button-filled:hover {
+.pick-button-secondary.pick-button-filled:hover {
   box-shadow: 0px 8px 25px -8px rgb(121, 49, 177);
 }
-.vs-button-secondary.vs-button-border,
-.vs-button-secondary.vs-button-flat {
+.pick-button-secondary.pick-button-border,
+.pick-button-secondary.pick-button-flat {
   border: 1px solid rgb(121, 49, 177);
   background: transparent !important;
   color: rgb(121, 49, 177);
 }
-.vs-button-secondary.vs-button-border .vs-button--text.isActive,
-.vs-button-secondary.vs-button-flat .vs-button--text.isActive {
+.pick-button-secondary.pick-button-border .pick-button--text.isActive,
+.pick-button-secondary.pick-button-flat .pick-button--text.isActive {
   color: #fff !important;
 }
-.vs-button-secondary.vs-button-border:hover,
-.vs-button-secondary.vs-button-flat:hover {
+.pick-button-secondary.pick-button-border:hover,
+.pick-button-secondary.pick-button-flat:hover {
   background: rgb(121, 49, 177,0.08) !important;
 }
-.vs-button-secondary.vs-button-border .vs-button-backgroundx,
-.vs-button-secondary.vs-button-flat .vs-button-backgroundx {
+.pick-button-secondary.pick-button-border .pick-button-backgroundx,
+.pick-button-secondary.pick-button-flat .pick-button-backgroundx {
   background: rgb(121, 49, 177);
   box-shadow: inset 0px 0px 60px 0px rgb(121, 49, 177);
 }
-.vs-button-secondary.vs-button-flat {
+.pick-button-secondary.pick-button-flat {
   border: none !important;
 }
-.vs-button-secondary.vs-button-line {
+.pick-button-secondary.pick-button-line {
   color: rgb(121, 49, 177);
   border-color: rgb(121, 49, 177,0.2);
 }
-.vs-button-secondary.vs-button-line .vs-button-linex {
+.pick-button-secondary.pick-button-line .pick-button-linex {
   background: rgb(121, 49, 177);
 }
-.vs-button-secondary.vs-button-gradient {
+.pick-button-secondary.pick-button-gradient {
   background: #640064;
   background-image: linear-gradient(30deg, rgb(121, 49, 177,1) 0%, rgb(121, 49, 177,0.5) 100%) !important;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
 }
-.vs-button-secondary.vs-button-relief {
+.pick-button-secondary.pick-button-relief {
   background: rgb(121, 49, 177,1);
   box-shadow: 0 -3px 0 0 rgba(0,0,0,0.2) inset;
 }
-.vs-button-danger.vs-button-filled {
+.pick-button-danger.pick-button-filled {
   background: rgb( 255, 71, 87) !important;
 }
-.vs-button-danger.vs-button-filled:hover {
+.pick-button-danger.pick-button-filled:hover {
   box-shadow: 0px 8px 25px -8px rgb( 255, 71, 87);
 }
-.vs-button-danger.vs-button-border,
-.vs-button-danger.vs-button-flat {
+.pick-button-danger.pick-button-border,
+.pick-button-danger.pick-button-flat {
   border: 1px solid rgb( 255, 71, 87);
   background: transparent !important;
   color: rgb( 255, 71, 87);
 }
-.vs-button-danger.vs-button-border .vs-button--text.isActive,
-.vs-button-danger.vs-button-flat .vs-button--text.isActive {
+.pick-button-danger.pick-button-border .pick-button--text.isActive,
+.pick-button-danger.pick-button-flat .pick-button--text.isActive {
   color: #fff !important;
 }
-.vs-button-danger.vs-button-border:hover,
-.vs-button-danger.vs-button-flat:hover {
+.pick-button-danger.pick-button-border:hover,
+.pick-button-danger.pick-button-flat:hover {
   background: rgb( 255, 71, 87,0.08) !important;
 }
-.vs-button-danger.vs-button-border .vs-button-backgroundx,
-.vs-button-danger.vs-button-flat .vs-button-backgroundx {
+.pick-button-danger.pick-button-border .pick-button-backgroundx,
+.pick-button-danger.pick-button-flat .pick-button-backgroundx {
   background: rgb( 255, 71, 87);
   box-shadow: inset 0px 0px 60px 0px rgb( 255, 71, 87);
 }
-.vs-button-danger.vs-button-flat {
+.pick-button-danger.pick-button-flat {
   border: none !important;
 }
-.vs-button-danger.vs-button-line {
+.pick-button-danger.pick-button-line {
   color: rgb( 255, 71, 87);
   border-color: rgb( 255, 71, 87,0.2);
 }
-.vs-button-danger.vs-button-line .vs-button-linex {
+.pick-button-danger.pick-button-line .pick-button-linex {
   background: rgb( 255, 71, 87);
 }
-.vs-button-danger.vs-button-gradient {
+.pick-button-danger.pick-button-gradient {
   background: #640064;
   background-image: linear-gradient(30deg, rgb( 255, 71, 87,1) 0%, rgb( 255, 71, 87,0.5) 100%) !important;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
 }
-.vs-button-danger.vs-button-relief {
+.pick-button-danger.pick-button-relief {
   background: rgb( 255, 71, 87,1);
   box-shadow: 0 -3px 0 0 rgba(0,0,0,0.2) inset;
 }
-.vs-button-success.vs-button-filled {
+.pick-button-success.pick-button-filled {
   background: rgb(70, 201, 58) !important;
 }
-.vs-button-success.vs-button-filled:hover {
+.pick-button-success.pick-button-filled:hover {
   box-shadow: 0px 8px 25px -8px rgb(70, 201, 58);
 }
-.vs-button-success.vs-button-border,
-.vs-button-success.vs-button-flat {
+.pick-button-success.pick-button-border,
+.pick-button-success.pick-button-flat {
   border: 1px solid rgb(70, 201, 58);
   background: transparent !important;
   color: rgb(70, 201, 58);
 }
-.vs-button-success.vs-button-border .vs-button--text.isActive,
-.vs-button-success.vs-button-flat .vs-button--text.isActive {
+.pick-button-success.pick-button-border .pick-button--text.isActive,
+.pick-button-success.pick-button-flat .pick-button--text.isActive {
   color: #fff !important;
 }
-.vs-button-success.vs-button-border:hover,
-.vs-button-success.vs-button-flat:hover {
+.pick-button-success.pick-button-border:hover,
+.pick-button-success.pick-button-flat:hover {
   background: rgb( 70, 201, 58,0.08) !important;
 }
-.vs-button-success.vs-button-border .vs-button-backgroundx,
-.vs-button-success.vs-button-flat .vs-button-backgroundx {
+.pick-button-success.pick-button-border .pick-button-backgroundx,
+.pick-button-success.pick-button-flat .pick-button-backgroundx {
   background: rgb(70, 201, 58);
   box-shadow: inset 0px 0px 60px 0px rgb(70, 201, 58);
 }
-.vs-button-success.vs-button-flat {
+.pick-button-success.pick-button-flat {
   border: none !important;
 }
-.vs-button-success.vs-button-line {
+.pick-button-success.pick-button-line {
   color: rgb(70, 201, 58);
   border-color: rgb(70, 201, 58,0.2);
 }
-.vs-button-success.vs-button-line .vs-button-linex {
+.pick-button-success.pick-button-line .pick-button-linex {
   background: rgb(70, 201, 58);
 }
-.vs-button-success.vs-button-gradient {
+.pick-button-success.pick-button-gradient {
   background: #0064fa;
   background-image: linear-gradient(30deg, rgb(70, 201, 58,1) 0%, rgb(70, 201, 58,0.6) 100%) !important;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
 }
-.vs-button-success.vs-button-relief {
+.pick-button-success.pick-button-relief {
   background: rgb(70, 201, 58,1);
   box-shadow: 0 -3px 0 0 rgba(0,0,0,0.2) inset;
 }
-.vs-button-warning.vs-button-filled {
+.pick-button-warning.pick-button-filled {
   background: rgb(255,186,0) !important;
 }
-.vs-button-warning.vs-button-filled:hover {
+.pick-button-warning.pick-button-filled:hover {
   box-shadow: 0px 8px 25px -8px rgb(255,186,0);
 }
-.vs-button-warning.vs-button-border,
-.vs-button-warning.vs-button-flat {
+.pick-button-warning.pick-button-border,
+.pick-button-warning.pick-button-flat {
   border: 1px solid rgb(255,186,0);
   background: transparent !important;
   color: rgb(255,186,0);
 }
-.vs-button-warning.vs-button-border .vs-button--text.isActive,
-.vs-button-warning.vs-button-flat .vs-button--text.isActive {
+.pick-button-warning.pick-button-border .pick-button--text.isActive,
+.pick-button-warning.pick-button-flat .pick-button--text.isActive {
   color: #fff !important;
 }
-.vs-button-warning.vs-button-border:hover,
-.vs-button-warning.vs-button-flat:hover {
+.pick-button-warning.pick-button-border:hover,
+.pick-button-warning.pick-button-flat:hover {
   background: rgb(255,186,0,0.08) !important;
 }
-.vs-button-warning.vs-button-border .vs-button-backgroundx,
-.vs-button-warning.vs-button-flat .vs-button-backgroundx {
+.pick-button-warning.pick-button-border .pick-button-backgroundx,
+.pick-button-warning.pick-button-flat .pick-button-backgroundx {
   background: rgb(255,186,0);
   box-shadow: inset 0px 0px 60px 0px rgb(255,186,0);
 }
-.vs-button-warning.vs-button-flat {
+.pick-button-warning.pick-button-flat {
   border: none !important;
 }
-.vs-button-warning.vs-button-line {
+.pick-button-warning.pick-button-line {
   color: rgb(255,186,0);
   border-color: rgb(255,186,0,0.2);
 }
-.vs-button-warning.vs-button-line .vs-button-linex {
+.pick-button-warning.pick-button-line .pick-button-linex {
   background: rgb(255,186,0);
 }
-.vs-button-warning.vs-button-gradient {
+.pick-button-warning.pick-button-gradient {
   background: #fafafa;
   background-image: linear-gradient(30deg, rgb(255,186,0,1) 0%, rgb(255,186,0,0.5) 100%) !important;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
 }
-.vs-button-warning.vs-button-relief {
+.pick-button-warning.pick-button-relief {
   background: rgb(255,186,0,1);
   box-shadow: 0 -3px 0 0 rgba(0,0,0,0.2) inset;
 }
-.vs-button-dark.vs-button-filled {
+.pick-button-dark.pick-button-filled {
   background: rgb(30, 30, 30) !important;
 }
-.vs-button-dark.vs-button-filled:hover {
+.pick-button-dark.pick-button-filled:hover {
   box-shadow: 0px 8px 25px -8px rgb(30, 30, 30);
 }
-.vs-button-dark.vs-button-border,
-.vs-button-dark.vs-button-flat {
+.pick-button-dark.pick-button-border,
+.pick-button-dark.pick-button-flat {
   border: 1px solid rgb(30, 30, 30);
   background: transparent !important;
   color: rgb(30, 30, 30);
 }
-.vs-button-dark.vs-button-border .vs-button--text.isActive,
-.vs-button-dark.vs-button-flat .vs-button--text.isActive {
+.pick-button-dark.pick-button-border .pick-button--text.isActive,
+.pick-button-dark.pick-button-flat .pick-button--text.isActive {
   color: #fff !important;
 }
-.vs-button-dark.vs-button-border:hover,
-.vs-button-dark.vs-button-flat:hover {
+.pick-button-dark.pick-button-border:hover,
+.pick-button-dark.pick-button-flat:hover {
   background: rgb(30, 30, 30,0.08) !important;
 }
-.vs-button-dark.vs-button-border .vs-button-backgroundx,
-.vs-button-dark.vs-button-flat .vs-button-backgroundx {
+.pick-button-dark.pick-button-border .pick-button-backgroundx,
+.pick-button-dark.pick-button-flat .pick-button-backgroundx {
   background: rgb(30, 30, 30);
   box-shadow: inset 0px 0px 60px 0px rgb(30, 30, 30);
 }
-.vs-button-dark.vs-button-flat {
+.pick-button-dark.pick-button-flat {
   border: none !important;
 }
-.vs-button-dark.vs-button-line {
+.pick-button-dark.pick-button-line {
   color: rgb(30, 30, 30);
   border-color: rgb(30, 30, 30,0.2);
 }
-.vs-button-dark.vs-button-line .vs-button-linex {
+.pick-button-dark.pick-button-line .pick-button-linex {
   background: rgb(30, 30, 30);
 }
-.vs-button-dark.vs-button-gradient {
+.pick-button-dark.pick-button-gradient {
   background: #640064;
   background-image: linear-gradient(30deg, rgb(30, 30, 30,1) 0%, rgb(30, 30, 30,0.5) 100%) !important;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
 }
-.vs-button-dark.vs-button-relief {
+.pick-button-dark.pick-button-relief {
   background: rgb(30, 30, 30,1);
   box-shadow: 0 -3px 0 0 rgba(255,255,255,0.1) inset;
 }
-.vs-button-light.vs-button-filled {
+.pick-button-light.pick-button-filled {
   background: rgb(245, 245, 245) !important;
 }
-.vs-button-light.vs-button-filled:hover {
+.pick-button-light.pick-button-filled:hover {
   box-shadow: 0px 8px 25px -8px rgb(245, 245, 245);
 }
-.vs-button-light.vs-button-border,
-.vs-button-light.vs-button-flat {
+.pick-button-light.pick-button-border,
+.pick-button-light.pick-button-flat {
   border: 1px solid rgb(245, 245, 245);
   background: transparent !important;
   color: rgb(245, 245, 245);
 }
-.vs-button-light.vs-button-border .vs-button--text.isActive,
-.vs-button-light.vs-button-flat .vs-button--text.isActive {
+.pick-button-light.pick-button-border .pick-button--text.isActive,
+.pick-button-light.pick-button-flat .pick-button--text.isActive {
   color: #fff !important;
 }
-.vs-button-light.vs-button-border:hover,
-.vs-button-light.vs-button-flat:hover {
+.pick-button-light.pick-button-border:hover,
+.pick-button-light.pick-button-flat:hover {
   background: rgb(245, 245, 245,0.08) !important;
 }
-.vs-button-light.vs-button-border .vs-button-backgroundx,
-.vs-button-light.vs-button-flat .vs-button-backgroundx {
+.pick-button-light.pick-button-border .pick-button-backgroundx,
+.pick-button-light.pick-button-flat .pick-button-backgroundx {
   background: rgb(245, 245, 245);
   box-shadow: inset 0px 0px 60px 0px rgb(245, 245, 245);
 }
-.vs-button-light.vs-button-flat {
+.pick-button-light.pick-button-flat {
   border: none !important;
 }
-.vs-button-light.vs-button-line {
+.pick-button-light.pick-button-line {
   color: rgb(245, 245, 245);
   border-color: rgb(245, 245, 245,0.2);
 }
-.vs-button-light.vs-button-line .vs-button-linex {
+.pick-button-light.pick-button-line .pick-button-linex {
   background: rgb(245, 245, 245);
 }
-.vs-button-light.vs-button-gradient {
+.pick-button-light.pick-button-gradient {
   background: #640064;
   background-image: linear-gradient(30deg, rgb(245, 245, 245,1) 0%, rgb(245, 245, 245,0.5) 100%) !important;
   text-shadow: 1px 2px 4px rgba(0,0,0,0.3);
 }
-.vs-button-light.vs-button-relief {
+.pick-button-light.pick-button-relief {
   background: rgb(245, 245, 245,1);
   box-shadow: 0 -3px 0 0 rgba(0,0,0,0.2) inset;
 }
