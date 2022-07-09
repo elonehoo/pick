@@ -8,6 +8,7 @@ import { pickAlertPlugin } from './components/pickAlert'
 import { pickBreadcrumbPlugin } from './components/pickBreadcrumb'
 import { pickButtonPlugin } from './components/pickButton'
 import { pickCardPlugin } from './components/pickCard'
+import { pickCheckBoxPlugin } from './components/pickCheckBox'
 
 const pickPlugin: Plugin = {
   install(app: App) {
@@ -19,6 +20,7 @@ const pickPlugin: Plugin = {
     pickBreadcrumbPlugin.install?.(app)
     pickButtonPlugin.install?.(app)
     pickCardPlugin.install?.(app)
+    pickCheckBoxPlugin.install?.(app)
   },
 }
 
@@ -32,4 +34,6 @@ export * from './components/pickAlert'
 export * from './components/pickBreadcrumb'
 export * from './components/pickButton'
 export * from './components/pickCard'
+export * from './components/pickCheckBox'
+
 export * from './components/pickBreadcrumb/type'

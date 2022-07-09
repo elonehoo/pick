@@ -62,7 +62,7 @@ export function RandomColor(): string {
   return `rgb(${getRandomInt(0, 255)},${getRandomInt(0, 255)},${getRandomInt(0, 255)})`
 }
 
-export function rColor(colorx: string, opacity = 1): string {
+export function rColor(colorx: any, opacity = 1): string {
   if (/^[#]/.test(colorx)) {
     const c = hexToRgb(colorx)
     // @ts-expect-error This is not null, but there may be some user input null
@@ -80,19 +80,29 @@ export function rColor(colorx: string, opacity = 1): string {
     colorx = colorSplit
   }
   const vscolors = ['primary', 'success', 'danger', 'warning', 'dark']
+  const pickColorArray = {
+    primary:'31, 116, 255',
+    secondary : '121, 49, 177',
+    danger : '255, 71, 87',
+    success: '70, 201, 58',
+    warning: '255,186,0',
+    dark: '30, 30, 30',
+    light: '245, 245, 245'
+  }
   if (colorx) {
     if (/[#()]/.test(colorx)) {
       return colorx
     }
     else {
       if (vscolors.includes(colorx))
-        return `rgba(var(--pick-${colorx}),${opacity})`
+        // @ts-expect-error colorx is of type string and can be found, but the IDE will generate an error
+        return `rgba(${pickColorArray[colorx]}),${opacity})`
       else
-        return `rgba(var(--pick-primary),${opacity})`
+        return `rgba(31, 116, 255,${opacity})`
     }
   }
   else {
-    return `rgba(var(--pick-primary),${opacity})`
+    return `rgba(31, 116, 255,${opacity})`
   }
 }
 
@@ -123,6 +133,15 @@ export function getVariable(styles: CSSStyleDeclaration, propertyName: string) {
 
 export function changeColor(colorInicial: string) {
   const colores = ['primary', 'success', 'danger', 'warning', 'dark']
+  const pickColorArray = {
+    primary:'31, 116, 255',
+    secondary : '121, 49, 177',
+    danger : '255, 71, 87',
+    success: '70, 201, 58',
+    warning: '255,186,0',
+    dark: '30, 30, 30',
+    light: '245, 245, 245'
+  }
   let colorx
 
   if (colores.includes(colorInicial)) {
@@ -139,7 +158,8 @@ export function changeColor(colorInicial: string) {
       colorx = `${rgbx.r},${rgbx.g},${rgbx.b}`
     }
     else {
-      colorx = `--pick-${colorInicial}`
+      // @ts-expect-error colorInicial is of type string and can be found, but the IDE will generate an error
+      colorx = pickColorArray[colorInicial]
     }
   }
   return colorx
