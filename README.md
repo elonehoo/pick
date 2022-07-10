@@ -19,7 +19,7 @@
 - [x] Breadcrumb
 - [x] Button
 - [x] Card
-- [ ] CheckBox
+- [x] CheckBox
 - [ ] Chip
 - [ ] Collapse
 - [ ] Dialogs
