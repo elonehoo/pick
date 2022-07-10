@@ -94,8 +94,8 @@
 
 <template>
   <div
-   :class="[`vs-checkbox-${props.color}`, `vs-checkbox-${props.size}`]"
-   class="vs-component con-vs-checkbox"
+   :class="[`pick-checkbox-${props.color}`, `pick-checkbox-${props.size}`]"
+   class="pick-component con-pick-checkbox"
   >
     <input
      v-bind="attrs"
@@ -103,11 +103,11 @@
      :value="props.value"
      @input="emit('change',value)"
      type="checkbox"
-     class="vs-checkbox--input"
+     class="pick-checkbox--input"
      v-on="listeners">
-    <span :style="style" class="checkbox_x vs-checkbox">
-      <span :style="style_check" class="vs-checkbox--check">
-        <pick-icon :icon="props.icon" :icon-pack="props.iconPack" class="vs-checkbox--icon" />
+    <span :style="style" class="checkbox_x pick-checkbox">
+      <span :style="style_check" class="pick-checkbox--check">
+        <pick-icon :icon="props.icon" :icon-pack="props.iconPack" class="pick-checkbox--icon" />
       </span>
     </span>
     <span class="con-slot-label">
@@ -117,7 +117,7 @@
 </template>
 
 <style scoped>
-.con-vs-checkbox {
+.con-pick-checkbox {
     position: relative;
     display: block;
     display: -webkit-box;
@@ -133,21 +133,21 @@
     margin-right: 5px
 }
 
-.con-vs-checkbox.vs-checkbox-small .vs-checkbox {
+.con-pick-checkbox.pick-checkbox-small .pick-checkbox {
     width: 15px;
     height: 15px
 }
 
-.con-vs-checkbox.vs-checkbox-small .vs-checkbox .vs-icon {
+.con-pick-checkbox.pick-checkbox-small .pick-checkbox .pick-icon {
     font-size: .7rem
 }
 
-.con-vs-checkbox.vs-checkbox-large .vs-checkbox {
+.con-pick-checkbox.pick-checkbox-large .pick-checkbox {
     width: 24px;
     height: 24px
 }
 
-.vs-checkbox--input {
+.pick-checkbox--input {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -157,43 +157,43 @@
     background: #55d775
 }
 
-.vs-checkbox--input:disabled {
+.pick-checkbox--input:disabled {
     cursor: default;
     pointer-events: none
 }
 
-.vs-checkbox--input:disabled+.vs-checkbox {
+.pick-checkbox--input:disabled+.pick-checkbox {
     opacity: .5;
     cursor: default;
     pointer-events: none
 }
 
-.vs-checkbox--input:disabled+.vs-checkbox .vs-checkbox--check {
+.pick-checkbox--input:disabled+.pick-checkbox .pick-checkbox--check {
     cursor: default;
     pointer-events: none
 }
 
-.vs-checkbox--input:active:checked+.vs-checkbox .vs-checkbox--check {
+.pick-checkbox--input:active:checked+.pick-checkbox .pick-checkbox--check {
     -webkit-transform: translate(3px);
     transform: translate(3px)
 }
 
-.vs-checkbox--input:active:checked+.vs-checkbox .vs-icon {
+.pick-checkbox--input:active:checked+.pick-checkbox .pick-icon {
     -webkit-transform: translate(6px);
     transform: translate(6px)
 }
 
-.vs-checkbox--input:checked+.vs-checkbox {
+.pick-checkbox--input:checked+.pick-checkbox {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg)
 }
 
-.vs-checkbox--input:checked+.vs-checkbox .vs-checkbox--check {
+.pick-checkbox--input:checked+.pick-checkbox .pick-checkbox--check {
     -webkit-transform: translate(0);
     transform: translate(0)
 }
 
-.vs-checkbox--input:checked+.vs-checkbox .vs-checkbox--icon {
+.pick-checkbox--input:checked+.pick-checkbox .pick-checkbox--icon {
     opacity: 1;
     -webkit-transform: translate(0);
     transform: translate(0);
@@ -203,7 +203,7 @@
     display: flex
 }
 
-.vs-checkbox,.vs-checkbox--input:checked+.vs-checkbox .vs-checkbox--icon {
+.pick-checkbox,.pick-checkbox--input:checked+.pick-checkbox .pick-checkbox--icon {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -212,7 +212,7 @@
     justify-content: center
 }
 
-.vs-checkbox {
+.pick-checkbox {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -231,7 +231,7 @@
     box-sizing: border-box
 }
 
-.vs-checkbox--check {
+.pick-checkbox--check {
     -webkit-transform: translate(100%);
     transform: translate(100%);
     -webkit-transform-origin: right;
@@ -241,7 +241,7 @@
     z-index: 10
 }
 
-.vs-checkbox--icon {
+.pick-checkbox--icon {
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
     -webkit-transition: all 0.2s ease-out;
@@ -255,65 +255,65 @@
     transform-origin: center
 }
 
-.vs-checkbox-primary .vs-checkbox {
+.pick-checkbox-primary .pick-checkbox {
     border: 2px solid #b4b4b4
 }
 
-.vs-checkbox-primary input:checked+.vs-checkbox {
+.pick-checkbox-primary input:checked+.pick-checkbox {
     border: 2px solid rgba(31, 116, 255,1)!important;
     background: rgba(31, 116, 255,1)
 }
 
-.vs-checkbox-secondary .vs-checkbox {
+.pick-checkbox-secondary .pick-checkbox {
     border: 2px solid #b4b4b4
 }
 
-.vs-checkbox-secondary input:checked+.vs-checkbox {
+.pick-checkbox-secondary input:checked+.pick-checkbox {
     border: 2px solid rgba(121, 49, 177,1)!important;
     background: rgba(121, 49, 177,1)
 }
 
-.vs-checkbox-danger .vs-checkbox {
+.pick-checkbox-danger .pick-checkbox {
     border: 2px solid #b4b4b4
 }
 
-.vs-checkbox-danger input:checked+.vs-checkbox {
+.pick-checkbox-danger input:checked+.pick-checkbox {
     border: 2px solid rgba(255, 71, 87,1)!important;
     background: rgba(255, 71, 87,1)
 }
 
-.vs-checkbox-success .vs-checkbox {
+.pick-checkbox-success .pick-checkbox {
     border: 2px solid #b4b4b4
 }
 
-.vs-checkbox-success input:checked+.vs-checkbox {
+.pick-checkbox-success input:checked+.pick-checkbox {
     border: 2px solid rgba(70, 201, 58,1)!important;
     background: rgba(70, 201, 58,1)
 }
 
-.vs-checkbox-warning .vs-checkbox {
+.pick-checkbox-warning .pick-checkbox {
     border: 2px solid #b4b4b4
 }
 
-.vs-checkbox-warning input:checked+.vs-checkbox {
+.pick-checkbox-warning input:checked+.pick-checkbox {
     border: 2px solid rgba(255,186,0,1)!important;
     background: rgba(255,186,0,1)
 }
 
-.vs-checkbox-dark .vs-checkbox {
+.pick-checkbox-dark .pick-checkbox {
     border: 2px solid #b4b4b4
 }
 
-.vs-checkbox-dark input:checked+.vs-checkbox {
+.pick-checkbox-dark input:checked+.pick-checkbox {
     border: 2px solid rgba(30, 30, 30,1)!important;
     background: rgba(30, 30, 30,1)
 }
 
-.vs-checkbox-light .vs-checkbox {
+.pick-checkbox-light .pick-checkbox {
     border: 2px solid #b4b4b4
 }
 
-.vs-checkbox-light input:checked+.vs-checkbox {
+.pick-checkbox-light input:checked+.pick-checkbox {
     border: 2px solid rgba(245, 245, 245,1)!important;
     background: rgba(245, 245, 245,1)
 }
