@@ -44,7 +44,6 @@
   })
 
   const isChecked = computed(()=>{
-    console.log(isArrayx() ? isArrayIncludes() : props.value)
     return isArrayx() ? isArrayIncludes() : props.value
   })
 
@@ -102,6 +101,7 @@
      v-bind="attrs"
      :checked="isChecked || attrs.checked"
      :value="props.value"
+     @input="emit('change',value)"
      type="checkbox"
      class="vs-checkbox--input"
      v-on="listeners">
@@ -193,7 +193,7 @@
     transform: translate(0)
 }
 
-.vs-checkbox--input:checked+.vs-checkbox .vs-icon {
+.vs-checkbox--input:checked+.vs-checkbox .vs-checkbox--icon {
     opacity: 1;
     -webkit-transform: translate(0);
     transform: translate(0);
@@ -203,7 +203,7 @@
     display: flex
 }
 
-.vs-checkbox,.vs-checkbox--input:checked+.vs-checkbox .vs-icon {
+.vs-checkbox,.vs-checkbox--input:checked+.vs-checkbox .vs-checkbox--icon {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -213,8 +213,8 @@
 }
 
 .vs-checkbox {
-    -webkit-transition: all .2s ease;
-    transition: all .2s ease;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
     position: relative;
     display: block;
@@ -231,19 +231,7 @@
     box-sizing: border-box
 }
 
-.vuesax-app-is-rtl .vs-checkbox {
-    margin-left: 5px
-}
-
-.vuesax-app-is-ltr .vs-checkbox {
-    margin-right: 5px
-}
-
 .vs-checkbox--check {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
     -webkit-transform: translate(100%);
     transform: translate(100%);
     -webkit-transform-origin: right;
@@ -256,8 +244,8 @@
 .vs-checkbox--icon {
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
-    -webkit-transition: all .2s ease-out;
-    transition: all .2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
     z-index: 100;
     font-size: 1.125em;
     opacity: 0;
@@ -272,8 +260,8 @@
 }
 
 .vs-checkbox-primary input:checked+.vs-checkbox {
-    border: 2px solid rgba(var(--vs-primary),1)!important;
-    background: rgba(var(--vs-primary),1)
+    border: 2px solid rgba(31, 116, 255,1)!important;
+    background: rgba(31, 116, 255,1)
 }
 
 .vs-checkbox-secondary .vs-checkbox {
@@ -281,8 +269,8 @@
 }
 
 .vs-checkbox-secondary input:checked+.vs-checkbox {
-    border: 2px solid rgba(var(--vs-secondary),1)!important;
-    background: rgba(var(--vs-secondary),1)
+    border: 2px solid rgba(121, 49, 177,1)!important;
+    background: rgba(121, 49, 177,1)
 }
 
 .vs-checkbox-danger .vs-checkbox {
@@ -290,8 +278,8 @@
 }
 
 .vs-checkbox-danger input:checked+.vs-checkbox {
-    border: 2px solid rgba(var(--vs-danger),1)!important;
-    background: rgba(var(--vs-danger),1)
+    border: 2px solid rgba(255, 71, 87,1)!important;
+    background: rgba(255, 71, 87,1)
 }
 
 .vs-checkbox-success .vs-checkbox {
@@ -299,8 +287,8 @@
 }
 
 .vs-checkbox-success input:checked+.vs-checkbox {
-    border: 2px solid rgba(var(--vs-success),1)!important;
-    background: rgba(var(--vs-success),1)
+    border: 2px solid rgba(70, 201, 58,1)!important;
+    background: rgba(70, 201, 58,1)
 }
 
 .vs-checkbox-warning .vs-checkbox {
@@ -308,8 +296,8 @@
 }
 
 .vs-checkbox-warning input:checked+.vs-checkbox {
-    border: 2px solid rgba(var(--vs-warning),1)!important;
-    background: rgba(var(--vs-warning),1)
+    border: 2px solid rgba(255,186,0,1)!important;
+    background: rgba(255,186,0,1)
 }
 
 .vs-checkbox-dark .vs-checkbox {
@@ -317,8 +305,8 @@
 }
 
 .vs-checkbox-dark input:checked+.vs-checkbox {
-    border: 2px solid rgba(var(--vs-dark),1)!important;
-    background: rgba(var(--vs-dark),1)
+    border: 2px solid rgba(30, 30, 30,1)!important;
+    background: rgba(30, 30, 30,1)
 }
 
 .vs-checkbox-light .vs-checkbox {
@@ -326,8 +314,8 @@
 }
 
 .vs-checkbox-light input:checked+.vs-checkbox {
-    border: 2px solid rgba(var(--vs-light),1)!important;
-    background: rgba(var(--vs-light),1)
+    border: 2px solid rgba(245, 245, 245,1)!important;
+    background: rgba(245, 245, 245,1)
 }
 
 </style>
