@@ -127,6 +127,10 @@ export default defineConfig({
               text: 'CheckBox',
               link: '/components/checkBox',
             },
+            {
+              text: 'Chip',
+              link: '/components/chip',
+            },
           ],
         },
       ],
