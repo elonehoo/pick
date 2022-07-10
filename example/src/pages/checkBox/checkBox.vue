@@ -15,6 +15,8 @@ function demo2(event:string){
   checkBox2 = event
 }
 
+
+
 function demo3(event:string){
   console.log(event)
 }
@@ -30,12 +32,12 @@ function demo3(event:string){
   <br />
   <div>
     <pick-check-box >Primary</pick-check-box>
-    <pick-check-box color="success">Primary</pick-check-box>
-    <pick-check-box color="danger">Primary</pick-check-box>
-    <pick-check-box color="warning">Primary</pick-check-box>
-    <pick-check-box color="dark">Primary</pick-check-box>
-    <pick-check-box color="rgb(38, 187, 174)">Primary</pick-check-box>
-    <pick-check-box color="#720ea8">Primary</pick-check-box>
+    <pick-check-box color="success">Success</pick-check-box>
+    <pick-check-box color="danger">Danger</pick-check-box>
+    <pick-check-box color="warning">Warning</pick-check-box>
+    <pick-check-box color="dark">Dark</pick-check-box>
+    <pick-check-box color="rgb(38, 187, 174)">RGB</pick-check-box>
+    <pick-check-box color="#720ea8">HEX</pick-check-box>
   </div>
   <br />
   <div>
@@ -43,7 +45,7 @@ function demo3(event:string){
   </div>
   <br/>
   <div>
-    {{checkBox2 === null ?'null':checkBox2}}
+    {{checkBox2 === undefined ?'null':checkBox2}}
     <pick-check-box @input="demo2" :value="checkBox2" pickValue="Elone Hoo" >Elone Hoo</pick-check-box>
   </div>
   <br />
