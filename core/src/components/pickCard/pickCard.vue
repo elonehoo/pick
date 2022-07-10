@@ -36,7 +36,7 @@ function hasSlot(slot: string) {
   </div>
 </template>
 
-<style scoped>
+<style>
 .con-pick-card {
   width: 100%;
   height: auto;

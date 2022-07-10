@@ -74,7 +74,7 @@ const getBgColor = computed(() => {
   </i>
 </template>
 
-<style scoped>
+<style>
 .pick-icon {
   color: inherit;
   text-align: center;

@@ -284,7 +284,7 @@ const styleLine = computed(() => {
   </button>
 </template>
 
-<style scoped>
+<style>
 .pick-button {
   transition: all 0.2s ease;
   padding: 10px;

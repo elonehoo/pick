@@ -8,6 +8,7 @@ import breadcrumb from '~/pages/breadcrumb/breadcrumb.vue'
 import button from '~/pages/button/button.vue'
 import card from '~/pages/card/card.vue'
 import checkBox from '~/pages/checkBox/checkBox.vue'
+import chip from '~/pages/chip/chip.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,6 +44,10 @@ const router = createRouter({
     {
       path: '/checkBox',
       component: checkBox,
+    },
+    {
+      path: '/chip',
+      component: chip,
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],

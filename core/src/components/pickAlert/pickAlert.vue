@@ -95,7 +95,7 @@ function leave(el: any) {
   </Transition>
 </template>
 
-<style scoped>
+<style>
 .con-pick-alert {
   border-radius: 6px;
   color: #fff;

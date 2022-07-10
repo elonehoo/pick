@@ -146,7 +146,7 @@ const returnScale = computed(() => {
   </div>
 </template>
 
-<style scoped>
+<style>
 .con-pick-avatar {
   width: 32px;
   height: 32px;

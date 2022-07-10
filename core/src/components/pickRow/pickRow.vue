@@ -18,7 +18,7 @@ withDefaults(defineProps<{
   </div>
 </template>
 
-<style scoped>
+<style>
 .pick-row{
   align-items: v-bind(align);
   justify-content: v-bind(justify);

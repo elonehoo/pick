@@ -116,7 +116,7 @@
   </div>
 </template>
 
-<style scoped>
+<style>
 .con-pick-checkbox {
     position: relative;
     display: block;

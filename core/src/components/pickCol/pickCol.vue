@@ -28,7 +28,7 @@ withDefaults(defineProps<{
   </div>
 </template>
 
-<style scoped>
+<style>
   .pick-col {
     float: left;
     order: v-bind(order);

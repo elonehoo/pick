@@ -71,7 +71,7 @@ const hasSlot = computed(() => {
   </nav>
 </template>
 
-<style scoped>
+<style>
 .pick-breadcrumb {
   display: flex;
 }
