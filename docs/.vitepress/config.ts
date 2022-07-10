@@ -123,6 +123,10 @@ export default defineConfig({
               text: 'Card',
               link: '/components/card',
             },
+            {
+              text: 'CheckBox',
+              link: '/components/checkBox',
+            },
           ],
         },
       ],
