@@ -20,7 +20,7 @@
 - [x] Button
 - [x] Card
 - [x] CheckBox
-- [ ] Chip
+- [x] Chip
 - [ ] Collapse
 - [ ] Dialogs
 - [ ] Divider
