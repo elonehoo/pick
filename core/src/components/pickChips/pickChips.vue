@@ -6,14 +6,14 @@
 
   const props = withDefaults(defineProps<{
     value?:any,
-    vsColor:string,
+    pickColor:string,
     placeholder:string,
     items:Array<any>,
     iconPack:string,
     removeIcon:string
   }>(), {
     value:{},
-    vsColor:'primary',
+    pickColor:'primary',
     placeholder:'',
     items:undefined,
     iconPack:'material-icons',
@@ -76,7 +76,7 @@
     padding: 5px
 }
 
-.con-chips .con-vs-chip {
+.con-chips .con-pick-chip {
     margin-top: 0;
     margin-bottom: 0
 }
