@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {pickChip} from '@elonehoo/pick'
+import {pickChip,pickChips} from '@elonehoo/pick'
 
 const chips = $ref([
   'Discord',
@@ -28,6 +28,16 @@ function remove (item:string):void {
     <br>
     {{chips}}
     <pick-chip v-for="(chip,index) in chips" :key="index" @click="remove(chip)" closable style="width: 110px;">{{chip}}</pick-chip >
+    <br />
+    <br />
+    <pick-chips color="rgb(145, 32, 159)" placeholder="New Element" :value="chips">
+      <pick-chip v-for="(chip,index) in chips" :key="index" @click="remove(chip)" closable style="width: 110px;">{{chip}}</pick-chip >
+    </pick-chips>
+    <br />
+    <br />
+    <pick-chips color="rgb(145, 32, 159)" placeholder="New Element" :value="chips" removeIcon="delete_forever">
+      <pick-chip v-for="(chip,index) in chips" :key="index" closeIcon="delete_forever" @click="remove(chip)" closable style="width: 110px;">{{chip}}</pick-chip >
+    </pick-chips>
   </div>
 </template>
 
