@@ -7,6 +7,7 @@
 @import url(./components/pickCard.css);
 @import url(./components/pickCheckBox.css);
 @import url(./components/pickChip.css);
+@import url(./components/pickChips.css);
 
 * {
   margin: 0px;
