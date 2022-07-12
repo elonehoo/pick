@@ -198,7 +198,6 @@
     -webkit-transform: translate(0);
     transform: translate(0);
     color: #fff;
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex
 }

@@ -29,7 +29,7 @@ const pickPlugin: Plugin = {
 }
 
 export default pickPlugin
-
+import './style/main.css'
 export * from './components/pickRow'
 export * from './components/pickCol'
 export * from './components/pickAvatar'
