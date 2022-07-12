@@ -1,0 +1,119 @@
+.con-pick-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+}
+.con-pick-avatar.large {
+  width: 50px;
+  height: 50px;
+}
+.con-pick-avatar.small {
+  width: 24px;
+  height: 24px;
+}
+.con-pick-avatar.small .pick-avatar-text {
+  font-size: 0.9375em;
+}
+.pick-avatar--count {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  z-index: 100;
+}
+.pick-avatar--count.badgeNumber {
+  width: auto;
+  height: auto;
+  top: -3px;
+  right: 0px;
+  border-radius: 4px;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 0.625em;
+  color: #fff;
+}
+.pick-avatar--text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.pick-avatar--con-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.pick-avatar--con-img img {
+  width: 100%;
+}
+.con-pick-avatar-primary{
+  background: rgba(var(--pick-primary),1);
+}
+.dot-count-primary{
+  background: rgba(var(--pick-primary),1);
+}
+.pick-avatar-text-primary{
+  background: rgba(var(--pick-primary),1);
+}
+.con-pick-avatar-secondary{
+  background: rgba(var(--pick-secondary),1);
+}
+.dot-count-secondary{
+  background: rgba(var(--pick-secondary),1);
+}
+.pick-avatar-text-secondary{
+  background: rgba(var(--pick-secondary),1);
+}
+.con-pick-avatar-danger{
+  background: rgba(var(--pick-danger),1);
+}
+.dot-count-danger{
+  background: rgba(var(--pick-danger),1);
+}
+.pick-avatar-text-danger{
+  background: rgba(var(--pick-danger),1);
+}
+.con-pick-avatar-success{
+  background: rgba(var(--pick-success),1);
+}
+.dot-count-success{
+  background: rgba(var(--pick-success),1);
+}
+.pick-avatar-text-success{
+  background: rgba(var(--pick-success),1);
+}
+.con-pick-avatar-warning{
+  background: rgba(var(--pick-warning),1);
+}
+.dot-count-warning{
+  background: rgba(var(--pick-warning),1);
+}
+.pick-avatar-text-warning{
+  background: rgba(var(--pick-warning),1);
+}
+.con-pick-avatar-dark{
+  background: rgba(var(--pick-dark),1);
+}
+ .dot-count-dark{
+  background: rgba(var(--pick-dark),1);
+}
+ .pick-avatar-text-dark{
+  background: rgba(var(--pick-dark),1);
+}
+.con-pick-avatar-light{
+  background: rgba(var(--pick-light),1);
+}
+ .dot-count-light{
+  background: rgba(var(--pick-light),1);
+}
+ .pick-avatar-text-light{
+  background: rgba(var(--pick-light),1);
+}
