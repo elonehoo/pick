@@ -1,0 +1,108 @@
+.pick-icon {
+  color: inherit;
+  text-align: center;
+  font-size: 1rem;
+}
+.pick-icon.large {
+  font-size: 3.125rem;
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.pick-icon.medium {
+  font-size: 2.31rem;
+  width: 2.31rem;
+  height: 2.31rem;
+}
+.pick-icon.small {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.pick-icon-bg {
+  width: 1rem;
+  height: 1rem;
+}
+.pick-icon-bg.bg-large {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+.pick-icon-bg.bg-medium {
+  width: 2.31rem;
+  height: 2.31rem;
+}
+.pick-icon-bg.bg-small {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.round {
+  border-radius: 50%;
+}
+.con-pick-icon-bg-primary{
+  background: rgba(var(--pick-primary),1)
+}
+.dot-count-primary{
+  background: rgba(var(--pick-primary),1)
+}
+.pick-icon-primary{
+  color: rgba(var(--pick-primary),1)
+}
+
+.con-pick-icon-bg-secondary{
+  background: rgba(var(--pick-secondary),1)
+}
+.dot-count-secondary{
+  background: rgba(var(--pick-secondary),1)
+}
+.pick-icon-secondary{
+  color: rgba(var(--pick-secondary),1)
+}
+
+.con-pick-icon-bg-danger{
+  background: rgba(var(--pick-danger),1)
+}
+.dot-count-danger{
+  background: rgba(var(--pick-danger),1)
+}
+.pick-icon-danger{
+  color: rgba(var(--pick-danger),1)
+}
+
+.con-pick-icon-bg-success{
+  background: rgba(var(--pick-success),1)
+}
+.dot-count-success{
+  background: rgba(var(--pick-success),1)
+}
+.pick-icon-success{
+  color: rgba(var(--pick-success),1)
+}
+
+.con-pick-icon-bg-warning{
+  background: rgba(var(--pick-warning),1)
+}
+.dot-count-warning{
+  background: rgba(var(--pick-warning),1)
+}
+.pick-icon-warning{
+  color: rgba(var(--pick-warning),1)
+}
+
+.con-pick-icon-bg-dark{
+  background: rgba(var(--pick-dark),1)
+}
+.dot-count-dark{
+  background: rgba(var(--pick-dark),1)
+}
+.pick-icon-dark{
+  color: rgba(var(--pick-dark),1)
+}
+
+.con-pick-icon-bg-light{
+  background: rgba(var(--pick-light),1)
+}
+.dot-count-light{
+  background: rgba(var(--pick-light),1)
+}
+.pick-icon-light{
+  color: rgba(var(--pick-light),1)
+}
