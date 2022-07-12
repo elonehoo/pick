@@ -9,6 +9,7 @@
 @import url(./components/pickChip.css);
 @import url(./components/pickChips.css);
 @import url(./components/pickIcon.css);
+@import url(./components/pickCollapse.css);
 
 * {
   margin: 0px;
