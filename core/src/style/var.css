@@ -1,0 +1,18 @@
+/*-----------------
+    Global Vars
+------------------*/
+:root{
+
+  /* fonts */
+  --pick-font-size:1rem;
+  --pick-color:0, 0, 200;
+  --pick-font-family: arial;
+  /* disabled */
+  --pick-disabled-opacity: 0.5;
+  --pick-disabled-pointer: default;
+  /* transition */
+  --pick-transition-duration: 0.25s;
+  --pick-transition-delay: 0s;
+  --pick-transition-timing: ease;
+
+}

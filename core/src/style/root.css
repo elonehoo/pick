@@ -1,0 +1,9 @@
+:root{
+  --pick-primary: 31, 116, 255;
+  --pick-secondary: 121, 49, 177;
+  --pick-danger: 255, 71, 87;
+  --pick-success: 70, 201, 58;
+  --pick-warning: 255,186,0;
+  --pick-dark: 30, 30, 30;
+  --pick-light: 245, 245, 245;
+}
