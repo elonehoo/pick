@@ -168,16 +168,16 @@ Sometimes we want to change the internal icon inside the checkbox. To do so, we 
       <pick-check-box icon="close" color="danger">Close</pick-check-box>
     </pick-col>
     <pick-col :w="2">
-      <pick-check-box icon="attach_file" color="warning">Attach File</pick-check-box>
+      <pick-check-box icon="attach_file" color="warning">Attach</pick-check-box>
     </pick-col>
     <pick-col :w="2">
-      <pick-check-box icon="format_bold" color="dark">Format Bold</pick-check-box>
+      <pick-check-box icon="format_bold" color="dark">Format</pick-check-box>
     </pick-col>
     <pick-col :w="2">
-      <pick-check-box icon="location_searching" color="rgb(38, 187, 174)">Location Searching</pick-check-box>
+      <pick-check-box icon="location_searching" color="rgb(38, 187, 174)">Location</pick-check-box>
     </pick-col>
     <pick-col :w="2">
-      <pick-check-box icon="camera_alt" color="#720ea8">Camera Alt</pick-check-box>
+      <pick-check-box icon="camera_alt" color="#720ea8">Camera</pick-check-box>
     </pick-col>
   </pick-row>
 </div>
