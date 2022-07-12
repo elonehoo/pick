@@ -95,6 +95,10 @@ export default defineConfig({
           text: 'Theme',
           items: [
             {
+              text: 'Color',
+              link: '/components/color',
+            },
+            {
               text: 'Icon',
               link: '/components/icon',
             },
