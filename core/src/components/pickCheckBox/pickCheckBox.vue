@@ -107,7 +107,7 @@
      v-on="listeners">
     <span :style="style" class="checkbox_x pick-checkbox">
       <span :style="style_check" class="pick-checkbox--check">
-        <pick-icon :icon="props.icon" :icon-pack="props.iconPack" class="pick-checkbox--icon" />
+        <pick-icon style="font-size:1rem;" :icon="props.icon" :icon-pack="props.iconPack" class="pick-checkbox--icon" />
       </span>
     </span>
     <span class="con-slot-label">

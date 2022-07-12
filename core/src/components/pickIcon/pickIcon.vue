@@ -66,7 +66,6 @@ const getBgColor = computed(() => {
 <template>
   <i
     :style="iconStyle"
-    style="font-size: 1rem;"
     :class="[iconPack, iconPack !='material-icons' ? icon : '',iconClass,getBg,getBgSize,{'round':round}]"
     class="pick-icon notranslate icon-scale"
     v-bind="$attrs"
