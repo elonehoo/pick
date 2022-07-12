@@ -4,6 +4,7 @@
 @import url(./components/pickAvatar.css);
 @import url(./components/pickBreadcrumb.css);
 @import url(./components/pickButton.css);
+@import url(./components/pickCard.css);
 
 * {
   margin: 0px;

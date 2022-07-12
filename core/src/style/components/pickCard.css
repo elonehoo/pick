@@ -1,0 +1,62 @@
+.con-pick-card {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: block;
+  box-shadow: 0px 4px 25px 0px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+.con-pick-card.withHover {
+  cursor: pointer;
+}
+.con-pick-card.withHover:hover {
+  transform: translate(0, 4px);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+.con-pick-card.withHover:hover img {
+  transform: scale(1.1);
+}
+.con-pick-card.fixedHeight {
+  height: 100%;
+  position: relative;
+}
+.pick-card--header {
+  padding: 10px;
+  box-shadow: 0px 10px 15px -10px rgba(0,0,0,0.05);
+}
+.pick-card--header h3 {
+  padding: 0px;
+}
+.pick-card--footer {
+  position: relative;
+  padding: 10px;
+  transform: translate(0, 40%);
+  margin-top: -5%;
+  padding-top: 0px;
+}
+.pick-card--footer.fixedHeight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-top: 0%;
+  transform: translate(0);
+}
+.pick-card--content {
+  padding: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+.pick-card--content.fixedHeight {
+  margin-bottom: 20px;
+}
+.pick-card--media {
+  width: 100%;
+  overflow: hidden;
+}
+.pick-card--media img {
+  width: 100%;
+  transition: all 0.25s ease;
+  display: block;
+}
