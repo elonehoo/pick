@@ -3,6 +3,7 @@
 @import url(./components/pickAlert.css);
 @import url(./components/pickAvatar.css);
 @import url(./components/pickBreadcrumb.css);
+@import url(./components/pickButton.css);
 
 * {
   margin: 0px;
