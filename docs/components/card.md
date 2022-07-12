@@ -40,12 +40,12 @@ To add a card we have the `pick-card` component, for the internal structure we u
   <pick-col type="flex" justify="center" align="center" :w="6">
     <pick-card class="cardx">
       <template #header>
-        <h3>
+        <h3 style="color:black">
           Hello world !
         </h3>
       </template>
       <template #default>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <span style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
       </template>
       <template #footer>
         <pick-row justify="flex-end">
@@ -111,7 +111,7 @@ There are cases in which you need to add an image or video on the card so we hav
   <pick-col type="flex" justify="center" align="center" :w="6">
     <pick-card class="cardx">
       <template #header>
-        <h3>
+        <h3 style="color:black">
           Hello world !
         </h3>
       </template>
@@ -119,7 +119,7 @@ There are cases in which you need to add an image or video on the card so we hav
         <img src="/card.png">
       </template>
       <template #default>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <span style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
       </template>
       <template #footer>
         <pick-row justify="flex-end">
@@ -133,7 +133,7 @@ There are cases in which you need to add an image or video on the card so we hav
   <pick-col type="flex" justify="center" align="center" :w="6">
     <pick-card class="cardx">
       <template #header>
-        <h3>
+        <h3 style="color:black">
           Hello world !
         </h3>
       </template>
@@ -141,7 +141,7 @@ There are cases in which you need to add an image or video on the card so we hav
         <img src="/card2.png">
       </template>
       <template #default>
-            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <span style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
       </template>
       <template #footer>
         <pick-row justify="flex-end">
@@ -207,7 +207,7 @@ If you need to set card with the same height, send the prop `fixed-height` and c
   <pick-col type="flex" justify="center" align="center" :w="6">
     <pick-card class="cardx" fixed-height>
       <template #header>
-        <h3>
+        <h3 style="color:black">
           Hello world !
         </h3>
       </template>
@@ -215,7 +215,7 @@ If you need to set card with the same height, send the prop `fixed-height` and c
         <img src="/card.png">
       </template>
       <template #default>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <span style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
       </template>
       <template #footer>
         <pick-row justify="flex-end">
@@ -229,7 +229,7 @@ If you need to set card with the same height, send the prop `fixed-height` and c
   <pick-col type="flex" justify="center" align="center" :w="6">
     <pick-card class="cardx" fixed-height>
       <template #header>
-        <h3>
+        <h3 style="color:black">
           Hello world !
         </h3>
       </template>
@@ -237,7 +237,7 @@ If you need to set card with the same height, send the prop `fixed-height` and c
         <img src="/card2.png">
       </template>
       <template #default>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <span style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
       </template>
       <template #footer>
         <pick-row justify="flex-end">
@@ -303,7 +303,7 @@ You can add hover functionality with the property `actionable`.
   <pick-col type="flex" justify="center" align="center" :w="6">
     <pick-card class="cardx" actionable>
       <template #header>
-        <h3>
+        <h3 style="color:black">
           Hello world !
         </h3>
       </template>
@@ -311,7 +311,7 @@ You can add hover functionality with the property `actionable`.
         <img src="/card.png">
       </template>
       <template #default>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <span style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
       </template>
       <template #footer>
         <pick-row justify="flex-end">
@@ -325,7 +325,7 @@ You can add hover functionality with the property `actionable`.
   <pick-col type="flex" justify="center" align="center" :w="6">
     <pick-card class="cardx" actionable>
       <template #header>
-        <h3>
+        <h3 style="color:black">
           Hello world !
         </h3>
       </template>
@@ -333,7 +333,7 @@ You can add hover functionality with the property `actionable`.
         <img src="/card2.png">
       </template>
       <template #default>
-        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+        <span style="color:black">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
       </template>
       <template #footer>
         <pick-row justify="flex-end">
