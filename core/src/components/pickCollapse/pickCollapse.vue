@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { provide } from 'vue'
+  import { ref,provide } from 'vue'
   import {pickCollapseAccordion,pickCollapseOpenHover,pickCollapseEmitChange,pickCollapseCloseAllItems} from '../../symbol/collapse'
   const emit = defineEmits(['change'])
 
@@ -17,8 +17,10 @@
     emit('change')
   }
 
-  function closeAllItems(){
+  const children = ref(null)
 
+  function closeAllItems(el:any){
+    console.log('close all items',el.value)
   }
 
   provide(pickCollapseAccordion, props.accordion)
@@ -30,7 +32,8 @@
 <template>
   <div
    :class="[type]"
-   class="vs-collapse">
-    <slot></slot>
+   ref="children"
+   class="pick-collapse">
+    <slot />
   </div>
 </template>

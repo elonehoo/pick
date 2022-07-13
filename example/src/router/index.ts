@@ -9,6 +9,7 @@ import button from '~/pages/button/button.vue'
 import card from '~/pages/card/card.vue'
 import checkBox from '~/pages/checkBox/checkBox.vue'
 import chip from '~/pages/chip/chip.vue'
+import collapse from '~/pages/collapse/collapse.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -48,6 +49,10 @@ const router = createRouter({
     {
       path: '/chip',
       component: chip,
+    },
+    {
+      path: '/collapse',
+      component: collapse,
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],

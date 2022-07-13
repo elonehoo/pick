@@ -11,6 +11,8 @@ import { pickCardPlugin } from './components/pickCard'
 import { pickCheckBoxPlugin } from './components/pickCheckBox'
 import { pickChipPlugin } from './components/pickChip'
 import { pickChipsPlugin } from './components/pickChips'
+import { pickCollapsePlugin } from './components/pickCollapse'
+import { pickCollapseItemPlugin } from './components/pickCollapseItem'
 
 const pickPlugin: Plugin = {
   install(app: App) {
@@ -25,6 +27,8 @@ const pickPlugin: Plugin = {
     pickCheckBoxPlugin.install?.(app)
     pickChipPlugin.install?.(app)
     pickChipsPlugin.install?.(app)
+    pickCollapsePlugin.install?.(app)
+    pickCollapseItemPlugin.install?.(app)
   },
 }
 
@@ -41,5 +45,7 @@ export * from './components/pickCard'
 export * from './components/pickCheckBox'
 export * from './components/pickChip'
 export * from './components/pickChips'
+export * from './components/pickCollapse'
+export * from './components/pickCollapseItem'
 
 export * from './components/pickBreadcrumb/type'
