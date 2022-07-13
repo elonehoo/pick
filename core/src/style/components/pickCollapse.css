@@ -62,6 +62,22 @@
   transform: translate(-50%,-50%) rotate(180deg);
 }
 
+.pick-collapse.border .open-item .pick-collapse-item--icon-header {
+  -webkit-transform: translate(-50%,-50%) rotate(180deg);
+  transform: translate(-50%,-50%) rotate(180deg);
+}
+
+.pick-collapse.shadow .open-item .pick-collapse-item--icon-header {
+  -webkit-transform: translate(-50%,-50%) rotate(180deg);
+  transform: translate(-50%,-50%) rotate(180deg);
+}
+
+.pick-collapse.margin .open-item .pick-collapse-item--icon-header {
+  -webkit-transform: translate(-50%,-50%) rotate(180deg);
+  transform: translate(-50%,-50%) rotate(180deg);
+}
+
+
 .pick-collapse-item.disabledx {
   opacity: .5;
   cursor: default;
