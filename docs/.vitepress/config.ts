@@ -135,6 +135,10 @@ export default defineConfig({
               text: 'Chip',
               link: '/components/chip',
             },
+            {
+              text: 'Collapse',
+              link: '/components/collapse',
+            },
           ],
         },
       ],
