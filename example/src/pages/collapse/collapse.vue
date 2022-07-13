@@ -1,20 +1,11 @@
 <script setup lang="ts">
  import {pickCollapse,pickCollapseItem} from '@elonehoo/pick'
 
- const collapseOpen = $ref<boolean>(true)
- function collapseIconArrow():string{
-    if(collapseOpen === true){
-      return 'keyboard_arrow_up'
-    }else{
-      return 'keyboard_arrow_down'
-    }
-
- }
 </script>
 
 <template>
   <div>
-    <pick-collapse>
+    <pick-collapse accordion>
       <pick-collapse-item>
         <template #header>
          Collapse item

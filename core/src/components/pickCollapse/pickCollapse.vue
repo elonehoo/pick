@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { ref,provide } from 'vue'
+  import { provide,ref } from 'vue'
   import {pickCollapseAccordion,pickCollapseOpenHover,pickCollapseEmitChange,pickCollapseCloseAllItems} from '../../symbol/collapse'
   const emit = defineEmits(['change'])
 
@@ -16,11 +16,25 @@
   function emitChange():void{
     emit('change')
   }
-
-  const children = ref(null)
+  const root = ref<HTMLDivElement | null>(null)
 
   function closeAllItems(el:any){
-    console.log('close all items',el.value)
+    //@ts-ignore
+    let childrens:HTMLDivElement[] = root.value?.children
+    //@ts-ignore
+    for(let i:number = 0; i < childrens?.length; i++){
+      //@ts-ignore
+      if(childrens[i] !== el.value){
+        //@ts-ignore
+        console.log(typeof childrens[i])
+        //@ts-ignore
+        console.log(childrens[i].children[1].style.maxHeight)
+        //@ts-ignore
+        childrens[i].children[1].style.maxHeight = '0px'
+        // childrens[i].maxHeight = '0px'
+      }
+    }
+
   }
 
   provide(pickCollapseAccordion, props.accordion)
@@ -31,8 +45,8 @@
 
 <template>
   <div
+    ref="root"
    :class="[type]"
-   ref="children"
    class="pick-collapse">
     <slot />
   </div>

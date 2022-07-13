@@ -11,24 +11,20 @@
 
   const element = ref<HTMLDivElement | null>(null)
 
-  const iconIsArrow = ref<string>('')
-
   const emit = defineEmits(['fetch'])
 
   const props = withDefaults(defineProps<{
     open?:boolean,
     disabled?:boolean,
     notArrow?:boolean,
-    iconArrowOpen?:string,
-    iconArrowDown?:string,
+    iconArrow?:string,
     iconPack?:string,
     sst?:boolean
   }>(), {
     open:false,
     disabled:false,
     notArrow:false,
-    iconArrowOpen:'keyboard_arrow_up',
-    iconArrowDown:'keyboard_arrow_down',
+    iconArrow:'keyboard_arrow_down',
     iconPack:'material-icons',
     sst:false
   })
@@ -62,10 +58,8 @@
   onMounted(()=>{
     window.addEventListener('resize', changeHeight)
     const maxHeightx = content.value?.scrollHeight
-    iconIsArrow.value = props.iconArrowDown
     if(props.open) {
       maxHeight.value = `${maxHeightx}px`
-      iconIsArrow.value = props.iconArrowOpen
     }
   })
 
@@ -77,7 +71,6 @@
     const maxHeightx = content.value?.scrollHeight
     if(maxHeight.value != '0px') {
       maxHeight.value = `${maxHeightx}px`
-      iconIsArrow.value = props.iconArrowOpen
     }
   }
 
@@ -105,10 +98,8 @@
     const maxHeightx = content.value?.scrollHeight
     if(maxHeight.value == '0px') {
       maxHeight.value = `${maxHeightx}px`
-      iconIsArrow.value = props.iconArrowOpen
     } else {
       maxHeight.value = `0px`
-      iconIsArrow.value = props.iconArrowDown
     }
   }
 
@@ -119,7 +110,6 @@
     let maxHeightx = content.value?.scrollHeight
     if(openHover.value) {
       maxHeight.value = `${maxHeightx}px`
-      iconIsArrow.value = props.iconArrowOpen
 
     }
   }
@@ -127,7 +117,6 @@
   function mouseout(){
     if(openHover.value) {
       maxHeight.value = `0px`
-      iconIsArrow.value = props.iconArrowDown
     }
   }
 
@@ -147,7 +136,7 @@
    >
     <slot name="header"/>
     <span v-if="!notArrow" class="icon-header pick-collapse-item--icon-header">
-      <pick-icon :icon-pack="iconPack" :icon="iconIsArrow" />
+      <pick-icon :icon-pack="props.iconPack" :icon="props.iconArrow" />
     </span>
    </header>
    <div ref="content" :style="styleContent" class="pick-collapse-item--content">

@@ -57,6 +57,11 @@
   opacity: 1
 }
 
+.pick-collapse.default .open-item .pick-collapse-item--icon-header {
+  -webkit-transform: translate(-50%,-50%) rotate(180deg);
+  transform: translate(-50%,-50%) rotate(180deg);
+}
+
 .pick-collapse-item.disabledx {
   opacity: .5;
   cursor: default;
