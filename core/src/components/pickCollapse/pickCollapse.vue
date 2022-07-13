@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { provide,ref } from 'vue'
   import {pickCollapseAccordion,pickCollapseOpenHover,pickCollapseEmitChange,pickCollapseCloseAllItems} from '../../symbol/collapse'
+
   const emit = defineEmits(['change'])
 
   const props = withDefaults(defineProps<{
@@ -24,14 +25,18 @@
     //@ts-ignore
     for(let i:number = 0; i < childrens?.length; i++){
       //@ts-ignore
-      if(childrens[i] !== el.value){
+      if(childrens[i] !== el){
         //@ts-ignore
-        console.log(typeof childrens[i])
-        //@ts-ignore
-        console.log(childrens[i].children[1].style.maxHeight)
+        if(childrens[i].children[1].style.maxHeight !== '0px'){
+          childrens[i].classList.toggle('open-item')
+        }
         //@ts-ignore
         childrens[i].children[1].style.maxHeight = '0px'
-        // childrens[i].maxHeight = '0px'
+      }else{
+        //@ts-ignore
+        if(childrens[i].children[1].style.maxHeight === '0px'){
+          childrens[i].classList.toggle('open-item')
+        }
       }
     }
 

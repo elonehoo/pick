@@ -51,7 +51,7 @@
 
   watch(dataReady,(newValue:boolean,oldValue:boolean)=>{
     if (oldValue != newValue && newValue) {
-        initMaxHeight()
+      initMaxHeight()
     }
   })
 
@@ -60,6 +60,7 @@
     const maxHeightx = content.value?.scrollHeight
     if(props.open) {
       maxHeight.value = `${maxHeightx}px`
+      content.value!.style.maxHeight = `${maxHeightx}px`
     }
   })
 
@@ -69,8 +70,9 @@
 
   function changeHeight():void{
     const maxHeightx = content.value?.scrollHeight
-    if(maxHeight.value != '0px') {
+    if(content.value!.style.maxHeight != '0px') {
       maxHeight.value = `${maxHeightx}px`
+      content.value!.style.maxHeight = `${maxHeightx}px`
     }
   }
 
@@ -80,26 +82,27 @@
     if(openHover.value || props.disabled) return
     if(accordion.value) {
       //@ts-ignore
-      closeAllItems(element)
+      closeAllItems(element.value)
     }
     if (props.sst && !dataReady.value) {
       emit('fetch', {
         done: () => {
-          initMaxHeight();
           dataReady.value = true
         }
       })
-    } else {
-      initMaxHeight()
     }
+    initMaxHeight()
+
   }
 
   function initMaxHeight() {
     const maxHeightx = content.value?.scrollHeight
-    if(maxHeight.value == '0px') {
+    if(content.value?.style.maxHeight === '0px') {
       maxHeight.value = `${maxHeightx}px`
+      content.value!.style.maxHeight = `${maxHeightx}px`
     } else {
-      maxHeight.value = `0px`
+      maxHeight.value = '0px'
+      content.value!.style.maxHeight = `0px`
     }
   }
 
@@ -110,13 +113,14 @@
     let maxHeightx = content.value?.scrollHeight
     if(openHover.value) {
       maxHeight.value = `${maxHeightx}px`
-
+      content.value!.style.maxHeight = `${maxHeightx}px`
     }
   }
 
   function mouseout(){
     if(openHover.value) {
-      maxHeight.value = `0px`
+      maxHeight.value = '0px'
+      content.value!.style.maxHeight = `0px`
     }
   }
 
@@ -125,7 +129,7 @@
 <template>
   <div
    ref="element"
-   :class="{'open-item': maxHeight != '0px', 'disabledx': disabled}"
+   :class="{'open-item': content?.style.maxHeight !== '0px', 'disabledx': disabled}"
    class="pick-collapse-item"
    @mouseover="mouseover"
    @mouseout="mouseout"
