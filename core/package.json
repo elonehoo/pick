@@ -31,7 +31,7 @@
   "scripts": {
     "build": "rimraf dist && vite build",
     "prepublishOnly": "pnpm run build",
-    "build:dev": "vite build"
+    "build:dev": "vite build --watch"
   },
   "dependencies": {
     "vue": "^3.2.37"
