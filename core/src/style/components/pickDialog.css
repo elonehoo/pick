@@ -1,6 +1,3 @@
-/*
-GLOBAL COLORS
-*/
 .dialog-t-enter,
 .dialog-t-leave-to {
   opacity: 0 !important;
@@ -73,6 +70,43 @@ GLOBAL COLORS
   font-size: 0.875em;
   transition: all 0.23s ease 0.1s;
 }
+
+.con-pick-dialog .pick-dialog header span.after {
+  right: 0
+}
+
+.con-pick-dialog .pick-dialog header span.after {
+  left: 0
+}
+
+.con-pick-dialog .pick-dialog header .pick-dialog-cancel {
+  -webkit-transform: translate(-8px,-8px);
+  transform: translate(-8px,-8px)
+}
+
+.con-pick-dialog .pick-dialog header .pick-dialog-cancel {
+  -webkit-transform: translate(8px,-8px);
+  transform: translate(8px,-8px)
+}
+
+.con-pick-dialog .pick-dialog header .pick-dialog-cancel:hover {
+  -webkit-transform: translate(-5px,-5px);
+  transform: translate(-5px,-5px)
+}
+
+.con-pick-dialog .pick-dialog header .pick-dialog-cancel:hover {
+  -webkit-transform: translate(5px,-5px);
+  transform: translate(5px,-5px)
+}
+
+.con-pick-dialog .pick-dialog header h3 {
+  padding-right: 12px
+}
+
+.con-pick-dialog .pick-dialog header h3 {
+  padding-left: 12px
+}
+
 .con-pick-dialog .pick-dialog header {
   width: 100%;
   display: flex;
@@ -108,7 +142,7 @@ GLOBAL COLORS
   position: relative;
   padding: 8px;
   cursor: pointer;
-  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px 0 rgb(0 0 0 / 10%);
   border-radius: 5px;
   background: #fff;
   font-size: 1.25em;
@@ -131,48 +165,7 @@ GLOBAL COLORS
   height: 1px;
   background: rgba(0,0,0,0.05);
 }
-.pick-dialog-primary .pick-dialog .pick-dialog-header {
-  color: rgba(var(--pick-primary), 1);
-}
-.pick-dialog-primary .pick-dialog .after {
-  background: rgba(var(--pick-primary), 1);
-}
-.pick-dialog-secondary .pick-dialog .pick-dialog-header {
-  color: rgba(var(--pick-secondary), 1);
-}
-.pick-dialog-secondary .pick-dialog .after {
-  background: rgba(var(--pick-secondary), 1);
-}
-.pick-dialog-danger .pick-dialog .pick-dialog-header {
-  color: rgba(var(--pick-danger), 1);
-}
-.pick-dialog-danger .pick-dialog .after {
-  background: rgba(var(--pick-danger), 1);
-}
-.pick-dialog-success .pick-dialog .pick-dialog-header {
-  color: rgba(var(--pick-success), 1);
-}
-.pick-dialog-success .pick-dialog .after {
-  background: rgba(var(--pick-success), 1);
-}
-.pick-dialog-warning .pick-dialog .pick-dialog-header {
-  color: rgba(var(--pick-warning), 1);
-}
-.pick-dialog-warning .pick-dialog .after {
-  background: rgba(var(--pick-warning), 1);
-}
-.pick-dialog-dark .pick-dialog .pick-dialog-header {
-  color: rgba(var(--pick-dark), 1);
-}
-.pick-dialog-dark .pick-dialog .after {
-  background: rgba(var(--pick-dark), 1);
-}
-.pick-dialog-light .pick-dialog .pick-dialog-header {
-  color: rgba(var(--pick-light), 1);
-}
-.pick-dialog-light .pick-dialog .after {
-  background: rgba(var(--pick-light), 1);
-}
+
 @-moz-keyframes rebound {
   0% {
     transform: scale(0.9);
@@ -216,4 +209,61 @@ GLOBAL COLORS
   100% {
     transform: scale(1);
   }
+}
+
+
+.pick-dialog-primary .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-primary),1)
+}
+
+.pick-dialog-primary .pick-dialog .after {
+  background: rgba(var(--pick-primary),1)
+}
+
+.pick-dialog-secondary .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-secondary),1)
+}
+
+.pick-dialog-secondary .pick-dialog .after {
+  background: rgba(var(--pick-secondary),1)
+}
+
+.pick-dialog-danger .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-danger),1)
+}
+
+.pick-dialog-danger .pick-dialog .after {
+  background: rgba(var(--pick-danger),1)
+}
+
+.pick-dialog-success .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-success),1)
+}
+
+.pick-dialog-success .pick-dialog .after {
+  background: rgba(var(--pick-success),1)
+}
+
+.pick-dialog-warning .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-warning),1)
+}
+
+.pick-dialog-warning .pick-dialog .after {
+  background: rgba(var(--pick-warning),1)
+}
+
+.pick-dialog-dark .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-dark),1)
+}
+
+.pick-dialog-dark .pick-dialog .after {
+  background: rgba(var(--pick-dark),1)
+}
+
+.pick-dialog-light .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-light),1)
+}
+
+.pick-dialog-light .pick-dialog .after {
+  background: rgba(var(--pick-light),1)
 }
