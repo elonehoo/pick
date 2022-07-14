@@ -40,7 +40,7 @@ const hasSlot = computed(() => {
 
 <template>
   <nav :class="`pick-align-${props.align}`" class="pick-breadcrumb" aria-label="breadcrumb">
-    <ol class="pick-breadcrumb--ol">
+    <ol style="list-style:none;" class="pick-breadcrumb--ol">
       <slot />
       <li v-for="item in items" v-show="!hasSlot" :key="item.title" :class="{'pick-active':item.active,'disabled-link':item.disabled}">
         <a

@@ -136,7 +136,7 @@
 
   function insertBody(){
     let parentx = props.parent ? props.parent : document.body
-    parentx.insertBody(con.value,parentx.firstChild)
+    parentx.insertBefore(con.value,parentx.firstChild)
   }
 </script>
 
