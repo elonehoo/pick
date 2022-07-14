@@ -22,6 +22,7 @@ export default defineConfig({
     }),
   ],
   build: {
+    watch:{},
     outDir: 'dist',
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
