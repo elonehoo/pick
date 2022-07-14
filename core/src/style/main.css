@@ -10,6 +10,7 @@
 @import url(./components/pickChips.css);
 @import url(./components/pickIcon.css);
 @import url(./components/pickCollapse.css);
+@import url(./components/pickDialog.css);
 
 * {
   margin: 0px;

@@ -1,0 +1,219 @@
+/*
+GLOBAL COLORS
+*/
+.dialog-t-enter,
+.dialog-t-leave-to {
+  opacity: 0 !important;
+}
+.dialog-t-enter .pick-dialog {
+  transform: scale(0.9) !important;
+}
+.dialog-t-leave-to .pick-dialog {
+  transform: scale(0.9) !important;
+}
+.dialog-t-enter .pick-dialog-cancel,
+.dialog-t-leave-to .pick-dialog-cancel {
+  border-radius: 50% !important;
+}
+.dialog-t-enter .pick-dialog-text,
+.dialog-t-leave-to .pick-dialog-text {
+  opacity: 0;
+}
+.dialog-t-enter .after,
+.dialog-t-leave-to .after {
+  height: 0% !important;
+}
+.dialog-t-enter header h3,
+.dialog-t-leave-to header h3 {
+  opacity: 0;
+}
+.dialog-t-enter footer button,
+.dialog-t-leave-to footer button {
+  transform: translate(0, 10px);
+  opacity: 0;
+}
+.con-pick-dialog {
+  transition: all 0.2s;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 30000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+.con-pick-dialog .pick-dialog-dark {
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  z-index: 10;
+  transition: all 0.25s ease;
+  opacity: 1;
+}
+.con-pick-dialog .pick-dialog {
+  transition: all 0.2s;
+  z-index: 100;
+  width: calc(100% - 20px);
+  margin: 10px;
+  max-width: 400px;
+  border-radius: 6px;
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.1);
+  background: #fff;
+  animation: rebound 0.3s;
+}
+.con-pick-dialog .pick-dialog.locked {
+  transform: scale(1.02);
+}
+.con-pick-dialog .pick-dialog .pick-dialog-text {
+  padding: 10px;
+  font-size: 0.875em;
+  transition: all 0.23s ease 0.1s;
+}
+.con-pick-dialog .pick-dialog header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8f8f8;
+  border-radius: 5px 5px;
+  position: relative;
+}
+.con-pick-dialog .pick-dialog header .con-title-after {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px 5px 0px 0px;
+}
+.con-pick-dialog .pick-dialog header span.after {
+  transition: all 0.23s ease 0.1s;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 3px;
+  height: 100%;
+  display: block;
+}
+.con-pick-dialog .pick-dialog header h3 {
+  transition: all 0.23s ease 0.1s;
+  padding: 8px;
+  font-size: 1.2rem;
+  margin: 0px;
+}
+.con-pick-dialog .pick-dialog header .pick-dialog-cancel {
+  transition: all 0.23s ease 0.1s;
+  position: relative;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  background: #fff;
+  font-size: 1.25em;
+}
+.con-pick-dialog .pick-dialog header .pick-dialog-cancel:hover {
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+}
+.con-pick-dialog .pick-dialog footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.con-pick-dialog .pick-dialog footer:before {
+  content: '';
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background: rgba(0,0,0,0.05);
+}
+.pick-dialog-primary .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-primary), 1);
+}
+.pick-dialog-primary .pick-dialog .after {
+  background: rgba(var(--pick-primary), 1);
+}
+.pick-dialog-secondary .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-secondary), 1);
+}
+.pick-dialog-secondary .pick-dialog .after {
+  background: rgba(var(--pick-secondary), 1);
+}
+.pick-dialog-danger .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-danger), 1);
+}
+.pick-dialog-danger .pick-dialog .after {
+  background: rgba(var(--pick-danger), 1);
+}
+.pick-dialog-success .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-success), 1);
+}
+.pick-dialog-success .pick-dialog .after {
+  background: rgba(var(--pick-success), 1);
+}
+.pick-dialog-warning .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-warning), 1);
+}
+.pick-dialog-warning .pick-dialog .after {
+  background: rgba(var(--pick-warning), 1);
+}
+.pick-dialog-dark .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-dark), 1);
+}
+.pick-dialog-dark .pick-dialog .after {
+  background: rgba(var(--pick-dark), 1);
+}
+.pick-dialog-light .pick-dialog .pick-dialog-header {
+  color: rgba(var(--pick-light), 1);
+}
+.pick-dialog-light .pick-dialog .after {
+  background: rgba(var(--pick-light), 1);
+}
+@-moz-keyframes rebound {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes rebound {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes rebound {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rebound {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
