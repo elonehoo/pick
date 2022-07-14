@@ -21,7 +21,7 @@
 - [x] Card
 - [x] CheckBox
 - [x] Chip
-- [ ] Collapse
+- [x] Collapse
 - [ ] Dialogs
 - [ ] Divider
 - [ ] DropDown
