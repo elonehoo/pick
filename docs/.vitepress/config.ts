@@ -139,6 +139,10 @@ export default defineConfig({
               text: 'Collapse',
               link: '/components/collapse',
             },
+            {
+              text: 'Dialog',
+              link: '/components/dialog',
+            },
           ],
         },
       ],
