@@ -22,7 +22,7 @@
 - [x] CheckBox
 - [x] Chip
 - [x] Collapse
-- [ ] Dialogs
+- [x] Dialogs
 - [ ] Divider
 - [ ] DropDown
 - [ ] Images
