@@ -27,7 +27,7 @@
     buttonAccept:'filled',
     buttonCancel:'flat',
     isValid:'none',
-    buttonsHidden:true,
+    buttonsHidden:false,
     acceptText:'Accept',
     cancelText:'Cancel',
     iconPack:'material-icons',

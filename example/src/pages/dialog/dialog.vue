@@ -4,22 +4,18 @@ import {pickDialog,pickButton} from '@elonehoo/pick'
 
 const dialogActive = ref<boolean>(false)
 
-const dialogActive1 = ref<boolean>(false)
-const dialogActive2 = ref<boolean>(false)
-const dialogActive3 = ref<boolean>(false)
-const dialogActive4 = ref<boolean>(false)
-const dialogActive5 = ref<boolean>(false)
+const baseColor = ref<string>('primary')
+
+function showDialog(color:string){
+  dialogActive.value = true
+  baseColor.value = color
+}
 
 const dialogActive6 = ref<boolean>(false)
 const acceptFlag = ref<boolean>(false)
 
 function dialogCancel() {
   dialogActive.value = false
-  dialogActive1.value = false
-  dialogActive2.value = false
-  dialogActive3.value = false
-  dialogActive4.value = false
-  dialogActive5.value = false
 }
 
 function dialogCancel1() {
@@ -40,61 +36,14 @@ function dialogAccept1(value:any){
 
 <template>
   <div>
-    <pick-button @click="dialogActive = true">
-      show
-    </pick-button>
+    <pick-button @click="showDialog('primary')">Alert Primary</pick-button>&nbsp;
+    <pick-button @click="showDialog('success')" color="success">Alert Success</pick-button>&nbsp;
+    <pick-button @click="showDialog('danger')" color="danger">Alert Danger</pick-button>&nbsp;
+    <pick-button @click="showDialog('warning')" color="warning">Alert Warning</pick-button>&nbsp;
+    <pick-button @click="showDialog('dark')" color="dark">Alert Dark</pick-button>&nbsp;
+    <pick-button @click="showDialog('#3dd495')" color="#3dd495">Alert HEX</pick-button>&nbsp;
 
-    <pick-dialog :buttonsHidden="false" @cancel="dialogCancel" @accept="dialogAccept" @close="dialogCancel" title="Dialog - primary" :active="dialogActive" color="primary">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </pick-dialog>
-
-    <br />
-    <br />
-    <pick-button color="success" @click="dialogActive1 = true">
-      show
-    </pick-button>
-
-    <pick-dialog :buttonsHidden="false" @cancel="dialogCancel" @accept="dialogAccept" @close="dialogCancel" title="Dialog - success" :active="dialogActive1" color="success">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </pick-dialog>
-
-    <br />
-    <br />
-    <pick-button color="danger" @click="dialogActive2 = true">
-      show
-    </pick-button>
-
-    <pick-dialog :buttonsHidden="false" @cancel="dialogCancel" @accept="dialogAccept" @close="dialogCancel" title="Dialog - danger" :active="dialogActive2" color="danger">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </pick-dialog>
-
-    <br />
-    <br />
-    <pick-button color="warning" @click="dialogActive3 = true">
-      show
-    </pick-button>
-
-    <pick-dialog :buttonsHidden="false" @cancel="dialogCancel" @accept="dialogAccept" @close="dialogCancel" title="Dialog - danger" :active="dialogActive3" color="warning">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </pick-dialog>
-
-    <br />
-    <br />
-    <pick-button color="dark" @click="dialogActive4 = true">
-      show
-    </pick-button>
-
-    <pick-dialog :buttonsHidden="false" @cancel="dialogCancel1" @accept="dialogAccept" @close="dialogCancel" title="Dialog - danger" :active="dialogActive4" color="dark">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </pick-dialog>
-
-    <br />
-    <br />
-    <pick-button color="#3dd495" @click="dialogActive5 = true">
-      show
-    </pick-button>
-
-    <pick-dialog :buttonsHidden="false" @cancel="dialogCancel" @accept="dialogAccept" @close="dialogCancel" title="Dialog - danger" :active="dialogActive5" color="#3dd495">
+    <pick-dialog :buttonsHidden="false" @cancel="dialogCancel" @accept="dialogAccept" @close="dialogCancel" title="Dialog - primary" :active="dialogActive" :color="baseColor">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </pick-dialog>
 
