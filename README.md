@@ -23,7 +23,7 @@
 - [x] Chip
 - [x] Collapse
 - [x] Dialogs
-- [ ] Divider
+- [x] Divider
 - [ ] DropDown
 - [ ] Images
 - [ ] Input
