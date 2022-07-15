@@ -11,6 +11,7 @@
 @import url(./components/pickIcon.css);
 @import url(./components/pickCollapse.css);
 @import url(./components/pickDialog.css);
+@import url(./components/pickDivider.css);
 
 * {
   margin: 0px;

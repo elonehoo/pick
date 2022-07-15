@@ -1,0 +1,92 @@
+.pick-divider {
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 15px 0px;
+  clear: both;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pick-divider .after,
+.pick-divider .before {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.pick-divider--text {
+  cursor: default;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  background: #fff;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 0.9375em;
+}
+.pick-divider--icon {
+  font-size: 1.25em;
+}
+.pick-divider-border-primary {
+  border-top-color: rgba(var(--pick-primary), 1);
+}
+.pick-divider-text-primary {
+  color: rgba(var(--pick-primary), 1);
+}
+.pick-divider-background-primary {
+  background: rgba(var(--pick-primary), 1);
+}
+.pick-divider-border-secondary {
+  border-top-color: rgba(var(--pick-secondary), 1);
+}
+.pick-divider-text-secondary {
+  color: rgba(var(--pick-secondary), 1);
+}
+.pick-divider-background-secondary {
+  background: rgba(var(--pick-secondary), 1);
+}
+.pick-divider-border-danger {
+  border-top-color: rgba(var(--pick-danger), 1);
+}
+.pick-divider-text-danger {
+  color: rgba(var(--pick-danger), 1);
+}
+.pick-divider-background-danger {
+  background: rgba(var(--pick-danger), 1);
+}
+.pick-divider-border-success {
+  border-top-color: rgba(var(--pick-success), 1);
+}
+.pick-divider-text-success {
+  color: rgba(var(--pick-success), 1);
+}
+.pick-divider-background-success {
+  background: rgba(var(--pick-success), 1);
+}
+.pick-divider-border-warning {
+  border-top-color: rgba(var(--pick-warning), 1);
+}
+.pick-divider-text-warning {
+  color: rgba(var(--pick-warning), 1);
+}
+.pick-divider-background-warning {
+  background: rgba(var(--pick-warning), 1);
+}
+.pick-divider-border-dark {
+  border-top-color: rgba(var(--pick-dark), 1);
+}
+.pick-divider-text-dark {
+  color: rgba(var(--pick-dark), 1);
+}
+.pick-divider-background-dark {
+  background: rgba(var(--pick-dark), 1);
+}
+.pick-divider-border-light {
+  border-top-color: rgba(var(--pick-light), 1);
+}
+.pick-divider-text-light {
+  color: rgba(var(--pick-light), 1);
+}
+.pick-divider-background-light {
+  background: rgba(var(--pick-light), 1);
+}
