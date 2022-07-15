@@ -11,6 +11,7 @@ import checkBox from '~/pages/checkBox/checkBox.vue'
 import chip from '~/pages/chip/chip.vue'
 import collapse from '~/pages/collapse/collapse.vue'
 import dialog from '~/pages/dialog/dialog.vue'
+import divider from '~/pages/divider/divider.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -58,6 +59,10 @@ const router = createRouter({
     {
       path: '/dialog',
       component: dialog,
+    },
+    {
+      path: '/divider',
+      component: divider,
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],
