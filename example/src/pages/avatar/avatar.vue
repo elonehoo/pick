@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { pickAvatar, pickCol, pickRow } from '@elonehoo/pick'
 
-const badge1: number = $ref(6)
+var badge1 = $ref<number>(6)
 const badge2: number = $ref(16)
 </script>
 

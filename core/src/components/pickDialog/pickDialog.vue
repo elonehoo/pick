@@ -170,7 +170,7 @@
           <slot/>
           {{ text }}
         </div>
-        <footer v-if="props.buttonsHidden ? false : isPrompt || props.type==='confirm'">
+        <footer>
           <pick-button
            :disabled="props.isValid === 'none' ? false : !props.isValid"
            :color="props.color"
@@ -181,6 +181,7 @@
             {{ props.acceptText }}
           </pick-button>
           <pick-button
+           v-if="props.buttonsHidden ? false : isPrompt || props.type==='confirm'"
            :textColor="'rgba(0,0,0,.5)'"
            :type="props.buttonCancel"
            class="pick-dialog-cancel-button"

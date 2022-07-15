@@ -29,6 +29,9 @@
   transform: translate(0, 10px);
   opacity: 0;
 }
+.pick-dialog-accept-button,.pick-dialog-cancel-button{
+  margin: 2px;
+}
 .con-pick-dialog {
   transition: all 0.2s;
   width: 100%;
