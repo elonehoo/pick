@@ -63,7 +63,7 @@
       'border-top-style': props.borderStyle
     }
     if (!isColor(props.color)) {
-      classes['border-top-color'] = borderColor
+      classes['border-top-color'] = borderColor.value
     }
     return classes
   })
@@ -75,7 +75,7 @@
       'border-top-style': props.borderStyle
     }
     if (!isColor(props.color)) {
-      classes['border-top-color'] = borderColor
+      classes['border-top-color'] = borderColor.value
     }
     return classes
   })
