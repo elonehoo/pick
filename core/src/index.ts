@@ -16,6 +16,7 @@ import { pickCollapseItemPlugin } from './components/pickCollapseItem'
 import { pickDialogPlugin } from './components/pickDialog'
 import { pickDividerPlugin } from './components/pickDivider'
 import { pickImagePlugin } from './components/pickImage'
+import { pickImagesPlugin } from './components/pickImages'
 
 const pickPlugin: Plugin = {
   install(app: App) {
@@ -35,6 +36,7 @@ const pickPlugin: Plugin = {
     pickDialogPlugin.install?.(app)
     pickDividerPlugin.install?.(app)
     pickImagePlugin.install?.(app)
+    pickImagesPlugin.install?.(app)
   },
 }
 
@@ -56,5 +58,6 @@ export * from './components/pickCollapseItem'
 export * from './components/pickDialog'
 export * from './components/pickDivider'
 export * from './components/pickImage'
+export * from './components/pickImages'
 
 export * from './components/pickBreadcrumb/type'
