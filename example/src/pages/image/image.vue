@@ -16,5 +16,4 @@ import { pickImage,pickImages } from '@elonehoo/pick'
   max-height: 500px;
   overflow: auto;
 }
-
 </style>
