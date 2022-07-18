@@ -147,6 +147,10 @@ export default defineConfig({
               text: 'Divider',
               link: '/components/divider',
             },
+            {
+              text: 'Images',
+              link: '/components/images',
+            },
           ],
         },
       ],
