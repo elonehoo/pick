@@ -4,7 +4,7 @@
 
  :root {
   --vp-c-accent: #fef8e2;
-  --vp-c-brand: #e39500;
+  --vp-c-brand: #e39500; /*e39500*/
   --vp-c-brand-light: #f5a816;
   --vp-c-brand-lighter: #fadd60;
   --vp-c-brand-dark: #cca600;
@@ -46,13 +46,13 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #f5a816 30%,
-    #fadd60
+    #fadd60 30%,
+    #f5a816
   );
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #f5a816 30%,
-    #fadd60
+    #f5a816 50%,
+    #fadd60 50%
   );
   --vp-home-hero-image-filter: blur(30px);
 }

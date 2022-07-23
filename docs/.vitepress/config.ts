@@ -151,6 +151,10 @@ export default defineConfig({
               text: 'Images',
               link: '/components/images',
             },
+            {
+              text: 'Input',
+              link: '/components/input',
+            },
           ],
         },
       ],
