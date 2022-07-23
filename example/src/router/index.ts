@@ -13,6 +13,7 @@ import collapse from '~/pages/collapse/collapse.vue'
 import dialog from '~/pages/dialog/dialog.vue'
 import divider from '~/pages/divider/divider.vue'
 import image from '~/pages/image/image.vue'
+import input from '~/pages/input/input.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -68,6 +69,10 @@ const router = createRouter({
     {
       path: '/image',
       component: image,
+    },
+    {
+      path: '/input',
+      component: input,
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],
