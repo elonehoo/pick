@@ -13,6 +13,7 @@
 @import url(./components/pickDialog.css);
 @import url(./components/pickDivider.css);
 @import url(./components/pickImage.css);
+@import url(./components/pickInput.css);
 
 * {
   margin: 0px;

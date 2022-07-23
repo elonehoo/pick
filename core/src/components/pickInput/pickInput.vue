@@ -1,13 +1,14 @@
 <script setup lang="ts">
   import {ref,inject,Ref,computed,useAttrs} from 'vue'
   import { getColor } from '../../util/color'
+  import { pickIcon } from '../pickIcon'
 
   const attrs = useAttrs()
 
   const pickinput= ref<any>(null)
 
   const props = withDefaults(defineProps<{
-    value?:string | number,
+    modelValue?:string | number,
     labelPlaceholder?: string | number,
     label?: string | number,
     autofocus?: boolean,
@@ -29,7 +30,7 @@
     valIconDanger?:string,
     valIconWarning?:string,
   }>(), {
-    value: '',
+    modelValue: '',
     labelPlaceholder:undefined,
     label: undefined,
     autofocus: false,
@@ -47,12 +48,12 @@
     descriptionText:undefined,
     size:'normal',
     valIconPack:'material-icons',
-    valIconSuccess:undefined,
-    valIconDanger:undefined,
-    valIconWarning:undefined,
+    valIconSuccess:'done',
+    valIconDanger:'clear',
+    valIconWarning:'warning',
   })
 
-  const emit = defineEmits(['input','focus','blur'])
+  const emit = defineEmits(['update:modelValue','focus','blur','icon-click'])
 
   const elForm = inject('elForm','')
   const elFormItem = inject('elFormItem','')
@@ -73,9 +74,6 @@
 
   const listeners = computed(()=>{
     return {
-      input:(eve:any)=>{
-        emit('input',eve.target.value)
-      },
       focus: (evt:any) => {
         emit('focus',evt)
         changeFocus(true)
@@ -88,7 +86,7 @@
   })
 
   const isValue = computed(()=>{
-    return props.labelPlaceholder ? true : !props.value
+    return props.labelPlaceholder ? true : !props.modelValue
   })
 
   const getIcon = computed(()=>{
@@ -106,10 +104,10 @@
     el.style.height = '0'
   }
 
-  function enter(el:HTMLElement,done:Function):void{
+  function enter(el:HTMLElement,done?:Function):void{
     let h:number = el.scrollHeight
     el.style.height = h + 'px'
-    done()
+    done!()
   }
 
   function leave(el:HTMLElement):void{
@@ -125,34 +123,117 @@
   <div
     ref="coninput"
     :style="styleLabel"
-    :class="[`vs-input-${props.color}`,{
+    :class="[`pick-input-${props.color}`,{
       'isFocus':isFocus,
       'input-icon-validate-success':props.success,
       'input-icon-validate-danger':props.danger,
       'input-icon-validate-warning':props.warning,
       'is-label-placeholder':props.labelPlaceholder
     }]"
-    class="vs-component vs-con-input-label vs-input">
+    class="pick-component pick-con-input-label pick-input">
     <label
      v-if="props.labelPlaceholder ? false : props.label"
-     class="vs-input--label"
+     class="pick-input--label"
      @click="focusInput">{{ props.label }}</label>
-    <div class="vs-con-input">
+    <div class="pick-con-input">
       <input
        ref="pickinput"
        :style="style"
        :autofocus="autofocus"
-       :class="[size,{
-         'hasValue':value !== '',
-         'hasIcon':icon,
-         'icon-after-input':iconAfter
+       :class="[props.size,{
+         'hasValue':props.modelValue !== '',
+         'hasIcon':props.icon,
+         'icon-after-input':props.iconAfter
        }]"
-       :placeholder="undefined"
-       :value="value"
+       :value="props.modelValue"
+       @input="emit('update:modelValue', ($event.target as HTMLInputElement).value)"
        v-bind="attrs"
-       :type="attrs.type ? attrs.type : 'text'"
-       class="vs-inputx vs-input--input"
+       :placeholder="null"
+       :type="$attrs.type ? $attrs.type : 'text'"
+       class="pick-inputx pick-input--input"
        v-on="listeners">
+      <transition name="placeholderx">
+        <span
+          v-if="isValue && ( labelPlaceholder || attrs.placeholder)"
+          ref="spanplaceholder"
+          :style="styleLabel"
+          :class="[
+            props.labelPlaceholder&&(props.size),
+            props.size,
+            {'pick-placeholder-label': props.labelPlaceholder,}
+          ]"
+          class="input-span-placeholder pick-input--placeholder"
+          @click="focusInput">
+          {{ attrs.placeholder || props.labelPlaceholder }}
+        </span>
+      </transition>
+      <pick-icon
+       v-if="props.icon"
+       :class="{'icon-after':iconAfter, 'icon-no-border':iconNoBorder}"
+       :icon-pack="iconPack"
+       :icon="icon"
+       style="font-size: 1.1rem;"
+       class="icon-inputx notranslate pick-input--icon"
+       @click="focusInput(); emit('icon-click');" />
+      <transition name="icon-validate" >
+        <span
+          v-if="success || danger || warning"
+          :class="{'icon-before':iconAfter}"
+          class="input-icon-validate pick-input--icon-validate">
+          <pick-icon
+            style="font-size: 1.1rem;"
+            :class="{'icon-before':iconAfter}"
+            :icon-pack="valIconPack"
+            :icon="getIcon"
+          />
+        </span>
+      </transition>
     </div>
+    <transition-group
+      @before-enter="beforeEnter(pickinput)"
+      @enter="enter(pickinput)"
+      @leave="leave(pickinput)"
+    >
+      <div
+        v-if="success"
+        key="success"
+        class="con-text-validation pick-input--text-validation">
+        <span class="span-text-validation span-text-validation-success pick-input--text-validation-span">
+          {{
+            successText
+          }}
+        </span>
+      </div>
+      <div
+        v-else-if="danger"
+        key="danger"
+        class="con-text-validation pick-input--text-validation">
+        <span class="span-text-validation span-text-validation-danger pick-input--text-validation-span">
+          {{
+            dangerText
+          }}
+        </span>
+      </div>
+      <div
+        v-else-if="warning"
+        key="warning"
+        class="con-text-validation pick-input--text-validation">
+        <span class="span-text-validation span-text-validation-warning pick-input--text-validation-spans">
+          {{
+            warningText
+          }}
+        </span>
+      </div>
+      <div
+        v-if="descriptionText"
+        key="description"
+        class="con-text-validation pick-input--text-validation">
+        <span class="span-text-validation span-text-validation pick-input--text-validation-span">
+          {{
+            descriptionText
+          }}
+        </span>
+      </div>
+    </transition-group>
   </div>
 </template>
