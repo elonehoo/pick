@@ -17,6 +17,9 @@ hero:
       text: Get Started
       link: /docs/
     - theme: alt
+      text: Components
+      link: /components/grid
+    - theme: alt
       text: Why Pick?
       link: /docs/why
     - theme: alt
