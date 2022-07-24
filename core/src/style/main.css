@@ -14,6 +14,7 @@
 @import url(./components/pickDivider.css);
 @import url(./components/pickImage.css);
 @import url(./components/pickInput.css);
+@import url(./components/pickInputNumber.css);
 
 * {
   margin: 0px;

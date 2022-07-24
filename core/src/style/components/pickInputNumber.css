@@ -1,0 +1,202 @@
+.pick-input-number {
+  position: relative;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 10px;
+  background: #f5f5f5;
+  padding: 2px;
+  border-radius: 5px;
+}
+.pick-input-number.isChangeValue .pick-input-number--input {
+  transform: translate(0, -2px);
+  opacity: 0.5;
+}
+.pick-input-number .pick-input-number--input {
+  transition: all 0.2s ease;
+  width: 40px;
+  min-width: 40px;
+  border: 0px;
+  text-align: center;
+  background: transparent;
+  padding: 4px;
+  -moz-appearance: textfield;
+}
+.pick-input-number .pick-input-number--input[type=number]::-webkit-inner-spin-button,
+.pick-input-number .pick-input-number--input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.pick-input-number button {
+  min-width: 22px;
+  min-height: 22px;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+  position: relative;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: #fff;
+  backface-visibility: hidden;
+}
+.pick-input-number button:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+.pick-input-number button i {
+  font-size: 0.9rem;
+}
+.pick-input-number button.pick-input-number--button-plus {
+  transform: translate(10px, 0px);
+}
+.pick-input-number button.pick-input-number--button-plus:active {
+  transform: translate(10px, 0px) scale(0.9);
+}
+.pick-input-number button.pick-input-number--button-plus:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.5);
+}
+.pick-input-number button.pick-input-number--button-plus.limit {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.5);
+}
+.pick-input-number button.pick-input-number--button-less {
+  transform: translate(-10px, 0px);
+}
+.pick-input-number button.pick-input-number--button-less:active {
+  transform: translate(-10px, 0px) scale(0.9);
+}
+.pick-input-number button.pick-input-number--button-less:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.5);
+}
+.pick-input-number button.pick-input-number--button-less.limit {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.5);
+}
+.pick-input-number.pick-input-number-size-medium input {
+  padding: 3px;
+  font-size: 0.8rem;
+}
+.pick-input-number.pick-input-number-size-medium button {
+  min-width: 19px;
+  min-height: 19px;
+}
+.pick-input-number.pick-input-number-size-medium button i {
+  font-size: 0.8rem;
+}
+.pick-input-number.pick-input-number-size-medium button.pick-input-number--button-plus {
+  transform: translate(8px, 0px);
+}
+.pick-input-number.pick-input-number-size-medium button.pick-input-number--button-plus:active {
+  transform: translate(8px, 0px) scale(0.9);
+}
+.pick-input-number.pick-input-number-size-medium button.pick-input-number--button-less {
+  transform: translate(-8px, 0px);
+}
+.pick-input-number.pick-input-number-size-medium button.pick-input-number--button-less:active {
+  transform: translate(-8px, 0px) scale(0.9);
+}
+.pick-input-number.pick-input-number-size-small .pick-input-number--input {
+  padding: 2px;
+  font-size: 0.7rem;
+}
+.pick-input-number.pick-input-number-size-small button {
+  min-width: 16px;
+  min-height: 16px;
+}
+.pick-input-number.pick-input-number-size-small button i {
+  font-size: 0.7rem;
+}
+.pick-input-number.pick-input-number-size-small button.pick-input-number--button-plus {
+  transform: translate(7px, 0px);
+}
+.pick-input-number.pick-input-number-size-small button.pick-input-number--button-plus:active {
+  transform: translate(7px, 0px) scale(0.9);
+}
+.pick-input-number.pick-input-number-size-small button.pick-input-number--button-less {
+  transform: translate(-7px, 0px);
+}
+.pick-input-number.pick-input-number-size-small button.pick-input-number--button-less:active {
+  transform: translate(-7px, 0px) scale(0.9);
+}
+.pick-input-number.pick-input-number-size-mini .pick-input-number--input {
+  padding: 1px;
+  font-size: 0.6rem;
+}
+.pick-input-number.pick-input-number-size-mini button {
+  min-width: 14px;
+  min-height: 14px;
+}
+.pick-input-number.pick-input-number-size-mini button i {
+  font-size: 0.6rem;
+}
+.pick-input-number.pick-input-number-size-mini button.pick-input-number--button-plus {
+  transform: translate(6px, 0px);
+}
+.pick-input-number.pick-input-number-size-mini button.pick-input-number--button-plus:active {
+  transform: translate(6px, 0px) scale(0.9);
+}
+.pick-input-number.pick-input-number-size-mini button.pick-input-number--button-less {
+  transform: translate(-6px, 0px);
+}
+.pick-input-number.pick-input-number-size-mini button.pick-input-number--button-less:active {
+  transform: translate(-6px, 0px) scale(0.9);
+}
+.pick-input-number-primary button {
+  background: rgba(var(--pick-primary), 1);
+}
+.pick-input-number-primary button:hover {
+  box-shadow: 0px 3px 12px 0px rgba(var(--pick-primary), 0.4);
+}
+.pick-input-number-secondary button {
+  background: rgba(var(--pick-secondary), 1);
+}
+.pick-input-number-secondary button:hover {
+  box-shadow: 0px 3px 12px 0px rgba(var(--pick-secondary), 0.4);
+}
+.pick-input-number-danger button {
+  background: rgba(var(--pick-danger), 1);
+}
+.pick-input-number-danger button:hover {
+  box-shadow: 0px 3px 12px 0px rgba(var(--pick-danger), 0.4);
+}
+.pick-input-number-success button {
+  background: rgba(var(--pick-success), 1);
+}
+.pick-input-number-success button:hover {
+  box-shadow: 0px 3px 12px 0px rgba(var(--pick-success), 0.4);
+}
+.pick-input-number-warning button {
+  background: rgba(var(--pick-warning), 1);
+}
+.pick-input-number-warning button:hover {
+  box-shadow: 0px 3px 12px 0px rgba(var(--pick-warning), 0.4);
+}
+.pick-input-number-dark button {
+  background: rgba(var(--pick-dark), 1);
+}
+.pick-input-number-dark button:hover {
+  box-shadow: 0px 3px 12px 0px rgba(var(--pick-dark), 0.4);
+}
+.pick-input-number-light button {
+  background: rgba(var(--pick-light), 1);
+}
+.pick-input-number-light button:hover {
+  box-shadow: 0px 3px 12px 0px rgba(var(--pick-light), 0.4);
+}
