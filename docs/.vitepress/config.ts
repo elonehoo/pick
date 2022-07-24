@@ -155,6 +155,10 @@ export default defineConfig({
               text: 'Input',
               link: '/components/input',
             },
+            {
+              text:'Input Number',
+              link:'/components/input-number',
+            },
           ],
         },
       ],
