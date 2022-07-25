@@ -21,6 +21,7 @@ import { pickInputPlugin } from './components/pickInput'
 import { pickInputNumberPlugin } from './components/pickInputNumber'
 import { pickListPlugin } from './components/pickList'
 import {pickListHeaderPlugin} from './components/pickListHeader'
+import { pickListItemPlugin } from './components/pickListItem'
 
 const pickPlugin: Plugin = {
   install(app: App) {
@@ -45,6 +46,7 @@ const pickPlugin: Plugin = {
     pickInputNumberPlugin.install?.(app)
     pickListPlugin.install?.(app)
     pickListHeaderPlugin.install?.(app)
+    pickListItemPlugin.install?.(app)
   },
 }
 
@@ -71,5 +73,6 @@ export * from './components/pickInput'
 export * from './components/pickInputNumber'
 export * from './components/pickList'
 export * from './components/pickListHeader'
+export * from './components/pickListItem'
 
 export * from './components/pickBreadcrumb/type'
