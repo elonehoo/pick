@@ -15,6 +15,7 @@ import divider from '~/pages/divider/divider.vue'
 import image from '~/pages/image/image.vue'
 import input from '~/pages/input/input.vue'
 import inputNumber from '~/pages/input-number/input-number.vue'
+import list from '~/pages/list/list.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -78,6 +79,10 @@ const router = createRouter({
     {
       path: '/inputNumber',
       component: inputNumber,
+    },
+    {
+      path: '/list',
+      component: list,
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],
