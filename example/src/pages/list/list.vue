@@ -47,23 +47,23 @@ import {pickList, pickListHeader,pickListItem,pickButton,pickCheckBox,pickChip,p
   </pick-list>
 
   <pick-list>
-  <pick-list-header title="Users" color="danger"></pick-list-header>
-  <pick-list-item title="Steve Jobes" subtitle="Top Contributor">
-    <template #avatar>
-      <pick-avatar />
-    </template>
-  </pick-list-item>
-  <pick-list-item title="Matt" subtitle="11 Points">
-    <template #avatar>
-      <pick-avatar text="Pick"/>
-    </template>
-  </pick-list-item>
-  <pick-list-header title="Profile photo" color="warning"></pick-list-header>
-  <pick-list-item title="Xian Famous Foods" subtitle="A taste of Shaanxi's delicious culinary traditions, with delights like spicy cold noodles and lamb burgers.">
-    <template #avatar>
-      <pick-avatar text="Vue"/>
-    </template>
-  </pick-list-item>
-</pick-list>
+    <pick-list-header title="Users" color="danger"></pick-list-header>
+    <pick-list-item title="Steve Jobes" subtitle="Top Contributor">
+      <template #avatar>
+        <pick-avatar />
+      </template>
+    </pick-list-item>
+    <pick-list-item title="Matt" subtitle="11 Points">
+      <template #avatar>
+        <pick-avatar text="Pick"/>
+      </template>
+    </pick-list-item>
+    <pick-list-header title="Profile photo" color="warning"></pick-list-header>
+    <pick-list-item title="Xian Famous Foods" subtitle="A taste of Shaanxi's delicious culinary traditions, with delights like spicy cold noodles and lamb burgers.">
+      <template #avatar>
+        <pick-avatar text="Vue"/>
+      </template>
+    </pick-list-item>
+  </pick-list>
   </div>
 </template>
