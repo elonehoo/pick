@@ -25,13 +25,13 @@
 - [x] Dialogs
 - [x] Divider
 - [ ] DropDown
-- [ ] Images
-- [ ] Input
+- [x] Images
+- [x] Input
 - [ ] List
 - [ ] Loading
 - [ ] Navbar
 - [ ] Notifications
-- [ ] Number Input
+- [x] Number Input
 - [ ] Pagination
 - [ ] Popup
 - [ ] Progress
