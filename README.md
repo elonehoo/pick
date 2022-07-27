@@ -27,7 +27,7 @@
 - [ ] DropDown
 - [x] Images
 - [x] Input
-- [ ] List
+- [x] List
 - [ ] Loading
 - [ ] Navbar
 - [ ] Notifications
