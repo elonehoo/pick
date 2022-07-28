@@ -163,6 +163,10 @@ export default defineConfig({
               text:'List',
               link:'/components/list',
             },
+            {
+              text:'Loading',
+              link:'/components/loading',
+            },
           ],
         },
       ],
