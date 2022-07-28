@@ -28,7 +28,7 @@
 - [x] Images
 - [x] Input
 - [x] List
-- [ ] Loading
+- [x] Loading
 - [ ] Navbar
 - [ ] Notifications
 - [x] Number Input
