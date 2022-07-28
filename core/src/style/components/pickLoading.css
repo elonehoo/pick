@@ -1,0 +1,1052 @@
+/*
+GLOBAL COLORS
+*/
+.pick-con-loading__container {
+  position: relative;
+  overflow: hidden;
+}
+.pick-con-loading__container .con-pick-loading {
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
+  min-height: 60px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.beforeRemove {
+  opacity: 0;
+}
+.con-pick-loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background: rgba(255,255,255,0.6);
+  z-index: 300000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.con-pick-loading.textAfter {
+  flex-direction: column-reverse !important;
+}
+.con-pick-loading .title-loading {
+  position: relative;
+  padding: 5px;
+}
+.con-pick-loading .effect-click {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.con-pick-loading .pick-loading {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  display: block;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 3px solid transparent;
+}
+.con-pick-loading .pick-loading .effects {
+  transition: all 0.3s ease;
+}
+.con-pick-loading .pick-loading.material {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.con-pick-loading .pick-loading.default .effect-1,
+.con-pick-loading .pick-loading.border .effect-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-left: 3px solid rgba(var(--pick-primary), 1);
+  animation: rotate 1s ease infinite;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.default .effect-2,
+.con-pick-loading .pick-loading.border .effect-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-left: 3px solid rgba(var(--pick-primary), 1);
+  animation: rotateOpacity 1s ease infinite 0.1s;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.default .effect-3,
+.con-pick-loading .pick-loading.border .effect-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-left: 3px solid rgba(var(--pick-primary), 1);
+  animation: rotateOpacity 1s ease infinite 0.2s;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.border {
+  border: 1px solid #f0f0f0;
+}
+.con-pick-loading .pick-loading.border .effect-1,
+.con-pick-loading .pick-loading.border .effect-2,
+.con-pick-loading .pick-loading.border .effect-3 {
+  border: 1px solid transparent;
+  border-left: 1px solid rgba(var(--pick-primary), 1);
+}
+.con-pick-loading .pick-loading.point .effect-1 {
+  background: rgba(var(--pick-primary), 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: scale 1.2s ease infinite;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.point .effect-2 {
+  background: rgba(var(--pick-primary), 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: scale 1.8s ease infinite;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.point .effect-3 {
+  background: rgba(var(--pick-primary), 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: scale 3.6s ease-out infinite;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.radius .effect-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(var(--pick-primary), 1);
+  animation: radius 1s ease infinite;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.radius .effect-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(var(--pick-primary), 1);
+  animation: radius 2s ease infinite 0.1s;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.radius .effect-3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(var(--pick-primary), 1);
+  animation: radius 3s ease infinite 0.2s;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.corners .effect-1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(var(--pick-primary), 1);
+  animation: corners 1s ease infinite;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.con-pick-loading .pick-loading.sound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.con-pick-loading .pick-loading.sound .effect-1 {
+  position: relative;
+  width: 5px;
+  height: 100%;
+  animation: sound 1.4s ease infinite alternate;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: rgba(var(--pick-primary), 1);
+  margin: 0px 4px;
+}
+.con-pick-loading .pick-loading.sound .effect-2 {
+  position: relative;
+  width: 5px;
+  height: 60%;
+  animation: sound 0.7s ease infinite alternate;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: rgba(var(--pick-primary), 1);
+  margin: 0px 4px;
+}
+.con-pick-loading .pick-loading.sound .effect-3 {
+  position: relative;
+  width: 5px;
+  height: 80%;
+  animation: sound 1s ease-out infinite alternate;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: rgba(var(--pick-primary), 1);
+  margin: 0px 4px;
+}
+.spinner {
+  animation: rotator 1.4s linear infinite;
+}
+.path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+.effect-click-leave-active {
+  transition: all 0.3s;
+}
+.effect-click-leave-to {
+  opacity: 0;
+  width: 1000px !important;
+  height: 1000px !important;
+}
+.pick-loading-background-primary {
+  background: rgba(var(--pick-primary), 1);
+}
+.pick-loading-color-primary .default .effect-1,
+.pick-loading-color-primary .border .effect-1 {
+  border-left: 3px solid rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .default .effect-2,
+.pick-loading-color-primary .border .effect-2 {
+  border-left: 3px solid rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .default .effect-3,
+.pick-loading-color-primary .border .effect-3 {
+  border-left: 3px solid rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .border .effect-1,
+.pick-loading-color-primary .border .effect-2,
+.pick-loading-color-primary .border .effect-3 {
+  border-left: 1px solid rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .point .effect-1 {
+  background: rgba(var(--pick-primary), 0.4) !important;
+}
+.pick-loading-color-primary .point .effect-2 {
+  background: rgba(var(--pick-primary), 0.4) !important;
+}
+.pick-loading-color-primary .point .effect-3 {
+  background: rgba(var(--pick-primary), 0.4) !important;
+}
+.pick-loading-color-primary .radius .effect-1 {
+  border: 3px solid rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .radius .effect-2 {
+  border: 3px solid rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .radius .effect-3 {
+  border: 3px solid rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .corners .effect-1 {
+  border: 3px solid rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .sound .effect-1 {
+  background: rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .sound .effect-2 {
+  background: rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-color-primary .sound .effect-3 {
+  background: rgba(var(--pick-primary), 1) !important;
+}
+.pick-loading-background-secondary {
+  background: rgba(var(--pick-secondary), 1);
+}
+.pick-loading-color-secondary .default .effect-1,
+.pick-loading-color-secondary .border .effect-1 {
+  border-left: 3px solid rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .default .effect-2,
+.pick-loading-color-secondary .border .effect-2 {
+  border-left: 3px solid rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .default .effect-3,
+.pick-loading-color-secondary .border .effect-3 {
+  border-left: 3px solid rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .border .effect-1,
+.pick-loading-color-secondary .border .effect-2,
+.pick-loading-color-secondary .border .effect-3 {
+  border-left: 1px solid rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .point .effect-1 {
+  background: rgba(var(--pick-secondary), 0.4) !important;
+}
+.pick-loading-color-secondary .point .effect-2 {
+  background: rgba(var(--pick-secondary), 0.4) !important;
+}
+.pick-loading-color-secondary .point .effect-3 {
+  background: rgba(var(--pick-secondary), 0.4) !important;
+}
+.pick-loading-color-secondary .radius .effect-1 {
+  border: 3px solid rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .radius .effect-2 {
+  border: 3px solid rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .radius .effect-3 {
+  border: 3px solid rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .corners .effect-1 {
+  border: 3px solid rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .sound .effect-1 {
+  background: rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .sound .effect-2 {
+  background: rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-color-secondary .sound .effect-3 {
+  background: rgba(var(--pick-secondary), 1) !important;
+}
+.pick-loading-background-danger {
+  background: rgba(var(--pick-danger), 1);
+}
+.pick-loading-color-danger .default .effect-1,
+.pick-loading-color-danger .border .effect-1 {
+  border-left: 3px solid rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .default .effect-2,
+.pick-loading-color-danger .border .effect-2 {
+  border-left: 3px solid rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .default .effect-3,
+.pick-loading-color-danger .border .effect-3 {
+  border-left: 3px solid rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .border .effect-1,
+.pick-loading-color-danger .border .effect-2,
+.pick-loading-color-danger .border .effect-3 {
+  border-left: 1px solid rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .point .effect-1 {
+  background: rgba(var(--pick-danger), 0.4) !important;
+}
+.pick-loading-color-danger .point .effect-2 {
+  background: rgba(var(--pick-danger), 0.4) !important;
+}
+.pick-loading-color-danger .point .effect-3 {
+  background: rgba(var(--pick-danger), 0.4) !important;
+}
+.pick-loading-color-danger .radius .effect-1 {
+  border: 3px solid rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .radius .effect-2 {
+  border: 3px solid rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .radius .effect-3 {
+  border: 3px solid rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .corners .effect-1 {
+  border: 3px solid rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .sound .effect-1 {
+  background: rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .sound .effect-2 {
+  background: rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-color-danger .sound .effect-3 {
+  background: rgba(var(--pick-danger), 1) !important;
+}
+.pick-loading-background-success {
+  background: rgba(var(--pick-success), 1);
+}
+.pick-loading-color-success .default .effect-1,
+.pick-loading-color-success .border .effect-1 {
+  border-left: 3px solid rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .default .effect-2,
+.pick-loading-color-success .border .effect-2 {
+  border-left: 3px solid rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .default .effect-3,
+.pick-loading-color-success .border .effect-3 {
+  border-left: 3px solid rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .border .effect-1,
+.pick-loading-color-success .border .effect-2,
+.pick-loading-color-success .border .effect-3 {
+  border-left: 1px solid rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .point .effect-1 {
+  background: rgba(var(--pick-success), 0.4) !important;
+}
+.pick-loading-color-success .point .effect-2 {
+  background: rgba(var(--pick-success), 0.4) !important;
+}
+.pick-loading-color-success .point .effect-3 {
+  background: rgba(var(--pick-success), 0.4) !important;
+}
+.pick-loading-color-success .radius .effect-1 {
+  border: 3px solid rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .radius .effect-2 {
+  border: 3px solid rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .radius .effect-3 {
+  border: 3px solid rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .corners .effect-1 {
+  border: 3px solid rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .sound .effect-1 {
+  background: rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .sound .effect-2 {
+  background: rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-color-success .sound .effect-3 {
+  background: rgba(var(--pick-success), 1) !important;
+}
+.pick-loading-background-warning {
+  background: rgba(var(--pick-warning), 1);
+}
+.pick-loading-color-warning .default .effect-1,
+.pick-loading-color-warning .border .effect-1 {
+  border-left: 3px solid rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .default .effect-2,
+.pick-loading-color-warning .border .effect-2 {
+  border-left: 3px solid rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .default .effect-3,
+.pick-loading-color-warning .border .effect-3 {
+  border-left: 3px solid rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .border .effect-1,
+.pick-loading-color-warning .border .effect-2,
+.pick-loading-color-warning .border .effect-3 {
+  border-left: 1px solid rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .point .effect-1 {
+  background: rgba(var(--pick-warning), 0.4) !important;
+}
+.pick-loading-color-warning .point .effect-2 {
+  background: rgba(var(--pick-warning), 0.4) !important;
+}
+.pick-loading-color-warning .point .effect-3 {
+  background: rgba(var(--pick-warning), 0.4) !important;
+}
+.pick-loading-color-warning .radius .effect-1 {
+  border: 3px solid rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .radius .effect-2 {
+  border: 3px solid rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .radius .effect-3 {
+  border: 3px solid rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .corners .effect-1 {
+  border: 3px solid rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .sound .effect-1 {
+  background: rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .sound .effect-2 {
+  background: rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-color-warning .sound .effect-3 {
+  background: rgba(var(--pick-warning), 1) !important;
+}
+.pick-loading-background-dark {
+  background: rgba(var(--pick-dark), 1);
+}
+.pick-loading-color-dark .default .effect-1,
+.pick-loading-color-dark .border .effect-1 {
+  border-left: 3px solid rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .default .effect-2,
+.pick-loading-color-dark .border .effect-2 {
+  border-left: 3px solid rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .default .effect-3,
+.pick-loading-color-dark .border .effect-3 {
+  border-left: 3px solid rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .border .effect-1,
+.pick-loading-color-dark .border .effect-2,
+.pick-loading-color-dark .border .effect-3 {
+  border-left: 1px solid rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .point .effect-1 {
+  background: rgba(var(--pick-dark), 0.4) !important;
+}
+.pick-loading-color-dark .point .effect-2 {
+  background: rgba(var(--pick-dark), 0.4) !important;
+}
+.pick-loading-color-dark .point .effect-3 {
+  background: rgba(var(--pick-dark), 0.4) !important;
+}
+.pick-loading-color-dark .radius .effect-1 {
+  border: 3px solid rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .radius .effect-2 {
+  border: 3px solid rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .radius .effect-3 {
+  border: 3px solid rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .corners .effect-1 {
+  border: 3px solid rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .sound .effect-1 {
+  background: rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .sound .effect-2 {
+  background: rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-color-dark .sound .effect-3 {
+  background: rgba(var(--pick-dark), 1) !important;
+}
+.pick-loading-background-light {
+  background: rgba(var(--pick-light), 1);
+}
+.pick-loading-color-light .default .effect-1,
+.pick-loading-color-light .border .effect-1 {
+  border-left: 3px solid rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .default .effect-2,
+.pick-loading-color-light .border .effect-2 {
+  border-left: 3px solid rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .default .effect-3,
+.pick-loading-color-light .border .effect-3 {
+  border-left: 3px solid rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .border .effect-1,
+.pick-loading-color-light .border .effect-2,
+.pick-loading-color-light .border .effect-3 {
+  border-left: 1px solid rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .point .effect-1 {
+  background: rgba(var(--pick-light), 0.4) !important;
+}
+.pick-loading-color-light .point .effect-2 {
+  background: rgba(var(--pick-light), 0.4) !important;
+}
+.pick-loading-color-light .point .effect-3 {
+  background: rgba(var(--pick-light), 0.4) !important;
+}
+.pick-loading-color-light .radius .effect-1 {
+  border: 3px solid rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .radius .effect-2 {
+  border: 3px solid rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .radius .effect-3 {
+  border: 3px solid rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .corners .effect-1 {
+  border: 3px solid rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .sound .effect-1 {
+  background: rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .sound .effect-2 {
+  background: rgba(var(--pick-light), 1) !important;
+}
+.pick-loading-color-light .sound .effect-3 {
+  background: rgba(var(--pick-light), 1) !important;
+}
+@-moz-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotateOpacity {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotateOpacity {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@-o-keyframes rotateOpacity {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateOpacity {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@-moz-keyframes scale {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+@-webkit-keyframes scale {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+@-o-keyframes scale {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(0.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.1);
+  }
+}
+@-moz-keyframes radius {
+  0% {
+    transform: rotate(0deg) scale(0.1);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(160deg) scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes radius {
+  0% {
+    transform: rotate(0deg) scale(0.1);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(160deg) scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.1);
+    opacity: 1;
+  }
+}
+@-o-keyframes radius {
+  0% {
+    transform: rotate(0deg) scale(0.1);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(160deg) scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.1);
+    opacity: 1;
+  }
+}
+@keyframes radius {
+  0% {
+    transform: rotate(0deg) scale(0.1);
+    opacity: 1;
+  }
+  60% {
+    transform: rotate(160deg) scale(1);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.1);
+    opacity: 1;
+  }
+}
+@-moz-keyframes corners {
+  0% {
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 50% 50% 20%;
+  }
+  50% {
+    border-radius: 50% 50% 20% 30%;
+  }
+  75% {
+    border-radius: 50% 20% 30% 30%;
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotate(-180deg);
+  }
+}
+@-webkit-keyframes corners {
+  0% {
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 50% 50% 20%;
+  }
+  50% {
+    border-radius: 50% 50% 20% 30%;
+  }
+  75% {
+    border-radius: 50% 20% 30% 30%;
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotate(-180deg);
+  }
+}
+@-o-keyframes corners {
+  0% {
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 50% 50% 20%;
+  }
+  50% {
+    border-radius: 50% 50% 20% 30%;
+  }
+  75% {
+    border-radius: 50% 20% 30% 30%;
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotate(-180deg);
+  }
+}
+@keyframes corners {
+  0% {
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 50% 50% 20%;
+  }
+  50% {
+    border-radius: 50% 50% 20% 30%;
+  }
+  75% {
+    border-radius: 50% 20% 30% 30%;
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotate(-180deg);
+  }
+}
+@-moz-keyframes sound {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scaleY(1.2);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scaleY(0.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes sound {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scaleY(1.2);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scaleY(0.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@-o-keyframes sound {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scaleY(1.2);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scaleY(0.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes sound {
+  0% {
+    transform: scaleY(0);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scaleY(1.2);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scaleY(0.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@-moz-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+@-o-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    transform: rotate(450deg);
+  }
+}
+@-moz-keyframes colors {
+  0% {
+    stroke: #4285f4;
+  }
+  25% {
+    stroke: #de3e35;
+  }
+  50% {
+    stroke: #f7c223;
+  }
+  75% {
+    stroke: #1b9a59;
+  }
+  100% {
+    stroke: #4285f4;
+  }
+}
+@-webkit-keyframes colors {
+  0% {
+    stroke: #4285f4;
+  }
+  25% {
+    stroke: #de3e35;
+  }
+  50% {
+    stroke: #f7c223;
+  }
+  75% {
+    stroke: #1b9a59;
+  }
+  100% {
+    stroke: #4285f4;
+  }
+}
+@-o-keyframes colors {
+  0% {
+    stroke: #4285f4;
+  }
+  25% {
+    stroke: #de3e35;
+  }
+  50% {
+    stroke: #f7c223;
+  }
+  75% {
+    stroke: #1b9a59;
+  }
+  100% {
+    stroke: #4285f4;
+  }
+}
+@keyframes colors {
+  0% {
+    stroke: #4285f4;
+  }
+  25% {
+    stroke: #de3e35;
+  }
+  50% {
+    stroke: #f7c223;
+  }
+  75% {
+    stroke: #1b9a59;
+  }
+  100% {
+    stroke: #4285f4;
+  }
+}
+@-moz-keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+@-webkit-keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+@-o-keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+@keyframes rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
