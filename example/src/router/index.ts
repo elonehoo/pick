@@ -16,6 +16,7 @@ import image from '~/pages/image/image.vue'
 import input from '~/pages/input/input.vue'
 import inputNumber from '~/pages/input-number/input-number.vue'
 import list from '~/pages/list/list.vue'
+import loading from '~/pages/loading/loading.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -83,6 +84,10 @@ const router = createRouter({
     {
       path: '/list',
       component: list,
+    },
+    {
+      path:'/loading',
+      component:loading
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],
