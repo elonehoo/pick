@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@elonehoo/pick": "workspace:*",
-    "material-icons": "^1.11.5"
+    "material-icons": "^1.11.8"
   },
   "devDependencies": {
     "typescript": "^4.7.4",
