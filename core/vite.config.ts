@@ -2,7 +2,7 @@ import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import distCss from '@elonehoo/vite-plugin-dist-css'
-import dts from 'vite-plugin-dts'
+import types from '@elonehoo/vite-plugin-type-ts'
 
 export default defineConfig({
   resolve: {
@@ -15,7 +15,7 @@ export default defineConfig({
       reactivityTransform: true,
     }),
     distCss(),
-    dts({
+    types({
       tsConfigFilePath: './tsconfig.json',
       cleanVueFileName: true,
       insertTypesEntry: true,
