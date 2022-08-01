@@ -29,6 +29,7 @@
     "dist"
   ],
   "scripts": {
+    "remove":"rimraf dist",
     "build": "rimraf dist && vite build",
     "prepublishOnly": "pnpm run build",
     "build:dev": "vite build"
