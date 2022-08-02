@@ -17,6 +17,7 @@
 @import url(./components/pickInputNumber.css);
 @import url(./components/pickList.css);
 @import url(./components/pickLoading.css);
+@import url(./components/pickNavbar.css);
 
 * {
   margin: 0px;
