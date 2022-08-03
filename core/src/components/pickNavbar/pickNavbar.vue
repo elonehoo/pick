@@ -4,11 +4,11 @@ import { isColor,getColor,changeColor } from '../../util/color'
 
 const props = withDefaults(defineProps<{
   modelValue:any,
-  type:string,
-  collapse:boolean,
-  color:string,
-  activeTextColor:string,
-  textColor:string
+  type?:string,
+  collapse?:boolean,
+  color?:string,
+  activeTextColor?:string,
+  textColor?:string
 }>(), {
   type:undefined,
   collapse:false,
