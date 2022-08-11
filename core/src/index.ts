@@ -27,6 +27,7 @@ import { pickNavbarPlugin } from './components/pickNavbar'
 import { pickNavbarItemsPlugin } from './components/pickNavbarItems'
 import { pickNavbarTitlePlugin } from './components/pickNavbarTitle'
 import { pickNavbarGroupPlugin } from './components/pickNavbarGroup'
+import {pickSelectPlugin} from './components/pickSelect'
 
 const pickPlugin: Plugin = {
   install(app: App) {
@@ -57,6 +58,7 @@ const pickPlugin: Plugin = {
     pickNavbarItemsPlugin.install?.(app)
     pickNavbarTitlePlugin.install?.(app)
     pickNavbarGroupPlugin.install?.(app)
+    pickSelectPlugin.install?.(app)
   },
 }
 
@@ -90,5 +92,6 @@ export * from './components/pickNavbarItems'
 export * from './components/pickNavbarTitle'
 export * from './components/pickNavbarGroup'
 export * from './components/pickNavbarItem'
+export * from './components/pickSelect'
 
 export * from './components/pickBreadcrumb/type'

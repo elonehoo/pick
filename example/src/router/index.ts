@@ -18,6 +18,7 @@ import inputNumber from '~/pages/input-number/input-number.vue'
 import list from '~/pages/list/list.vue'
 import loading from '~/pages/loading/loading.vue'
 import navbar from '~/pages/navbar/navbar.vue'
+import select from '~/pages/select/select.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -93,6 +94,10 @@ const router = createRouter({
     {
       path:'/navbar',
       component:navbar
+    },
+    {
+      path:'/select',
+      component:select
     },
     { path: '/:pathMatch(.*)*', component: All },
   ],
