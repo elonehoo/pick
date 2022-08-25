@@ -8,7 +8,7 @@ importers:
       '@elonehoo/rimraf': 0.0.1
       bumpp: 8.2.1
       eslint: 8.21.0
-      pnpm: 7.9.0
+      pnpm: 7.9.5
       ts-node: 10.9.1
       typescript: 4.7.4
       vite: 3.0.4
@@ -17,7 +17,7 @@ importers:
       '@elonehoo/rimraf': 0.0.1
       bumpp: 8.2.1
       eslint: 8.21.0
-      pnpm: 7.9.0
+      pnpm: 7.9.5
       ts-node: 10.9.1_e2tlcjkk7tlngjdlhzx5hjlnv4
       typescript: 4.7.4
       vite: 3.0.4
@@ -2880,8 +2880,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /pnpm/7.9.0:
-    resolution: {integrity: sha512-xkIVw73yJm/h5M4VvFIS5Q+gQCRDrp3r92g58PtcCK86aZCa7EQ6q6ivdfTAz0KsAVgloA6Anub28n6wju5v3w==}
+  /pnpm/7.9.5:
+    resolution: {integrity: sha512-+r7+PlBIsblqia8eUOUsBp/R+lHmGAm55jyQRt3DWMUI0srVR1aNJhQECfx24L53Ckz9g48mVxQXEniQMWQPmw==}
     engines: {node: '>=14.6'}
     hasBin: true
     dev: true
