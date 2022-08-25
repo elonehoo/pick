@@ -26,7 +26,7 @@ importers:
     specifiers:
       '@elonehoo/vite-plugin-dist-css': 0.0.4
       '@elonehoo/vite-plugin-type-ts': 0.0.1
-      '@vitejs/plugin-vue': 3.0.1
+      '@vitejs/plugin-vue': 3.0.3
       '@vue/compiler-sfc': 3.2.37
       vue: ^3.2.37
     dependencies:
@@ -34,7 +34,7 @@ importers:
     devDependencies:
       '@elonehoo/vite-plugin-dist-css': 0.0.4
       '@elonehoo/vite-plugin-type-ts': 0.0.1
-      '@vitejs/plugin-vue': 3.0.1_vite@3.0.9+vue@3.2.37
+      '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
       '@vue/compiler-sfc': 3.2.37
 
   docs:
@@ -53,7 +53,7 @@ importers:
   example:
     specifiers:
       '@elonehoo/pick': workspace:*
-      '@vitejs/plugin-vue': 3.0.1
+      '@vitejs/plugin-vue': 3.0.3
       '@vue/compiler-sfc': 3.2.37
       material-icons: 1.11.10
       vue: 3.2.37
@@ -63,7 +63,7 @@ importers:
       vue-router: 4.1.3_vue@3.2.37
     devDependencies:
       '@elonehoo/pick': link:../core
-      '@vitejs/plugin-vue': 3.0.1_vite@3.0.4+vue@3.2.37
+      '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
       '@vue/compiler-sfc': 3.2.37
       material-icons: 1.11.10
 
@@ -767,19 +767,8 @@ packages:
       vue: 3.2.37
     dev: true
 
-  /@vitejs/plugin-vue/3.0.1_vite@3.0.4+vue@3.2.37:
-    resolution: {integrity: sha512-Ll9JgxG7ONIz/XZv3dssfoMUDu9qAnlJ+km+pBA0teYSXzwPCIzS/e1bmwNYl5dcQGs677D21amgfYAnzMl17A==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    peerDependencies:
-      vite: ^3.0.0
-      vue: ^3.2.25
-    dependencies:
-      vite: 3.0.4
-      vue: 3.2.37
-    dev: true
-
-  /@vitejs/plugin-vue/3.0.1_vite@3.0.9+vue@3.2.37:
-    resolution: {integrity: sha512-Ll9JgxG7ONIz/XZv3dssfoMUDu9qAnlJ+km+pBA0teYSXzwPCIzS/e1bmwNYl5dcQGs677D21amgfYAnzMl17A==}
+  /@vitejs/plugin-vue/3.0.3_vite@3.0.9+vue@3.2.37:
+    resolution: {integrity: sha512-U4zNBlz9mg+TA+i+5QPc3N5lQvdUXENZLO2h0Wdzp56gI1MWhqJOv+6R+d4kOzoaSSq6TnGPBdZAXKOe4lXy6g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^3.0.0
@@ -3461,33 +3450,6 @@ packages:
       sass:
         optional: true
       stylus:
-        optional: true
-    dependencies:
-      esbuild: 0.14.51
-      postcss: 8.4.14
-      resolve: 1.22.1
-      rollup: 2.77.2
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
-  /vite/3.0.4:
-    resolution: {integrity: sha512-NU304nqnBeOx2MkQnskBQxVsa0pRAH5FphokTGmyy8M3oxbvw7qAXts2GORxs+h/2vKsD+osMhZ7An6yK6F1dA==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      terser:
         optional: true
     dependencies:
       esbuild: 0.14.51
