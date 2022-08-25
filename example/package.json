@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@elonehoo/pick": "workspace:*",
-    "material-icons": "1.11.8",
+    "material-icons": "1.11.10",
     "@vitejs/plugin-vue": "3.0.1",
     "@vue/compiler-sfc": "3.2.37"
   }
