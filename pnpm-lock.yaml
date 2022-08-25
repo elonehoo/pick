@@ -11,7 +11,7 @@ importers:
       pnpm: 7.9.5
       ts-node: 10.9.1
       typescript: 4.7.4
-      vite: 3.0.4
+      vite: 3.0.9
     devDependencies:
       '@elonehoo/eslint-config': 2.0.0_qugx7qdu5zevzvxaiqyxfiwquq
       '@elonehoo/rimraf': 0.0.1
@@ -20,7 +20,7 @@ importers:
       pnpm: 7.9.5
       ts-node: 10.9.1_e2tlcjkk7tlngjdlhzx5hjlnv4
       typescript: 4.7.4
-      vite: 3.0.4
+      vite: 3.0.9
 
   core:
     specifiers:
@@ -34,7 +34,7 @@ importers:
     devDependencies:
       '@elonehoo/vite-plugin-dist-css': 0.0.4
       '@elonehoo/vite-plugin-type-ts': 0.0.1
-      '@vitejs/plugin-vue': 3.0.1_vite@3.0.4+vue@3.2.37
+      '@vitejs/plugin-vue': 3.0.1_vite@3.0.9+vue@3.2.37
       '@vue/compiler-sfc': 3.2.37
 
   docs:
@@ -775,6 +775,17 @@ packages:
       vue: ^3.2.25
     dependencies:
       vite: 3.0.4
+      vue: 3.2.37
+    dev: true
+
+  /@vitejs/plugin-vue/3.0.1_vite@3.0.9+vue@3.2.37:
+    resolution: {integrity: sha512-Ll9JgxG7ONIz/XZv3dssfoMUDu9qAnlJ+km+pBA0teYSXzwPCIzS/e1bmwNYl5dcQGs677D21amgfYAnzMl17A==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      vite: ^3.0.0
+      vue: ^3.2.25
+    dependencies:
+      vite: 3.0.9
       vue: 3.2.37
     dev: true
 
@@ -2902,6 +2913,15 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  /postcss/8.4.16:
+    resolution: {integrity: sha512-ipHE1XBvKzm5xI7hiHCZJCSugxvsdq2mPnsq5+UF+VHCjiBvtDrlxJfMBToWaP9D5XlgNmcFGqoHmUn0EYEaRQ==}
+    engines: {node: ^10 || ^12 || >=14}
+    dependencies:
+      nanoid: 3.3.4
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /preact/10.10.0:
     resolution: {integrity: sha512-fszkg1iJJjq68I4lI8ZsmBiaoQiQHbxf1lNq+72EmC/mZOsFF5zn3k1yv9QGoFgIXzgsdSKtYymLJsrJPoamjQ==}
     dev: true
@@ -3467,6 +3487,33 @@ packages:
     dependencies:
       esbuild: 0.14.51
       postcss: 8.4.14
+      resolve: 1.22.1
+      rollup: 2.77.2
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /vite/3.0.9:
+    resolution: {integrity: sha512-waYABTM+G6DBTCpYAxvevpG50UOlZuynR0ckTK5PawNVt7ebX6X7wNXHaGIO6wYYFXSM7/WcuFuO2QzhBB6aMw==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    hasBin: true
+    peerDependencies:
+      less: '*'
+      sass: '*'
+      stylus: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      less:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.14.51
+      postcss: 8.4.16
       resolve: 1.22.1
       rollup: 2.77.2
     optionalDependencies:
