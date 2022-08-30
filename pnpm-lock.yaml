@@ -55,7 +55,7 @@ importers:
       '@elonehoo/pick': workspace:*
       '@vitejs/plugin-vue': 3.0.3
       '@vue/compiler-sfc': 3.2.37
-      material-icons: 1.11.10
+      material-icons: 1.11.11
       vue: 3.2.37
       vue-router: 4.1.4
     dependencies:
@@ -65,7 +65,7 @@ importers:
       '@elonehoo/pick': link:../core
       '@vitejs/plugin-vue': 3.0.3_vite@3.0.9+vue@3.2.37
       '@vue/compiler-sfc': 3.2.37
-      material-icons: 1.11.10
+      material-icons: 1.11.11
 
   test:
     specifiers:
@@ -2530,8 +2530,8 @@ packages:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
     dev: true
 
-  /material-icons/1.11.10:
-    resolution: {integrity: sha512-1nGlVYwH98BQGSoxHf1QCCDll6AmnkxuATjTHREvy8BSEc6EfRkvcsQwEmSgAY7qcKLV3Ip81u9YEiH/sjQgkg==}
+  /material-icons/1.11.11:
+    resolution: {integrity: sha512-8Cv9oJ4rqIYq0qHeX/Q3WU34qAXk8sXA9/sdg9BwPMKFhE0eGYPpVJMdSgmXNwmgxRxpMs68DceYVxx4jMNmbA==}
     dev: true
 
   /material-icons/1.11.8:
