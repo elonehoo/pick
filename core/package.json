@@ -40,7 +40,7 @@
   "devDependencies": {
     "@elonehoo/vite-plugin-dist-css": "0.0.4",
     "@elonehoo/vite-plugin-type-ts": "0.0.1",
-    "@vitejs/plugin-vue": "3.0.3",
+    "@vitejs/plugin-vue": "3.1.0",
     "@vue/compiler-sfc": "3.2.37"
   }
 }
