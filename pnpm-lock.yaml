@@ -55,7 +55,7 @@ importers:
       '@elonehoo/pick': workspace:*
       '@vitejs/plugin-vue': 3.1.0
       '@vue/compiler-sfc': 3.2.39
-      material-icons: 1.11.11
+      material-icons: 1.12.2
       vue: 3.2.39
       vue-router: 4.1.5
     dependencies:
@@ -65,7 +65,7 @@ importers:
       '@elonehoo/pick': link:../core
       '@vitejs/plugin-vue': 3.1.0_vite@3.1.0+vue@3.2.39
       '@vue/compiler-sfc': 3.2.39
-      material-icons: 1.11.11
+      material-icons: 1.12.2
 
   test:
     specifiers:
@@ -2837,13 +2837,13 @@ packages:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
     dev: true
 
-  /material-icons/1.11.11:
-    resolution: {integrity: sha512-8Cv9oJ4rqIYq0qHeX/Q3WU34qAXk8sXA9/sdg9BwPMKFhE0eGYPpVJMdSgmXNwmgxRxpMs68DceYVxx4jMNmbA==}
-    dev: true
-
   /material-icons/1.11.8:
     resolution: {integrity: sha512-PDvpRAtH7JTKJIuJgyry2MsfxxPfTj0RMBUNHkE+wzk+OBXuyltlAYqXZALtjHFqcOh7kNDe6guFLJ1r33VUbA==}
     dev: false
+
+  /material-icons/1.12.2:
+    resolution: {integrity: sha512-z17mvWzcQBp9O1wgJcmLDJLSR54VssccCYbB/ZgV7DzLxxy4cpfoc/MNH9fabO1wlowWCzSQM8/KA5EPTsN4qQ==}
+    dev: true
 
   /mdast-util-from-markdown/0.8.5:
     resolution: {integrity: sha512-2hkTXtYYnr+NubD/g6KGBS/0mFmBcifAsI0yIWRiRo0PjVs6SSOSOdtzbp6kSGnShDN6G5aWZpKQ2lWRy27mWQ==}
